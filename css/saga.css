@@ -794,7 +794,7 @@ body.accent-stone {
 
 @media (max-width: 41em) {
   .hero-img-box {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     height: auto;
     min-height: 0;
     max-height: none;
@@ -802,7 +802,7 @@ body.accent-stone {
   }
 
   .hero-img-item {
-    height: 11rem;
+    height: 14rem;
     max-height: none;
   }
 
