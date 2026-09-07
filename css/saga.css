@@ -787,3 +787,32 @@ body.accent-stone {
   --saga-glow: 0 0 4rem rgba(160, 140, 91, 0.25);
   --saga-stage-mid: #14110d;
 }
+
+/************************/
+ /* mobile hero — 3+3 mosaic, no stretch
+/************************/
+
+@media (max-width: 41em) {
+  .hero-img-box {
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin: 2.4rem 0;
+  }
+
+  .hero-img-item {
+    height: 14rem;
+    max-height: none;
+  }
+
+  .hero-img-item a {
+    display: block;
+    height: 100%;
+  }
+
+  .hero-img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
