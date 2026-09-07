@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Raphael L. Renard ist ein Autor von modernen Abenteuerromanen für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Norderns!"
+    />
+
+    <link rel="icon" href="img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/books.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/abenteurer.js"></script>
+
+    <script defer src="js/overall.js"></script>
+
+    <title>Raphael L. Renard &mdash; Eine Geschichte des Sandes</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          sizes="(max-width: 41em) 48px,
+                          70px"
+          class="logo"
+          alt="Raphael L. Renard logo"
+          src="img/logo/rl_logo.avif"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#author">Autor</a></li>
+          <li>
+            <a class="main-nav-link" href="#impressions">Impressionen</a>
+          </li>
+          <li><a class="main-nav-link" href="#map">Orte</a></li>
+          <li class="main-nav-link books-button nav-cta">Romane</li>
+        </ul>
+        <div class="nav-books hidden">
+          <ul class="nav-books-list">
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="abenteurer.html"
+                >Der Abenteurer</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="egds.html"
+                >Eine Geschichte des Sandes</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="proverbs.html"
+                >101 German Proverbs</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="oftheworld.html"
+                >"Of the world" Series</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="btn-mobile-nav" aria-label="menu button">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="nav-mobile">
+        <ul class="nav-mobile-list">
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="egds.html"
+              >Eine Geschichte des Sandes</a
+            >
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="proverbs.html"
+              >101 German Proverbs</a
+            >
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="oftheworld.html"
+              >"Of the world" Series</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-book">
+        <img
+          srcset="
+            img/books_background/background_egds_panorama_mobile.avif 1300w,
+            img/books_background/background_egds_panorama.avif        4000w
+          "
+          sizes="(max-width: 41em) 1300px,
+                      4000px"
+          class="background-img background-img-da"
+          src="img/books_background/background_egds_panorama.avif"
+          alt="text"
+          style="object-fit: cover"
+        />
+        <span class="subheading heading-background center-text"
+          >Eine Geschichte des Sandes</span
+        >
+        <h2 class="heading-secondary heading-background center-text">
+          Rettung oder Untergang
+        </h2>
+        <div class="wrapper--bookpage">
+          <div class="books-container--bookpage">
+            <!-- Eine Geschichte des Sandes - Band I -->
+
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/Eine-Geschichte-Sandes-Helden-S%C3%BCnden-ebook/dp/B076QMLSTZ/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=154O4YND3U9YW&keywords=raphael+l+renard&qid=1698834035&s=digital-text&sprefix=raphael+l+renar%2Cdigital-text%2C96&sr=1-1"
+                target="_blank"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_egds1_320.avif 320w,
+                    img/cover/cover_egds1.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_egds1.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Eine Geschichte des Sandes - Die 3 Helden und die 7 Sünden des Todes - Fußspuren im Wüstensand der Sahara"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">
+                  Band I - Die 3 Helden und die 7 Sünden des Todes
+                </h3>
+                <p class="strong">Sahara, Ende des 19. Jahrhunderts</p>
+                <p>
+                  Das Leben in der Wüstenfestung Fortechala wird durch die
+                  Ankunft eines unscheinbaren Boten aus den Fugen gerissen.
+                </p>
+                <p>
+                  Mit ihm kommen drei weitere Fremde nach Fortechala: Ein
+                  Krieger, ein Meisterschütze und ein Greis. Was als eine
+                  aussichtslos scheinende Befreiungsaktion beginnt, entwickelt
+                  sich mehr und mehr zum entscheidenden Kampf um das Schicksal
+                  einer gesamten Stadt.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 481
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 23. Oktober
+                  2017
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/Eine-Geschichte-Sandes-Helden-S%C3%BCnden-ebook/dp/B076QMLSTZ/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=154O4YND3U9YW&keywords=raphael+l+renard&qid=1698834035&s=digital-text&sprefix=raphael+l+renar%2Cdigital-text%2C96&sr=1-1"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Eine Geschichte des Sandes - Band II -->
+
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B07H9M76YQ?notRedirectToSDP=1&ref_=dbs_mng_calw_1&storeType=ebooks"
+                target="_blank"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_egds2_320.avif 320w,
+                    img/cover/cover_egds2.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_egds2.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Eine Geschichte des Sandes - Chaos - Fußspuren im Wüstensand der Sahara"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band II - Chaos</h3>
+                <p class="strong">Ein neuer Kommandant regiert die Stadt!</p>
+                <p>
+                  Während ein folgenschweres Ereignis das Leben in Fortechala
+                  zunehmend ins Chaos stürzen lässt, werden die Bewohner der
+                  Wüstenfestung von einer neuen Gefahr heimgesucht und von ihrer
+                  dunklen Vergangenheit eingeholt.
+                </p>
+                <p>
+                  Indessen versucht ein einfacher Bote verzweifelt, seine
+                  wenigen Gefährten zu vereinen, um Fortechala doch noch vor dem
+                  sicheren Untergang zu bewahren.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 579
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 12. September
+                  2018
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B07H9M76YQ?notRedirectToSDP=1&ref_=dbs_mng_calw_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 3 - Gegen den Sand -->
+
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B07S1XFQYP?notRedirectToSDP=1&ref_=dbs_mng_calw_2&storeType=ebooks"
+                target="_blank"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_egds3_320.avif 320w,
+                    img/cover/cover_egds3.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_egds3.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Eine Geschichte des Sandes - Zwei Pfade - Fußspuren im Wüstensand der Sahara"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band III - Zwei Pfade</h3>
+                <p class="strong">Rettung oder Untergang. Tugend oder Sünde.</p>
+                <p>Leben oder Tod. Gut oder böse.</p>
+                <p>
+                  Dies sind die zwei Pfade, vor denen die Bewohner der
+                  Wüstenfestung Fortechala stehen. Doch welchen sie letztendlich
+                  beschreiten werden, kann ihnen niemand vorschreiben.
+                </p>
+                <p>
+                  Das Ende dieser Geschichte hängt nur davon ab, wer den Kampf
+                  im Innersten eines jeden Einzelnen gewinnen wird.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 406
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 20. Mai 2019
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B07S1XFQYP?notRedirectToSDP=1&ref_=dbs_mng_calw_2&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn-carousel--bookpage btn--left hidden"
+            id="btn--left"
+            aria-label="carousel button left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon--bookpage"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-carousel--bookpage btn--right"
+            id="btn--right"
+            aria-label="carousel button right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon--bookpage"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECTION FEATURES -->
+      <section class="section-features" id="features">
+        <div class="container grid--features">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="flash-outline"></ion-icon>
+            <p class="feature-title">Epische Schlacht!</p>
+            <p class="feature-text">
+              Das Schicksal einer gesamten <br />Stadt steht auf dem Spiel.
+              <br />Ist ihr Ende noch abwendbar?
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon
+              class="feature-icon"
+              name="heart-circle-outline"
+            ></ion-icon>
+            <p class="feature-title">Die 7 Todsünden!</p>
+            <p class="feature-text">
+              Personifiziert als Charaktere führen sie ihre Heimat dem Untergang
+              entgegen. Oder sind sie der Schlüssel?
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="cloudy-outline"></ion-icon>
+            <p class="feature-title">Philosophie!</p>
+            <p class="feature-text">
+              Welcher Weg führt zur Rettung? Aktion oder Warten? Oder doch der
+              Griff zu den Waffen?
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon
+              class="feature-icon"
+              name="color-filter-outline"
+            ></ion-icon>
+            <p class="feature-title">Für Jung & Alt!</p>
+            <p class="feature-text">
+              Die Geschichten, die das Leben schreibt, kennen kein Alter und
+              keine Nation. Sie sind für jeden da.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid--footer">
+        <div class="footer-logo-col">
+          <a href="index.html" class="footer-logo">
+            <img
+              srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+              sizes="(max-width: 41em) 48px,
+                          70px"
+              class="logo"
+              alt="Omnifood logo"
+              src="img/logo/rl_logo.avif"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="footer-mail-col">
+          <p class="footer-heading">Kontakt</p>
+          <a class="footer-link" href="mailto:raphaellrenard108@gmail.com"
+            >raphaellrenard108@gmail.com</a
+          >
+        </div>
+        <div class="footer-nav-col">
+          <div>
+            <a href="impressum.html" class="footer-link"
+              ><p class="footer-heading">Impressum</p></a
+            >
+          </div>
+          <div>
+            <a href="datasecurity.html" class="footer-link"
+              ><p class="footer-heading">Datenschutz</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-sociallinks">
+          <ul class="social-link">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/raphaellrenard/?hl=en"
+                target="_blank"
+                name="logo-instagram"
+                alt="instagram logo"
+                aria-label="Visit the Instagram Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-instagram"
+                  alt="instagram logo"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+                target="_blank"
+                name="logo-amazon"
+                alt="amazon logo"
+                aria-label="Visit the Amazon Author Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-amazon"
+                  alt="amazon logo"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="copyright">
+            Copyright &copy; <span class="year">2023</span> by Raphael L. Renard
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

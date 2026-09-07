@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Raphael L. Renard ist ein Autor von modernen Abenteuerromanen für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Norderns!"
+    />
+
+    <link rel="icon" href="img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/overall.js"></script>
+    <title>Raphael L. Renard &mdash; Starte ins Abenteuer!</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          sizes="(max-width: 41em) 48px,
+                          70px"
+          class="logo"
+          alt="Raphael L. Renard logo"
+          src="img/logo/rl_logo.avif"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#author">Autor</a></li>
+          <li>
+            <a class="main-nav-link" href="#impressions">Impressionen</a>
+          </li>
+          <li><a class="main-nav-link" href="#map">Orte</a></li>
+          <li class="main-nav-link books-button nav-cta">Romane</li>
+        </ul>
+        <div class="nav-books hidden">
+          <ul class="nav-books-list">
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="abenteurer.html"
+                >Der Abenteurer</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="festung.html">Die Festung</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="proverbs.html"
+                >101 German Proverbs</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="oftheworld.html"
+                >"Of the world" Series</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="btn-mobile-nav" aria-label="menu button">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="nav-mobile">
+        <ul class="nav-mobile-list">
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="festung.html">Die Festung</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="proverbs.html"
+              >101 German Proverbs</a
+            >
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="oftheworld.html"
+              >"Of the world" Series</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECTION HERO -->
+      <section class="section section-hero" id="hero">
+        <div class="hero">
+          <h1 class="heading-primary">Starte ins Abenteuer</h1>
+          <div class="hero-img-box">
+            <figure class="hero-img-item">
+              <a href="festung.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_1_w120.avif 120w,
+                    img/hero/hero_single_1.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                          200px"
+                  src="img/hero/hero_single_1.avif"
+                  class="hero-img"
+                  alt="Festung in einer Wüste"
+                />
+              </a>
+            </figure>
+            <figure class="hero-img-item">
+              <a href="apt.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_2_w120.avif 120w,
+                    img/hero/hero_single_2.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                      200px"
+                  src="img/hero/hero_single_2.avif"
+                  class="hero-img"
+                  alt="grüner Dschungel mit klarem Fluss"
+                />
+              </a>
+            </figure>
+            <figure class="hero-img-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_3_w120.avif 120w,
+                    img/hero/hero_single_3.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                      200px"
+                  src="img/hero/hero_single_3.avif"
+                  class="hero-img"
+                  alt="Steinwüste und orangener Sand"
+                />
+              </a>
+            </figure>
+            <figure class="hero-img-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_4_w120.avif 120w,
+                    img/hero/hero_single_4.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                      200px"
+                  src="img/hero/hero_single_4.avif"
+                  class="hero-img"
+                  alt="Salzsee mit strahlend blauem Himmel"
+                />
+              </a>
+            </figure>
+            <figure class="hero-img-item">
+              <a href="apt.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_5_w120.avif 120w,
+                    img/hero/hero_single_5.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                      200px"
+                  src="img/hero/hero_single_5.avif"
+                  class="hero-img"
+                  alt="Strand einer mysteriösen karibischen Insel"
+                />
+              </a>
+            </figure>
+            <figure class="hero-img-item">
+              <a href="festung.html">
+                <img
+                  srcset="
+                    img/hero/hero_single_6_w120.avif 120w,
+                    img/hero/hero_single_6.avif      200w
+                  "
+                  sizes="(max-width: 416px) 120px,
+                      200px"
+                  src="img/hero/hero_single_6.avif"
+                  class="hero-img"
+                  alt="Stadtmauer einer Wüstenfestung bei Nacht"
+                />
+              </a>
+            </figure>
+          </div>
+          <div class="btn--hero">
+            <a
+              href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+              class="btn btn--full margin-right-sm"
+              target="_blank"
+              >Jetzt kaufen!</a
+            >
+            <a href="#books" class="btn btn--outline hidden"
+              >Mehr erfahren &darr;</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION BOOKS -->
+      <section class="section section-books" id="books">
+        <span class="subheading center-text">Die Bücher</span>
+        <h2 class="heading-secondary center-text">Entdecke neue Welten</h2>
+
+        <!-- Start of Slider -->
+        <div class="wrapper">
+          <div class="books-container">
+            <div class="book-item">
+              <a href="festung.html">
+                <img
+                  srcset="
+                    img/cover/cover_festung1_320.avif 320w,
+                    img/cover/cover_festung1.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_festung1.avif"
+                  draggable="false"
+                  class="book-img"
+                  alt="Buchcover - Die Festung - Band 1 Ankunft - Bote betritt Wüstenfestung"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Sahara</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="festung.html">
+                <img
+                  srcset="
+                    img/cover/cover_festung2_320.avif 320w,
+                    img/cover/cover_festung2.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_festung2.avif"
+                  draggable="false"
+                  class="book-img"
+                  alt="Buchcover - Die Festung - Band 2 Chaos - Dunkle Festung in der Wüste"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Sahara</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer1_320.avif 320w,
+                    img/cover/cover_abenteurer1.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer1_320.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Alte Bekannte - roter Stetson"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="apt.html">
+                <img
+                  srcset="
+                    img/cover/cover_apt_320.avif 320w,
+                    img/cover/cover_apt.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_apt.avif"
+                  class="book-img"
+                  alt="Buchcover - A Pirate's Tale - Piratenschiff mit roten Segeln vor karibischer Insel"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--place">Karibik</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="proverbs.html">
+                <img
+                  srcset="
+                    img/cover/cover_germanproverbs_320.avif 320w,
+                    img/cover/cover_germanproverbs.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_germanproverbs.avif"
+                  class="book-img"
+                  alt="Buchcover - 101 German Proverbs"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--genre">Sachbuch</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="oftheworld.html">
+                <img
+                  srcset="
+                    img/cover/cover_animalsoftheworld_320.avif 320w,
+                    img/cover/cover_animalsoftheworld.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_animalsoftheworld.avif"
+                  class="book-img"
+                  alt="Buchcover - Animals of the world - Pinguin in Arktisscenerie bei rosarotem Sonnenuntergang"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--genre">Sachbuch</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="oftheworld.html">
+                <img
+                  srcset="
+                    img/cover/cover_plantsoftheworld_320.avif 320w,
+                    img/cover/cover_plantsoftheworld.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_plantsoftheworld.avif"
+                  class="book-img"
+                  alt="Buchcover - Plants of the world - Mächtiger grüner Baum vor klarem, blauem Himmel"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--genre">Sachbuch</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="oftheworld.html">
+                <img
+                  srcset="
+                    img/cover/cover_mysticalcreatures_320.avif 320w,
+                    img/cover/cover_mysticalcreatures.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_mysticalcreatures.avif"
+                  class="book-img"
+                  alt="Buchcover - Mytsical Creatures - Oranger Drache fliegt über mittelalterliche Landschaft"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--genre">Sachbuch</span>
+              </div>
+            </div>
+
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer2_320.avif 320w,
+                    img/cover/cover_abenteurer2.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer2.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Faradisi - oranger Khandschar"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer3_320.avif 320w,
+                    img/cover/cover_abenteurer3.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer3.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Gegen den Sand - gelber Lasso"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer4_320.avif 320w,
+                    img/cover/cover_abenteurer4.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer4.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Der Pakt - grünes Fernrohr"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer5_320.avif 320w,
+                    img/cover/cover_abenteurer5.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer5.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Fünf gegen fünf - blauer Säbel"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="abenteurer.html">
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer6_320.avif 320w,
+                    img/cover/cover_abenteurer6.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer6.avif"
+                  class="book-img"
+                  alt="Buchcover - Der Abenteurer - Die Wahrheit - violettes Gewehr"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Orient</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item unfinished">
+              <a href="festung.html">
+                <img
+                  srcset="
+                    img/cover/cover_festung3_320.avif 320w,
+                    img/cover/cover_festung3.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_festung3.avif"
+                  draggable="false"
+                  class="book-img"
+                  alt="Buchcover - Die Festung - Band 3 Hoffnung - Bote in zerstörter Wüstenfestung"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Deutsch</span>
+                <span class="tag tag--place">Sahara</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+            <div class="book-item unfinished">
+              <a href="#">
+                <img
+                  srcset="
+                    img/cover/cover_htstw_320.avif 320w,
+                    img/cover/cover_htstw.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="img/cover/cover_htstw.avif"
+                  class="book-img"
+                  alt="Buchcover - How they saved the world - Arktische Landschaft in Spitzbergen"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">Englisch</span>
+                <span class="tag tag--place">Spitzbergen</span>
+                <span class="tag tag--genre">Belletristik</span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn--carousel btn--left"
+            id="btn--left"
+            aria-label="carousel button left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn--carousel btn--right"
+            id="btn--right"
+            aria-label="carousel button right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECTION FEATURES -->
+      <section class="section-features" id="features">
+        <div class="container grid--features">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="magnet-outline"></ion-icon>
+            <p class="feature-title">Fesselnde Spannung!</p>
+            <p class="feature-text">
+              Epische Geschichten, überraschende Wendungen & spannende Abenteuer
+              erwarten dich.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="earth-outline"></ion-icon>
+            <p class="feature-title">Reise um die Welt!</p>
+            <p class="feature-text">
+              Reise von den Wüsten des Orients, über aktische Weiten bis in den
+              tiefsten Dschungel.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="heart-half-outline"></ion-icon>
+            <p class="feature-title">Nahbare Charaktere!</p>
+            <p class="feature-text">
+              Vielschichte Charaktere fernab von Schwarz & Weiß entführen in
+              fantastische Welten mit Tiefgang.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon
+              class="feature-icon"
+              name="color-filter-outline"
+            ></ion-icon>
+            <p class="feature-title">Für Jung & Alt!</p>
+            <p class="feature-text">
+              Die Geschichten, die das Leben schreibt, kennen kein Alter und
+              keine Nation. Sie sind für jeden da.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION AUTHOR -->
+      <section class="section section-author" id="author">
+        <div class="container">
+          <span class="subheading">Der Autor</span>
+          <h2 class="heading-secondary">
+            "Eine gute Geschichte schreibt sich wie von selbst."
+          </h2>
+          <div class="author-box">
+            <div
+              class="author-img-box"
+              role="img"
+              aria-label="Autor Raphael L. Renard vor einem Wasserfall im Jungle"
+            ></div>
+            <div class="author-text-box">
+              <h3 class="heading-tertiary author-heading">Raphael L. Renard</h3>
+              <p class="author-text">
+                Raphael L. Renard ist ein Federführer, ein Fadenverbinder, ein
+                Tastenanschläger.
+              </p>
+              <p class="author-text">
+                Doch der wahre Autor aller guten Geschichten ist das Leben. So
+                fiktiv und frei erfunden sie auch sein mögen, in allen steckt
+                dennoch immer ein Quäntchen Wahrheit. Erlebnisse und Erfahrungen
+                aus der Welt, in der wir leben, Taten der Helden und Schurken,
+                die tief in uns schlummern, bis hin zu alltäglichen Dingen, die
+                wir alle kennen und die uns zu dem machen, was wir sind.
+              </p>
+              <!-- <p>
+                Renard besitzt eine Leidenschaft dafür, diese Abenteuer in
+                phantastische Geschichten zu bannen, um andere daran teilhaben zu
+                lassen. Er schreibt von Charakteren, die wir alle kennen und in
+                denen wir uns nur zu oft selbst wiederfinden. Er schreibt von
+                Emotionen, die wir alle fühlen und doch oft vergessen, bis uns
+                schließlich jemand darauf aufmerksam macht. Er schreibt von
+                epischen Geschehnissen, die unglaublich scheinen und sich doch Tag
+                für Tag in unserer Welt zutragen.​
+              </p>
+              <p>
+                Renard kombiniert Humor und Spannung in einer Art und Weise, die
+                seine Leser zum Lachen bringt, zum Nachdenken anregt oder schlicht
+                dazu bewegt, die nächste Seite umzuschlagen. Um in eine Welt
+                einzutauchen, die zugleich unbeschreiblich und doch so alltäglich
+                ist.
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION FLIPCARD -->
+      <section class="section section-flipcards" id="impressions">
+        <div class="container-quotes">
+          <span class="subheading">Impressionen</span>
+          <h2 class="heading-secondary">
+            "Wir werden beobachten und wir werden verstehen."
+          </h2>
+          <!-- beginning of quotes-gallery -->
+          <div class="flipcard-gallery">
+            <div class="flipcard-container">
+              <div class="flipcard-item">
+                <div class="flipcard-front">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_1.avif"
+                      class="flipcard-img"
+                      alt="Close-up Porträt einer jungen Araberin mit Kapuze in der Wüste"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      "Keine Kultur verdient weniger als die andere. Sie mögen
+                      an andere Dinge glauben. Eine andere Vergangenheit kennen.
+                      In einer anderen Gegenwart leben. Von einer anderen
+                      Zukunft träumen. Doch ganz am Ende bleiben wir alle
+                      gleich."
+                    </p>
+                    <p class="flipcard-book">Der Abenteurer</p>
+                  </div>
+                </div>
+                <div class="flipcard-back">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_2.avif"
+                      class="flipcard-img"
+                      alt="Lagerfeuer bei Nacht unter einem Steinbogen in der Wüste"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      „Diese Welt ist voll von Unrecht. <br />
+                      Kein Volk kann sich von diesem freisprechen, <br />ohne
+                      sich der Lüge zu zeihen."
+                    </p>
+                    <p class="flipcard-book">Der Abenteurer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flipcard-container">
+              <div class="flipcard-item">
+                <div class="flipcard-front">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_8.avif"
+                      class="flipcard-img"
+                      alt="Ausgang aus einer dunklen Höhle im tiefen Dschungel"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      "Aye, we're pirates, all right. But that doesn't mean we
+                      are the dishonest scallywags ye're imaginin' in yer
+                      darkened mind, young lass. <br />We do live by a
+                      particular code."
+                    </p>
+                    <p class="flipcard-book">A Pirate's Tale</p>
+                  </div>
+                </div>
+                <div class="flipcard-back">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_7.avif"
+                      class="flipcard-img"
+                      alt="Piratenkapitän im Dschungel"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      "This is it. The end of yer story. <br />
+                      No more blabberin' 'bout bein meant to be someone great.
+                      No legends. No treasure. No destiny. Just life. And there
+                      is only one thing 'bout life that we know fer sure.
+                      <br />It ends."
+                    </p>
+                    <p class="flipcard-book">A Pirate's Tale</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flipcard-container">
+              <div class="flipcard-item">
+                <div class="flipcard-front">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_5.avif"
+                      class="flipcard-img"
+                      alt="Stadtmauern einer Wüstenfestung bei Nacht"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      "Eben dieser Sand erzählt uns eine Geschichte. Eine
+                      Geschichte von Tausenden, die es da gibt auf dieser Welt.
+                      In diesen weiten Ebenen der Wüste findest du jede
+                      Geschichte, die du dir erträumen kannst."
+                    </p>
+                    <p class="flipcard-book">Die Festung</p>
+                  </div>
+                </div>
+                <div class="flipcard-back">
+                  <a href="abenteurer.html">
+                    <img
+                      src="img/gallery/gallery_4.avif"
+                      class="flipcard-img"
+                      alt="mysteriöse Gestalt in langen Gewändern beobachtete Wüstenfestung am Horizont"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div class="flipcard-quote">
+                    <p class="flipcard-text">
+                      "Wir werden beobachten und wir werden zuhören. Wir werden
+                      unsere Lehren daraus ziehen. Wir werden lernen. Und wir
+                      werden verstehen."
+                    </p>
+                    <p class="flipcard-book">Die Festung</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION MAP -->
+      <section class="section section-map" id="map">
+        <div class="container-map">
+          <span class="subheading">Orte</span>
+          <h2 class="heading-secondary">Eine Reise um die Welt</h2>
+          <div class="map">
+            <img
+              srcset="
+                img/map/map_colored_300.avif  300w,
+                img/map/map_colored.png      1200w
+              "
+              sizes="(max-width: 41em) 300px,
+                          1200px"
+              src="img/map/map_colored.png"
+              class="map-img"
+              alt="Minimalisierte Karte der Welt"
+            />
+            <!-- Arabia - Der Abenteurer -->
+            <span class="marker marker-arabia">
+              <span class="marker-inside" id="arabia"></span>
+            </span>
+
+            <div class="info info-arabia hidden" id="info-arabia">
+              <p class="info-heading">Arabien</p>
+              <p class="info-text">
+                Endlose Dünen, verlassene Ruinen & gefährliche Beduinenstämme.
+                Die Wüste ist voller Gefahren & Myterien.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer1.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 1 - Alte Bekannte"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer3.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 3 - Gegen den Sand"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer5.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 5 - Fünf gegen fünf"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Persia - Der Abenteurer -->
+            <span class="marker marker-persia">
+              <span class="marker-inside" id="persia"></span>
+            </span>
+
+            <div class="info info-persia hidden" id="info-persia">
+              <p class="info-heading">Persien</p>
+              <p class="info-text">
+                Ob im Kampf mit Verbrecherbanden in Isfahan oder aber auf der
+                Suche nach der geheimnisvollen Stadt an den Zwillingsfelsen:
+                Alle Spuren führen ins persische Reich.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer2.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 2 - Faradisi"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer4.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 4 - Der Pakt"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Caribbean - A Pirate's Tale -->
+            <span class="marker marker-caribbean">
+              <span class="marker-inside" id="caribbean"></span>
+            </span>
+            <div class="info info-caribbean hidden" id="info-caribbean">
+              <p class="info-heading">Die Karibik</p>
+              <p class="info-text">
+                Auf der Suche nach Captain Roger's Schatz lauern skrupellose
+                Piraten, scheinheilige Marinesoldaten und die Tücken des
+                finsteren Dschungels.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="apt.html">
+                  <img
+                    src="img/cover/cover_apt.avif"
+                    class="info-cover"
+                    alt="Buchcover A Pirate's Tale - Schiff mit roten Segeln in der Karibik"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Sahara - Die Festung -->
+            <span class="marker marker-sahara">
+              <span class="marker-inside" id="sahara"></span>
+            </span>
+            <div class="info info-sahara hidden" id="info-sahara">
+              <p class="info-heading">Die Sahara</p>
+              <p class="info-text">
+                Die unendlichen Weiten der mächtigen Sahara. Hier liegt die
+                Festung von Fortechala, deren Schicksal in den Händen dreier
+                Fremder liegt.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="festung.html">
+                  <img
+                    src="img/cover/cover_festung1.avif"
+                    class="info-cover"
+                    alt="Buchcover Die Festung - Band 1 Ankunft"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="festung.html">
+                  <img
+                    src="img/cover/cover_festung2.avif"
+                    class="info-cover"
+                    alt="Buchcover Die Festung - Band 2 Chaos"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="festung.html">
+                  <img
+                    src="img/cover/cover_festung3.avif"
+                    class="info-cover"
+                    alt="Buchcover Die Festung - Band 3 Hoffnung"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer1.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 1 - Alte Bekannte"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Colorado - Der Abenteurer / Katherine -->
+            <span class="marker marker-colorado">
+              <span class="marker-inside" id="colorado"></span>
+            </span>
+            <div class="info info-colorado hidden" id="info-colorado">
+              <p class="info-heading">Colorado</p>
+              <p class="info-text">
+                In den weiten Ebenen des Westens wird Sawyer einer harten Schule
+                unterzogen. Hier lernt er, was es heißt, ein wahrer Abenteurer
+                zu sein, ohne es zunächst zu verstehen.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer5.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 5 - Fünf gegen fünf"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="abenteurer.html">
+                  <img
+                    src="img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Buchcover Der Abenteurer - Band 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Svalbard - How they saved the world -->
+            <span class="marker marker-svalbard">
+              <span class="marker-inside" id="svalbard"></span>
+            </span>
+            <div class="info info-svalbard hidden" id="info-svalbard">
+              <p class="info-heading">Svalbard</p>
+              <p class="info-text">
+                Ein Geheimnis im tiefen Norden bedroht das Leben auf der ganzen
+                Welt. Das Schicksal führt 4 eigentümliche Charaktere an diesen
+                Ort. Doch können sie tatsächlich etwas bewirken?
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="#">
+                  <img
+                    src="img/cover/cover_htstw.avif"
+                    class="info-cover"
+                    alt="Buchcover How they saved the world"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Germany - Der Abenteurer / 101 German Proverbs -->
+            <span class="marker marker-germany">
+              <span class="marker-inside" id="germany"></span>
+            </span>
+            <div class="info info-germany hidden" id="info-germany">
+              <p class="info-heading">Deutschland</p>
+              <p class="info-text">
+                Lerne mehr über die Herkunft und die Bedeutung von den
+                häufigsten deutschen Sprichwörtern!
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="proverbs.html">
+                  <img
+                    src="img/cover/cover_germanproverbs.avif"
+                    class="info-cover"
+                    alt="Buchcover 101 German Proverbs"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid--footer">
+        <div class="footer-logo-col">
+          <a href="index.html" class="footer-logo">
+            <img
+              srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+              sizes="(max-width: 41em) 48px,
+                          70px"
+              class="logo"
+              alt="Omnifood logo"
+              src="img/logo/rl_logo.avif"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="footer-mail-col">
+          <p class="footer-heading">Kontakt</p>
+          <a class="footer-link" href="mailto:raphaellrenard108@gmail.com"
+            >raphaellrenard108@gmail.com</a
+          >
+        </div>
+        <div class="footer-nav-col">
+          <div>
+            <a href="impressum.html" class="footer-link"
+              ><p class="footer-heading">Impressum</p></a
+            >
+          </div>
+          <div>
+            <a href="datasecurity.html" class="footer-link"
+              ><p class="footer-heading">Datenschutz</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-sociallinks">
+          <ul class="social-link">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/raphaellrenard/?hl=en"
+                target="_blank"
+                name="logo-instagram"
+                alt="instagram logo"
+                aria-label="Visit the Instagram Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-instagram"
+                  alt="instagram logo"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+                target="_blank"
+                name="logo-amazon"
+                alt="amazon logo"
+                aria-label="Visit the Amazon Author Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-amazon"
+                  alt="amazon logo"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="copyright">
+            Copyright &copy;
+            <span class="year"
+              ><script>
+                document.write(new Date().getFullYear());
+              </script></span
+            >
+            by Raphael L. Renard
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

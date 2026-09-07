@@ -1,0 +1,693 @@
+/************************/
+/* 1.) GENERAL DESIGN INFO */
+/* 2.) GLOBAL RESET */
+/* 3.) HEADER */
+/* 4.) NAVI */
+/* 5.) FLYOUT */
+/* 6.) MOBILE NAVI */
+/* 7.) STICKY NAVI */
+/* 8.) GRIDS, HEADINGS, BTNs */
+/* 9.) CAROUSEL */
+/* 10.) FOOTER */
+/* 11.) HELPER CLASSES */
+/************************/
+
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400
+Medium: 500
+Semi Bold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph Default: 1.6
+Large: 1.8
+
+- Letter spacing
+
+
+
+--- 02 COLORS
+
+- Brand color: #FF7500
+- Tints: #ffe3cc, #ffac66, #ff831a
+- Shades: #190c00, #803b00, #e66900
+- Accents: 
+- Greys: #555 #333 #ccc #6f6f6f
+
+--- 03 IMAGES
+
+- unsplash.com
+- uifaces.co
+
+--- 04 ICONS
+
+- phosphor icons
+- ionicons
+- iconss8
+
+--- 05 SHADOWS
+
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--header: box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+--nav-books: box-shadow: 0 1rem 2rem var(--secondary-color);
+--button hover: box-shadow: inset 0 0 0 3px var(--main-color);
+--button carousel: box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+--focus: box-shadow: 0 0 0 0.8rem var(--main-color);
+--hero-img-box: box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.1);
+--book-img: box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.2);
+--flipcard-container: box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.1);
+--map-img: box-shadow: 0 8px 10px 8px rgba(0, 0, 0, 0.1);
+--info: box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+--info-cover: box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+
+
+--- 06 BORDER RADIUS
+
+Default: 20px, 10px, 5px
+
+--- 07 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+--- 08 Z-INDEX
+
+-- background-img (books): -10
+-- nav-books: 2
+
+-- marker: 9
+-- info: 10
+
+-- wrapper--bookpage: 100
+-- nav-open .nav-mobile: 101
+
+-- btn-mobile-nav: 1000
+
+-- sticky header: 999999
+*/
+
+:root {
+  --main-color: #ff7400;
+  --main-color-light: #ff9e4d;
+  --main-color-dark: #803a00;
+  --secondary-color: #331700;
+  --tertiary-color: yellow;
+  --background-color: #fff1e6;
+  --background-color2: #ffe3cc;
+  --text-color-light: #fff1e6;
+  --text-color-dark: #190c00;
+  --accent-color-primary: #5f2511;
+  --accent-color-secondary: #5f114b;
+  --accent-color-tertiary: ##4b5f11;
+}
+
+/************************/
+/** 2.) GLOBAL RESET ****/
+/************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  /* font-family: "Playfair+Display", serif; */
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--secondary-color);
+  /* background-color: #3d3d3d86; */
+
+  /* Only works if there is nothing absolutly positioned to body */
+  overflow-x: hidden;
+}
+
+/********************/
+/*** 3.) HEADER *****/
+/********************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  height: 7rem;
+  width: 7rem;
+}
+
+/************************/
+/** 4.) NAVIGATION ******/
+/************************/
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited,
+.books-button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color-dark);
+  font-weight: 500;
+  font-size: 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--main-color);
+}
+
+.nav-cta {
+  padding: 1.2rem 2.4rem;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  border: solid 2px var(--main-color);
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: var(--background-color);
+  color: var(--text-color-dark);
+  box-shadow: inset 0 0 0 3px var(--main-color);
+}
+
+/************************/
+/****** 5.) FLYOUT ******/
+/************************/
+
+.nav-books {
+  background-color: var(--background-color);
+  position: absolute;
+  top: 6.2rem;
+  right: 0;
+  padding: 2rem 4rem;
+
+  box-shadow: 0 1rem 2rem var(--secondary-color);
+  border-radius: 10px;
+  opacity: 0.97;
+  z-index: 2;
+}
+
+.nav-books:hover {
+  box-shadow: 0 1rem 1.2rem var(--secondary-color);
+}
+
+.nav-books-list,
+.nav-mobile-list {
+  list-style: none;
+}
+
+.nav-books-item:not(:first-child) {
+  border-top: 1px solid var(--secondary-color);
+  border-image: linear-gradient(
+    to right,
+    #190c00 80%,
+    rgba(0, 0, 0, 0) 50%
+  ); /* to right - at 50% transparent */
+  border-image-slice: 1;
+}
+
+.nav-books-item,
+.nav-mobile-item {
+  padding: 1rem 0;
+}
+
+.nav-books-link:link,
+.nav-books-link:visited,
+.nav-mobile-link:link,
+.nav-mobile-link:visited {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.nav-books-link:hover,
+.nav-books-link:active,
+.nav-mobile-link:hover,
+.nav-mobile-link:active {
+  color: var(--main-color);
+}
+
+/************************/
+/** 6.) MOBILE NAV ******/
+/************************/
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #190c00;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+.nav-mobile {
+  background-color: rgba(255, 255, 255, 0.924);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* transform: translateX(100%); */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+  text-align: center;
+
+  display: none;
+}
+
+.nav-mobile-item:not(:first-child) {
+  border-top: 1px solid var(--secondary-color);
+}
+
+.nav-open .nav-mobile {
+  display: flex;
+  z-index: 101;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+}
+
+/************************/
+/**** 7.) STICKY NAV ****/
+/************************/
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: var(--background-color);
+  z-index: 999999;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/*******************************/
+/** 8.) GRIDS, HEADINGS, BTNs **/
+/*******************************/
+
+.container,
+.container-quotes,
+.container-map {
+  max-width: 126rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.grid--1-cols {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: var(--text-color-dark);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+  justify-self: center;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main-color-dark);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 6.4rem;
+  border-radius: 10px;
+
+  /* Only for btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: var(--secondary-color);
+  border: solid 2px var(--main-color);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--background-color);
+  color: var(--text-color-dark);
+  box-shadow: inset 0 0 0 3px var(--main-color);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--background-color);
+
+  /* trick to add border inside */
+  box-shadow: inset 0 0 0 3px var(--main-color);
+}
+
+.btn--full-bookpage:link,
+.btn--full-bookpage:visited {
+  color: var(--secondary-color);
+  border: solid 3px var(--main-color);
+  background-color: rgba(255, 241, 230, 0.5);
+}
+
+.btn--full-bookpage:hover,
+.btn--full-bookpage:active {
+  background-color: rgba(255, 241, 230, 0.9);
+  color: var(--text-color-dark);
+  box-shadow: inset 0 0 0 3px var(--main-color);
+}
+
+/*******************************/
+/********** 9.) CAROUSEL *******/
+/*******************************/
+
+.btn--carousel {
+  height: 40px;
+  width: 40px;
+
+  background-color: transparent;
+  border: solid 1px var(--main-color);
+  border-radius: 50%;
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+}
+
+.btn--left {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn--right {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: var(--main-color);
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: var(--main-color);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: var(--tertiary-color);
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--tertiary-color);
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted var(--tertiary-color);
+  outline-offset: 8px; */
+  /* box-shadow: 0 0 0 0.8rem var(--main-color); */
+}
+
+/************************/
+/**** 10.) FOOTER *******/
+/************************/
+
+.footer {
+  padding: 4.8rem 0;
+  border-top: 1px solid var(--background-color);
+  color: var(--secondary-color);
+}
+
+.grid--footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 4fr 2fr;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.footer-mail-col,
+.footer-nav-col {
+  padding: 2rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.footer-mail-col {
+  text-align: center;
+}
+
+.footer-mail-col .footer-heading {
+  margin-bottom: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--main-color);
+  font-size: 1.6rem;
+}
+
+.footer-nav-col {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-link {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.footer-copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--secondary-color);
+  margin: 2.4rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.year {
+  font-weight: 600;
+}
+
+/************************/
+/** 11.) HELPER CLASSES */
+/************************/
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.heading-background {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.border {
+  border: 2px solid var(--secondary-color);
+}
+
+.hidden {
+  display: none !important;
+}

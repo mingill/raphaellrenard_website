@@ -1,0 +1,575 @@
+/* rem and em do NOT depend on html font-size in media queries
+Instead, 1rem = 1em = 16px */
+
+/***********************************/
+/* BELOW 1264px (Smaller Desktops) */
+/***********************************/
+
+@media (max-width: 79em) {
+  /* CAROUSEL */
+  .wrapper,
+  .wrapper--bookpage {
+    max-width: 76rem;
+  }
+
+  /* FEATURES */
+  .grid--features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10rem;
+    row-gap: 5rem;
+    margin: 0 10rem;
+  }
+
+  /* FLIPCARDS */
+  .flipcard-gallery {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .flipcard-container {
+    width: 25rem;
+    height: 50rem;
+  }
+  .flipcard-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .flipcard-character,
+  .flipcard-book {
+    font-size: 1.2rem;
+  }
+  .quote-text {
+    font-size: 1.2rem;
+  }
+  .quote-character,
+  .quote-book {
+    font-size: 1rem;
+  }
+  /* MAP */
+  .map {
+    max-width: 80rem;
+    height: auto;
+  }
+  .marker {
+    height: 3rem;
+    width: 3rem;
+  }
+  .marker-inside {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+  .info {
+    width: 19rem;
+    padding: 1.2rem;
+  }
+  .info-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .info-text {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .info-cover {
+    width: 2.6rem;
+  }
+  .info-arabia {
+    top: 69%;
+    left: 74.5%;
+  }
+  .info-persia {
+    top: 30%;
+    left: 73%;
+  }
+  .info-caribbean {
+    top: 43%;
+    left: 25%;
+  }
+  .info-sahara {
+    top: 66%;
+    left: 37%;
+  }
+  .info-colorado {
+    top: 27%;
+    left: 6.5%;
+  }
+  .info-svalbard {
+    top: 7%;
+    left: 30%;
+  }
+  .info-germany {
+    top: unset;
+    bottom: 53%;
+    left: 54%;
+  }
+  /* BOOK PAGES */
+  .wrapper--bookpage {
+    height: 90rem;
+  }
+  .books-container--bookpage {
+    grid-auto-columns: 76rem;
+    /* gap: 4rem; */
+  }
+  .book-item--bookpage {
+    padding: 3.2rem;
+  }
+  .book-img--bookpage {
+    width: 16rem;
+    height: 24rem;
+  }
+  .book-text p,
+  .book-stats {
+    font-size: 1.6rem;
+  }
+  .book-stats,
+  .book-text {
+    padding: 1.2rem 2.4rem 1.2rem 2.4rem;
+  }
+  .btn--bookpage .btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1.2rem 2.4rem;
+  }
+  .btn--bookpage {
+    gap: 6rem;
+  }
+}
+
+/***********************************/
+/* BELOW 1008px (Small Laptops) */
+/***********************************/
+
+@media (max-width: 63em) {
+  /* HEADER */
+  .main-nav {
+    display: none;
+  }
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+  /* FEATURES */
+  .feature-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    padding: 1.2rem;
+  }
+  /* QUOTES */
+  .quotes-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    margin: 0 4rem;
+  }
+  .quotes-item {
+    gap: 3rem;
+  }
+  .quote-text {
+    font-size: 1.6rem;
+  }
+  .quote-character,
+  .quote-book {
+    font-size: 1.2rem;
+  }
+  .quotes-item-left {
+    order: 1;
+  }
+  .quotes-item-right {
+    order: 2;
+  }
+}
+
+/***********************************/
+/* BELOW 864px (Tablets) */
+/***********************************/
+
+@media (max-width: 54em) {
+  /* BOOKS */
+  .wrapper {
+    max-width: 36rem;
+  }
+  /* FEATURES */
+  .grid--features {
+    column-gap: 4rem;
+    padding: 0rem;
+  }
+  .feature-icon {
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+  }
+  /* QUOTES */
+  .container-quotes {
+    padding: 0 1rem;
+  }
+  .quotes-gallery {
+    gap: 2rem;
+    margin: 0 1rem;
+  }
+  .quotes-item {
+    gap: 1rem;
+  }
+  .quote {
+    padding: 1rem;
+  }
+  .quote-text {
+    font-size: 1.6rem;
+  }
+  .quote-character,
+  .quote-book {
+    font-size: 1.2rem;
+  }
+  /* FLIPCARDS */
+  .flipcard-img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  .flipcard-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 6rem;
+  }
+  .flipcard-container {
+    width: 36rem;
+    height: 66rem;
+  }
+  .flipcard-text {
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+  .flipcard-character,
+  .flipcard-book {
+    font-size: 1.6rem;
+  }
+  /* MAP */
+  .map {
+    max-width: 60rem;
+    height: auto;
+  }
+  .marker {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+  .marker-inside {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .info-arabia {
+    top: unset;
+    bottom: 25%;
+    left: 37.5%;
+  }
+  .info-persia {
+    top: unset;
+    bottom: 40%;
+    left: 67%;
+  }
+  .info-caribbean {
+    top: unset;
+    bottom: 28%;
+    left: 25%;
+  }
+  .info-sahara {
+    top: unset;
+    bottom: 28%;
+    left: 29.5%;
+  }
+  .info-colorado {
+    top: unset;
+    bottom: 41%;
+    left: 6.5%;
+  }
+  .info-svalbard {
+    top: 6.5%;
+    left: 21.5%;
+  }
+  .info-germany {
+    bottom: 45%;
+    left: 21.5%;
+  }
+  /* FOOTER */
+  .footer-nav-col {
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+  }
+  /* BOOK PAGES */
+  .wrapper--bookpage {
+    max-width: 60rem;
+    height: 140rem;
+  }
+  .books-container--bookpage {
+    grid-auto-columns: 60rem;
+    /* gap: 4rem; */
+  }
+  .book-item--bookpage {
+    padding: 3.2rem;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 2fr 4fr 1fr 1fr; */
+  }
+  .book-img--bookpage {
+    width: 16rem;
+    height: 24rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .btn--bookpage {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .book-text,
+  .book-stats {
+    text-align: center;
+  }
+}
+
+/***********************************/
+/* BELOW 656px (Small Tablets) */
+/***********************************/
+
+@media (max-width: 41em) {
+  /* HEADER */
+  .header {
+    padding: 0 2.4rem;
+  }
+  .logo {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+  /* HERO */
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .section-hero {
+    padding: 4.8rem 0 4.8rem 0;
+  }
+  /* BOOKS */
+  .section-books {
+    padding: 4.8rem 0 0 0;
+  }
+  /* FEATURES */
+  .wrapper--bookpage {
+    max-width: 42rem;
+    height: 142rem;
+  }
+  .books-container--bookpage {
+    grid-auto-columns: 42rem;
+  }
+  .grid--features {
+    margin: 0 4rem;
+    column-gap: 2rem;
+  }
+  .feature-title {
+    font-size: 1.8rem;
+  }
+  .feature-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  .section-features {
+    padding: 4.8rem 0;
+  }
+  /* AUTHOR */
+  .section-author {
+    padding: 4.8rem 0;
+  }
+  .heading-secondary {
+    font-size: 3rem;
+    margin-bottom: 4.8rem;
+  }
+  .subheading {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+  .author-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .author-text {
+    font-size: 1.6rem;
+  }
+  /* QUOTES */
+  .section-quotes {
+    padding: 4.8rem 0;
+  }
+  .quotes-item {
+    /* grid-template-columns: repeat(1, 1fr); */
+    display: flex;
+    flex-direction: column;
+  }
+  .quotes-item a {
+    order: 1;
+  }
+  .quotes-item .quote {
+    order: 2;
+  }
+  .quotes-item a,
+  .quotes-item .quote {
+    width: 30rem;
+    height: 30rem;
+  }
+  /* MAP */
+  .section-map {
+    padding: 4.8rem 0;
+  }
+  .map {
+    max-width: 30rem;
+  }
+  .info-arabia,
+  .info-persia,
+  .info-caribbean,
+  .info-sahara,
+  .info-colorado,
+  .info-svalbard,
+  .info-germany {
+    top: 5%;
+    left: unset;
+    bottom: unset;
+    right: 5%;
+  }
+  /* FOOTER */
+  .footer-link .social-icon {
+    height: 2rem;
+    /* width: 2rem; */
+  }
+  .footer-heading,
+  .footer-link:link,
+  .footer-link:visited,
+  .footer-copyright {
+    font-size: 1.2rem;
+  }
+  .footer-logo {
+    padding: 1rem;
+  }
+  .grid--footer {
+    grid-template-columns: 1fr 6fr 8fr 4fr;
+    gap: 1rem;
+  }
+  .footer-mail-col,
+  .footer-nav-col {
+    padding: 1rem;
+  }
+  .footer-mail-col .footer-heading {
+    margin-bottom: 1rem;
+  }
+  .footer-copyright {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+/***********************************/
+/* BELOW 416px (Phones) */
+/***********************************/
+
+@media (max-width: 26em) {
+  /* HERO */
+  .hero {
+    padding: 0 1.6rem;
+  }
+  .heading-primary {
+    font-size: 3rem;
+  }
+  .btn--hero {
+    gap: 2rem;
+  }
+  .btn:link,
+  .btn:visited {
+    font-size: 1.8rem;
+  }
+  /* BOOKS */
+  .wrapper {
+    max-width: 24rem;
+  }
+  .books-container {
+    grid-auto-columns: 24rem;
+  }
+  .book-item {
+    width: 24rem;
+    height: 36rem;
+  }
+  .book-img {
+    width: 16rem;
+    height: 24rem;
+  }
+
+  /* FEATURES */
+  .grid--features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  /* AUTHOR */
+  .author-text-box {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .author-text {
+    font-size: 1.2rem;
+  }
+  /* MAP */
+  .container-map {
+    padding: 0 1.6rem;
+  }
+
+  /* FLIPCARDS */
+  .flipcard-container {
+    width: 25rem;
+    height: 50rem;
+  }
+  .flipcard-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .flipcard-character,
+  .flipcard-book {
+    font-size: 1.2rem;
+  }
+  /* FOOTER */
+  .grid--footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+  }
+  .footer-mail-col {
+    grid-column: 2 / -1;
+  }
+  .footer-nav-col {
+    grid-column: 1 / 3;
+    flex-direction: row;
+  }
+  .footer-logo {
+    padding: 0;
+  }
+  .footer-mail-col,
+  .footer-nav-col {
+    padding: 0;
+  }
+  /* BOOKPAGE */
+  .wrapper--bookpage {
+    max-width: 34rem;
+    height: 152rem;
+  }
+  .books-container--bookpage {
+    grid-auto-columns: 34rem;
+  }
+  .book-item--bookpage {
+    padding: 1.6rem;
+    /* grid-template-rows: 2fr 5fr 1fr 1fr; */
+  }
+  .section-book {
+    padding: 4.8rem 0;
+  }
+}
+
+/*
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

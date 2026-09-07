@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Raphael L. Renard ist ein Autor von modernen Abenteuerromanen für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Norderns!"
+    />
+
+    <link rel="icon" href="img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/books.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/abenteurer.js"></script>
+
+    <script defer src="js/overall.js"></script>
+
+    <title>Raphael L. Renard &mdash; Der Abenteurer</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          sizes="(max-width: 41em) 48px,
+                        70px"
+          class="logo"
+          alt="Raphael L. Renard logo"
+          src="img/logo/rl_logo.avif"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="../index.html#author">Autor</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="../index.html#impressions"
+              >Impressionen</a
+            >
+          </li>
+          <li><a class="main-nav-link" href="../index.html#map">Orte</a></li>
+          <li class="main-nav-link books-button nav-cta">Romane</li>
+        </ul>
+        <div class="nav-books hidden">
+          <ul class="nav-books-list">
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="abenteurer.html"
+                >Der Abenteurer</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="festung.html">Die Festung</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="proverbs.html"
+                >101 German Proverbs</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="oftheworld.html"
+                >"Of the world" Series</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="btn-mobile-nav" aria-label="menu button">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="nav-mobile">
+        <ul class="nav-mobile-list">
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="festung.html">Die Festung</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="proverbs.html"
+              >101 German Proverbs</a
+            >
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="oftheworld.html"
+              >"Of the world" Series</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECTION BOOKS -->
+      <section class="section-book">
+        <img
+          srcset="
+            img/books_background/background_da_panorama_mobile.avif 1300w,
+            img/books_background/background_da_panorama.avif        4000w
+          "
+          sizes="(max-width: 41em) 1300px,
+                      4000px"
+          class="background-img background-img-da"
+          src="img/books_background/background_da_panorama.avif"
+          alt="text"
+          style="object-fit: cover"
+        />
+        <span class="subheading heading-background center-text"
+          >Der Abenteurer</span
+        >
+        <h2 class="heading-secondary heading-background center-text">
+          Auf der Suche nach der Wahrheit
+        </h2>
+        <div class="wrapper--bookpage">
+          <div class="books-container--bookpage">
+            <!-- Der Abenteurer - Band 1 - Alte Bekannte -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B08BZXHNH5?notRedirectToSDP=1&ref_=dbs_mng_calw_0&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer1_320.avif 320w,
+                    img/cover/cover_abenteurer1.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer1.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Alte Bekannte - roter Stetson"
+                  draggable="false"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band I - Alte Bekannte</h3>
+                <p class="strong">Sahara, Herbst 1887:</p>
+                <p>
+                  Einsam und verlassen, inmitten der größten Wüste der Welt. An
+                  Händen und Füßen gut verschnürt, meiner Habe beraubt und dem
+                  Tode überlassen...
+                </p>
+                <p>
+                  Was wie das Ende meiner Reise klingen mag, ist in Wahrheit der
+                  Anfang.
+                </p>
+                <p>
+                  Ohne es zu ahnen, geriet ich zwischen Räuberkarawanen,
+                  heimtückische Verräter und skrupellose Verbrecherbanden.
+                </p>
+                <p>
+                  Und auch wenn ich auf meinem Weg ebenfalls treue Gefährten
+                  fand, waren auch diese von Mysterien und Geheimnissen umgeben,
+                  die es für mich nach und nach zu ergründen galt, um letztlich
+                  die wahren Ausmaße dieses Abenteuers begreifen zu lernen.
+                  Dieses Abenteuers, welches hiermit erst seinen Anfang fand.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 335
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 28. Juni 2020
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/Abenteurer-Bekannte-Raphael-L-Renard-ebook/dp/B08BZXHNH5/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=154O4YND3U9YW&keywords=raphael+l+renard&qid=1698834035&s=digital-text&sprefix=raphael+l+renar%2Cdigital-text%2C96&sr=1-3"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 2 - Faradisi -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B08KPFDHPP?notRedirectToSDP=1&ref_=dbs_mng_calw_1&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer2_320.avif 320w,
+                    img/cover/cover_abenteurer2.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer2.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Faradisi - oranger Stetson"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band II - Faradisi</h3>
+                <p class="strong">Persien, Herbst 1887:</p>
+                <p>
+                  Wieder mit meinen Gefährten vereint, war es uns gelungen, eine
+                  Bande heimtückischer Räuber zu bezwingen. Noch konnte ich
+                  jedoch nicht wissen, mit welch weitaus gefährlicheren
+                  Verbrechern wir durch unsere Taten aneinandergeraten würden.
+                </p>
+                <p>
+                  All die Geheimnisse meiner Begleiter, all die Mysterien, denen
+                  ich nach und nach auf den Grund ging. Alles führte mich zu ein
+                  und demselben Ort: Faradisi.
+                </p>
+                <p>
+                  In einem Wettlauf mit der Zeit galt es, eine Stadt von
+                  ungeheurer Wichtigkeit zu retten und ihr Volk vor einem
+                  schrecklichen Schicksal zu bewahren.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 333
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 3. Oktober 2020
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B08KPFDHPP?ref_=dbs_p_pwh_rwt_anx_cl_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 3 - Gegen den Sand -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B08R7V3TNN?notRedirectToSDP=1&ref_=dbs_mng_calw_2&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer3_320.avif 320w,
+                    img/cover/cover_abenteurer3.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer3.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Gegen den Sand - gelber Lasso"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band III - Gegen den Sand</h3>
+                <p class="strong">Arabien, Winter 1887:</p>
+                <p>
+                  Von meinen treuen Gefährten getrennt, begab ich mich gemeinsam
+                  mit einem neuen Begleiter auf eine Spur, die uns mitten in die
+                  Arabischen Wüste führte.
+                </p>
+                <p>
+                  Nun sollte sich zeigen, wie gut ich das einstige Greenhorn
+                  hinter mir gelassen hatte und auf die bevorstehenden
+                  Herausforderungen vorbereitet war.
+                </p>
+                <p>
+                  Doch neben neuen Feinden sollten wir auch auf alte Bekannte
+                  treffen und mussten einsehen, dass wir bereits zu tief in die
+                  bisherigen Geschehnisse verwickelt waren.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 343
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 23. Dezember
+                  2020
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B08R7V3TNN?ref_=dbs_p_pwh_rwt_anx_cl_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 4 - Der Pakt -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B0BHRGJHPM?notRedirectToSDP=1&ref_=dbs_mng_calw_3&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer4_320.avif 320w,
+                    img/cover/cover_abenteurer4.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer4.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Der Pakt - grünes Fernrohr"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band IV - Der Pakt</h3>
+                <p class="strong">Isfahan, Frühjahr 1888:</p>
+                <p>
+                  All meiner Erfahrung zum Trotz hatte ich meine Gegenspieler
+                  unterschätzt und war ihnen blindlings in die Falle gelaufen.
+                </p>
+                <p>
+                  Mein Leben lag in ihrer Hand und sie würden nicht zögern, mich
+                  geradewegs meinem Ende entgegenzuführen.
+                </p>
+                <p>
+                  Nicht nur musste ich einen Weg finden, mich zu befreien und
+                  mein Leben zu retten. Auch lag es an mir, die wenigen Mutigen,
+                  die bereit waren, sich gegen die größte Verbrecherbande des
+                  Orients zu erheben, in einem unwahrscheinlichen Pakt
+                  zusammenzuführen, der über unser aller Schicksal entscheiden
+                  sollte.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 355
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 8. Oktober 2022
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B0BHRGJHPM?ref_=dbs_p_pwh_rwt_anx_cl_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 5 - Fünf gegen fünf -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B0BXXMJJSH?notRedirectToSDP=1&ref_=dbs_mng_calw_4&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer5_320.avif 320w,
+                    img/cover/cover_abenteurer5.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer5.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Fünf gegen fünf - blauer Säbel"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band V - Fünf gegen fünf</h3>
+                <p class="strong">Colorado Springs, Frühjahr 1889:</p>
+                <p>
+                  Es war mir gelungen, ehemalige Feinde im Kampfe zu vereinen,
+                  um in einer blutigen Schlacht einen Sieg zu erringen. Doch der
+                  Triumph hatte schwere Opfer gefordert.
+                </p>
+                <p>
+                  Enttäuscht und erschöpft war ich in die Staaten zurückgekehrt,
+                  um ein neues Leben zu beginnen.
+                </p>
+                <p>
+                  Doch die Geister der Vergangenheit holten mich schneller ein,
+                  als mir lieb sein konnte. Hin- und hergerissen zwischen
+                  langjährigen Gefährten und neuen Banden trat ich eine Reise
+                  an, die bereits viele Jahre zuvor ihren wahren Anfang genommen
+                  hatte.
+                </p>
+                <p>
+                  Ohne es zu ahnen, hatte ich das Ende meiner Suche nun beinahe
+                  erreicht.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 341
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 9. März 2023
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B0BXXMJJSH?ref_=dbs_p_pwh_rwt_anx_cl_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+            <!-- Der Abenteurer - Band 6 - Die Wahrheit -->
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/gp/product/B0C3QXKC77?notRedirectToSDP=1&ref_=dbs_mng_calw_5&storeType=ebooks"
+                target="”_blank”"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_abenteurer6_320.avif 320w,
+                    img/cover/cover_abenteurer6.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_abenteurer6.avif"
+                  class="book-img--bookpage"
+                  alt="Buchcover - Der Abenteurer - Die Wahrheit - violettes Gewehr"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">Band VI - Die Wahrheit</h3>
+                <p class="strong">Orient, Frühjahr 1889:</p>
+                <p>
+                  Endlich hatte ich ihn gefunden! Den Mann, der mich einst dazu
+                  veranlasst hatte, meine Reise in den Orient anzutreten.
+                </p>
+                <p>
+                  Ich konnte ihm all die Fragen stellen, die seit Jahren auf
+                  meiner Seele brannten. Endlich konnte ich Licht uns Dunkle
+                  bringen. Frieden finden.
+                </p>
+                <p>
+                  Und doch musste ich einsehen, dass ich mein Ziel noch immer
+                  nicht erreicht hatte. Einen letzten Weg galt es noch zu gehen,
+                  um mich von den Fängen der Vergangenheit zu lösen und
+                  letztlich wahrlich frei zu sein.
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Sprache:</span> Deutsch
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Seiten:</span> 367
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Erscheinungsdatum:</span> 27. April 2023
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/gp/product/B0C3QXKC77?ref_=dbs_p_pwh_rwt_anx_cl_1&storeType=ebooks"
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Jetzt kaufen!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Mehr erfahren &darr;</a
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn-carousel--bookpage btn--left hidden"
+            id="btn--left"
+            aria-label="carousel button left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon--bookpage"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-carousel--bookpage btn--right"
+            id="btn--right"
+            aria-label="carousel button right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon--bookpage"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECTION FEATURES -->
+      <section class="section-features" id="features">
+        <div class="container grid--features">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="bonfire-outline"></ion-icon>
+            <p class="feature-title">Epische Reise!</p>
+            <p class="feature-text">
+              Vom mächtigen Hafen Kairos, <br />durch die Wüsten Arabiens
+              <br />bis in die Schluchten Persiens.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="people-outline"></ion-icon>
+            <p class="feature-title">Tapfere Gefährten!</p>
+            <p class="feature-text">
+              Freund oder Feind? In einer Zeit, <br />in der an jeder Ecke
+              Gefahren lauern, brauchst du zuverlässige Gefährten.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="help-outline"></ion-icon>
+            <p class="feature-title">Mysteriöse Begegnungen!</p>
+            <p class="feature-text">
+              Jeder Mensch hat Geheimnisse. <br />Gehe ihnen auf den Grund,
+              bevor sie dein Verderben bedeuten!
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon
+              class="feature-icon"
+              name="color-filter-outline"
+            ></ion-icon>
+            <p class="feature-title">Für Jung & Alt!</p>
+            <p class="feature-text">
+              Die Geschichten, die das Leben schreibt, kennen kein Alter und
+              keine Nation. Sie sind für jeden da.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid--footer">
+        <div class="footer-logo-col">
+          <a href="index.html" class="footer-logo">
+            <img
+              class="logo"
+              alt="Omnifood logo"
+              src="img/logo/rl_logo.avif"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="footer-mail-col">
+          <p class="footer-heading">Kontakt</p>
+          <a class="footer-link" href="mailto:raphaellrenard108@gmail.com"
+            >raphaellrenard108@gmail.com</a
+          >
+        </div>
+        <div class="footer-nav-col">
+          <div>
+            <a href="impressum.html" class="footer-link"
+              ><p class="footer-heading">Impressum</p></a
+            >
+          </div>
+          <div>
+            <a href="datasecurity.html" class="footer-link"
+              ><p class="footer-heading">Datenschutz</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-sociallinks">
+          <ul class="social-link">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/raphaellrenard/?hl=en"
+                target="_blank"
+                name="logo-instagram"
+                alt="instagram logo"
+                aria-label="Visit the Instagram Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-instagram"
+                  alt="instagram logo"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+                target="_blank"
+                name="logo-amazon"
+                alt="amazon logo"
+                aria-label="Visit the Amazon Author Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-amazon"
+                  alt="amazon logo"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="copyright">
+            Copyright &copy;
+            <span class="year"
+              ><script>
+                document.write(new Date().getFullYear());
+              </script></span
+            >
+            by Raphael L. Renard
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

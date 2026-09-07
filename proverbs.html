@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Raphael L. Renard ist ein Autor von modernen Abenteuerromanen für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Norderns!"
+    />
+
+    <link rel="icon" href="img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/books.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- <script defer src="js/abenteurer.js"></script> -->
+
+    <script defer src="js/overall.js"></script>
+
+    <title>Raphael L. Renard &mdash; 101 German Proverbs</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          sizes="(max-width: 41em) 48px,
+                          70px"
+          class="logo"
+          alt="Raphael L. Renard logo"
+          src="img/logo/rl_logo.avif"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#author">Autor</a></li>
+          <li>
+            <a class="main-nav-link" href="#impressions">Impressionen</a>
+          </li>
+          <li><a class="main-nav-link" href="#map">Orte</a></li>
+          <li class="main-nav-link books-button nav-cta">Romane</li>
+        </ul>
+        <div class="nav-books hidden">
+          <ul class="nav-books-list">
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="abenteurer.html"
+                >Der Abenteurer</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="festung.html">Die Festung</a>
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="proverbs.html"
+                >101 German Proverbs</a
+              >
+            </li>
+            <li class="nav-books-item">
+              <a class="nav-books-link" href="oftheworld.html"
+                >"Of the world" Series</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="btn-mobile-nav" aria-label="menu button">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="nav-mobile">
+        <ul class="nav-mobile-list">
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="festung.html">Die Festung</a>
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="proverbs.html"
+              >101 German Proverbs</a
+            >
+          </li>
+          <li class="nav-mobile-item">
+            <a class="nav-mobile-link" href="oftheworld.html"
+              >"Of the world" Series</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-book">
+        <img
+          srcset="
+            img/books_background/background_proverb_panorama_mobile.avif 1300w,
+            img/books_background/background_proverb_panorama.avif        4000w
+          "
+          sizes="(max-width: 41em) 1300px,
+                      4000px"
+          class="background-img background-img-light"
+          src="img/books_background/background_proverb_panorama.avif"
+          alt="text"
+          style="object-fit: cover"
+        />
+        <span class="subheading heading-background center-text"
+          >101 German Proverbs</span
+        >
+        <h2 class="heading-secondary heading-background center-text">
+          Learn about the meaning and origin of German proverbs!
+        </h2>
+        <div class="wrapper--bookpage">
+          <div class="books-container--bookpage">
+            <!-- APT - only item -->
+
+            <div class="book-item--bookpage">
+              <a
+                href="https://www.amazon.de/101-German-idioms-proverbs-translation-ebook/dp/B0B1966B8J/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+                target="_blank"
+              >
+                <img
+                  srcset="
+                    img/cover/cover_germanproverbs_320.avif 320w,
+                    img/cover/cover_germanproverbs.avif     480w
+                  "
+                  sizes="(max-width: 79em) 320px,
+                      480px"
+                  src="img/cover/cover_germanproverbs.avif"
+                  class="book-img--bookpage"
+                  alt="Bookcover - 101 German proverbs - violet background"
+                  draggable="false"
+              /></a>
+              <div class="book-text">
+                <h3 class="heading-tertiary">101 German Idioms & Proverbs</h3>
+                <p>
+                  You are studying the German language but haven't caught up yet
+                  to all the strange proverbs native speakers are using?
+                </p>
+                <p>
+                  You want to know the German versions of the English idioms
+                  you're used to?
+                </p>
+                <p>
+                  You are interested in the origin of strange phrases like "I
+                  think my pig is whistling"?
+                </p>
+                <p>You want to learn more about German culture?</p>
+                <p>
+                  You are looking for a nice gift for a language enthusiast, a
+                  world traveler oder even a German (learning) friend?
+                </p>
+                <p>
+                  Dive into wild and funny stories from ancient times up to the
+                  20th century and learn to master the German language as well
+                  as it's weird and surprisingly captivating idioms and
+                  proverbs!
+                </p>
+              </div>
+              <ul class="book-stats">
+                <li class="book-stat">
+                  <span class="strong">Language:</span> English
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Pages:</span> 107
+                </li>
+                <li class="book-stat">
+                  <span class="strong">Publication date:</span> May 13th 2022
+                </li>
+              </ul>
+              <div class="btn--bookpage">
+                <a
+                  href="https://www.amazon.de/101-German-idioms-proverbs-translation-ebook/dp/B0B1966B8J/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+                  class="btn btn--full-bookpage"
+                  target="_blank"
+                  >Buy Now!</a
+                >
+                <a href="#features" class="btn btn--outline hidden"
+                  >Learn more &darr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION FEATURES -->
+      <section class="section-features" id="features">
+        <div class="container grid--features">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="text-outline"></ion-icon>
+            <p class="feature-title">Literal translation!</p>
+            <p class="feature-text">
+              In Germany pigs whistle and people think they spider.
+              Understandably this makes the dog go crazy in the pan!
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="bulb-outline"></ion-icon>
+            <p class="feature-title">Actual meaning!</p>
+            <p class="feature-text">
+              Dive deeper into the German language and speak like a native!
+              These proverbs are commenly used in day by day conversation.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon
+              class="feature-icon"
+              name="finger-print-outline"
+            ></ion-icon>
+            <p class="feature-title">Fascinating origin!</p>
+            <p class="feature-text">
+              Learn about interesting historical facts and surprising stories
+              surrounding German lore und strange coincidences.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="trail-sign-outline"></ion-icon>
+            <p class="feature-title">Helpful icons!</p>
+            <p class="feature-text">
+              This book comes in a simple and clear design, focussing on helping
+              you learn and remember.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid--footer">
+        <div class="footer-logo-col">
+          <a href="index.html" class="footer-logo">
+            <img
+              srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+              sizes="(max-width: 41em) 48px,
+                          70px"
+              class="logo"
+              alt="Omnifood logo"
+              src="img/logo/rl_logo.avif"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="footer-mail-col">
+          <p class="footer-heading">Kontakt</p>
+          <a class="footer-link" href="mailto:raphaellrenard108@gmail.com"
+            >raphaellrenard108@gmail.com</a
+          >
+        </div>
+        <div class="footer-nav-col">
+          <div>
+            <a href="impressum.html" class="footer-link"
+              ><p class="footer-heading">Impressum</p></a
+            >
+          </div>
+          <div>
+            <a href="datasecurity.html" class="footer-link"
+              ><p class="footer-heading">Datenschutz</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-sociallinks">
+          <ul class="social-link">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/raphaellrenard/?hl=en"
+                target="_blank"
+                name="logo-instagram"
+                alt="instagram logo"
+                aria-label="Visit the Instagram Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-instagram"
+                  alt="instagram logo"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
+                target="_blank"
+                name="logo-amazon"
+                alt="amazon logo"
+                aria-label="Visit the Amazon Author Account of Raphael L. Renard"
+                ><ion-icon
+                  class="social-icon"
+                  name="logo-amazon"
+                  alt="amazon logo"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="copyright">
+            Copyright &copy;
+            <span class="year"
+              ><script>
+                document.write(new Date().getFullYear());
+              </script></span
+            >
+            by Raphael L. Renard
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
