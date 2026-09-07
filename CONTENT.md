@@ -3,6 +3,15 @@
 Source: repo root HTML (German, migrated from Hostinger). EN column pre-filled only where `contend.md` (private project folder) already holds English copy; everything else is translation TODO.
 
 > Note: header/footer are structurally identical on all pages; only the active-nav marker differs per page.
+>
+> ## Language decision (2026-09-07, supersedes the /de/ plan)
+> German stays at root (main market reads everything; URLs stable). English is
+> a curated `/en/` section, NOT a 1:1 mirror: `/en/index.html` (bio + English
+> books + German-books teaser) links to the shared English book pages
+> (`apt.html`, `proverbs.html`, `oftheworld.html` — already English on the live
+> site, proofread 2026-09-07). Empty EN cells for German-only book pages are
+> intentionally untranslated. `.de` redirects to root until expiry (Nov 2026),
+> then dies.
 
 ## Global chrome (header/nav/footer — identical on all pages)
 

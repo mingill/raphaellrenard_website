@@ -36,3 +36,28 @@ const showMobileNav = function () {
 };
 
 navButton.addEventListener("click", showMobileNav);
+
+// ************************************* //
+// ************************************* //
+// LANGUAGE SWITCHER - REMEMBER CHOICE
+// ************************************* //
+// ************************************* //
+// No auto-redirect: if the stored language differs from the current page,
+// gently pulse the switcher as a hint. Choice is stored on click.
+
+try {
+  const storedLang = localStorage.getItem("rl-lang");
+  const pageLang = document.documentElement.lang;
+  if (storedLang && storedLang !== pageLang) {
+    document
+      .querySelectorAll(".lang-switch")
+      .forEach((el) => el.classList.add("lang-hint"));
+  }
+  document.querySelectorAll(".lang-link").forEach((a) =>
+    a.addEventListener("click", () => {
+      try {
+        localStorage.setItem("rl-lang", a.dataset.lang);
+      } catch (e) {}
+    })
+  );
+} catch (e) {}

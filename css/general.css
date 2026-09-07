@@ -691,3 +691,46 @@ strong {
 .hidden {
   display: none !important;
 }
+
+/***************************/
+/** LANGUAGE SWITCHER ******/
+/***************************/
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.lang-link:link,
+.lang-link:visited {
+  text-decoration: none;
+  color: var(--text-color-dark);
+  transition: all 0.3s;
+}
+
+.lang-link:hover,
+.lang-link:active {
+  color: var(--main-color);
+}
+
+.lang-active {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.lang-sep {
+  opacity: 0.35;
+}
+
+.lang-hint {
+  animation: langPulse 1.2s ease-in-out 3;
+}
+
+@keyframes langPulse {
+  50% {
+    transform: scale(1.2);
+  }
+}
