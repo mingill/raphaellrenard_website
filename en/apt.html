@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Raphael L. Renard schreibt moderne Abenteuerromane für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Nordens!"
+      content="Raphael L. Renard writes modern adventure novels for young readers and adults. Let yourself be carried away to the vast Orient, the rough seas of the Caribbean or the icy tundra of the North!"
     />
 
-    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/proverbs.html" />
-    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/proverbs.html" />
-    <link rel="icon" href="img/logo/favicon.png" />
-    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/apt.html" />
+    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/apt.html" />
+    <link rel="icon" href="../img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="../img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
 
-    <link rel="stylesheet" href="css/books.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/queries.css" />
-    <link rel="stylesheet" href="css/saga.css" />
+    <link rel="stylesheet" href="../css/books.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="../css/saga.css" />
 
     <script
       type="module"
@@ -28,46 +28,42 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <script defer src="../js/overall.js"></script>
+    <script defer src="../js/saga.js"></script>
 
-    <!-- <script defer src="js/abenteurer.js"></script> -->
-
-    <script defer src="js/saga.js"></script>
-
-    <script defer src="js/overall.js"></script>
-
-    <title>Raphael L. Renard &mdash; 101 German Proverbs</title>
+    <title>Raphael L. Renard &mdash; A Pirate's Tale</title>
   </head>
 
-  <body class="accent-violet">
+  <body class="accent-jungle">
     <header class="header">
       <a href="index.html">
         <img
-          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          srcset="../img/logo/rl_logo_96.avif 48w, ../img/logo/rl_logo.avif 70w"
           sizes="(max-width: 41em) 48px,
                           70px"
           class="logo"
           alt="Raphael L. Renard logo"
-          src="img/logo/rl_logo.avif"
+          src="../img/logo/rl_logo.avif"
         />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="index.html#author">Autor</a></li>
+          <li><a class="main-nav-link" href="../index.html#author">Autor</a></li>
           <li>
-            <a class="main-nav-link" href="index.html#impressions">Impressionen</a>
+            <a class="main-nav-link" href="../index.html#impressions">Impressionen</a>
           </li>
-          <li><a class="main-nav-link" href="index.html#map">Orte</a></li>
+          <li><a class="main-nav-link" href="../index.html#map">Orte</a></li>
           <li class="main-nav-link books-button nav-cta">Romane</li>
           <li class="lang-switch">
-            <span class="lang-active">DE</span>
+            <a class="lang-link" data-lang="de" href="../apt.html">DE</a>
             <span class="lang-sep">|</span>
-            <a class="lang-link" data-lang="en" href="en/proverbs.html">EN</a>
+            <span class="lang-active">EN</span>
           </li>
         </ul>
         <div class="nav-books hidden">
           <ul class="nav-books-list">
             <li class="nav-books-item">
-              <a class="nav-books-link" href="abenteurer.html"
+              <a class="nav-books-link" href="../abenteurer.html"
                 >Der Abenteurer</a
               >
             </li>
@@ -75,7 +71,7 @@
               <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
             </li>
             <li class="nav-books-item">
-              <a class="nav-books-link" href="festung.html">Die Festung</a>
+              <a class="nav-books-link" href="../festung.html">Die Festung</a>
             </li>
             <li class="nav-books-item">
               <a class="nav-books-link" href="proverbs.html"
@@ -99,13 +95,13 @@
       <div class="nav-mobile">
         <ul class="nav-mobile-list">
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+            <a class="nav-mobile-link" href="../abenteurer.html">Der Abenteurer</a>
           </li>
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="festung.html">Die Festung</a>
+            <a class="nav-mobile-link" href="../festung.html">Die Festung</a>
           </li>
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="proverbs.html"
@@ -118,7 +114,7 @@
             >
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="en/proverbs.html">English</a>
+            <a class="nav-mobile-link" href="../apt.html">Deutsch</a>
           </li>
         </ul>
       </div>
@@ -128,21 +124,21 @@
       <section class="section-book">
         <img
           srcset="
-            img/books_background/background_proverb_panorama_mobile.avif 1300w,
-            img/books_background/background_proverb_panorama.avif        4000w
+            ../img/books_background/background_apt_panorama_mobile.avif 1300w,
+            ../img/books_background/background_apt_panorama.avif        4000w
           "
           sizes="(max-width: 41em) 1300px,
                       4000px"
-          class="background-img background-img-light"
-          src="img/books_background/background_proverb_panorama.avif"
-          alt="Panorama-Hintergrund zum Buch 101 German Proverbs"
+          class="background-img background-img-da"
+          src="../img/books_background/background_apt_panorama.avif"
+          alt="Panorama background — pirate ship with red sails off a Caribbean island"
           style="object-fit: cover"
         />
         <span class="subheading center-text"
-          >101 German Proverbs</span
+          >A Pirate's Tale</span
         >
         <h2 class="heading-secondary center-text">
-          Erfahre mehr über Bedeutung und Herkunft deutscher Sprichwörter!
+          16 characters on the hunt for the one true treasure!
         </h2>
         <div class="wrapper--bookpage">
           <div class="books-container--bookpage">
@@ -150,67 +146,63 @@
 
             <div class="book-item--bookpage">
               <a
-                href="https://www.amazon.de/101-German-idioms-proverbs-translation-ebook/dp/B0B1966B8J/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+                href="https://www.amazon.de/Pirates-Tale-English-Raphael-Renard-ebook/dp/B07ZBJL7XX"
                 target="_blank"
               >
                 <img
                   srcset="
-                    img/cover/cover_germanproverbs_320.avif 320w,
-                    img/cover/cover_germanproverbs.avif     480w
+                    ../img/cover/cover_apt_320.avif 320w,
+                    ../img/cover/cover_apt.avif     480w
                   "
                   sizes="(max-width: 79em) 320px,
                       480px"
-                  src="img/cover/cover_germanproverbs.avif"
+                  src="../img/cover/cover_apt.avif"
                   class="book-img--bookpage"
-                  alt="Buchcover - 101 German Proverbs - violetter Hintergrund"
+                  alt="Bookcover - A Pirate's Tale - pirate ship with red sails in front of a lush caribbean island"
                   draggable="false"
               /></a>
               <div class="book-text">
-                <h3 class="heading-tertiary">101 German Idioms & Proverbs</h3>
+                <h3 class="heading-tertiary">A Pirate's Tale</h3>
+                <p class="strong">Caribbean Sea, end of the 17th century</p>
                 <p>
-                  Du lernst Deutsch, aber die seltsamen Sprichwörter der
-                  Muttersprachler hast du noch nicht alle verstanden?
+                  Infamous Cap’n Roger hid away the greatest treasure of all
+                  Seven Seas on a secret island.
                 </p>
                 <p>
-                  Du möchtest wissen, wie die deutschen Versionen englischer
-                  Redewendungen lauten?
+                  17 years later, Roger’s island is finally found again by a
+                  pirate crew, closely tied to the events of the past. Following
+                  their dreams, they find themselves in a drama that only starts
+                  to unfold when a strange, young woman gets washed up on the
+                  beach.
                 </p>
                 <p>
-                  Dich interessiert die Herkunft seltsamer Ausdrücke wie
-                  "Ich glaub, mein Schwein pfeift"?
-                </p>
-                <p>Du möchtest mehr über die deutsche Kultur erfahren?</p>
-                <p>
-                  Du suchst ein schönes Geschenk für einen Sprachenfan, einen
-                  Weltreisenden oder einen deutschen (lernenden) Freund?
-                </p>
-                <p>
-                  Tauche ein in wilde und lustige Geschichten von der Antike bis
-                  ins 20. Jahrhundert und lerne, die deutsche Sprache ebenso zu
-                  beherrschen wie ihre schrägen und überraschend fesselnden
-                  Redewendungen und Sprichwörter!
+                  This tale follows the paths of scurrilous scoundrels, dutiful
+                  marines and a brave native tribe, each chapter told from a
+                  different point of view, tying together the pieces of old
+                  Cap’n Roger’s legacy.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Sprache:</span> Englisch
+                  <span class="strong">Language:</span> English
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Seiten:</span> 107
+                  <span class="strong">Pages:</span> 329
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Erscheinungsdatum:</span> 13. Mai 2022
+                  <span class="strong">Publication date:</span> October 26th
+                  2019
                 </li>
               </ul>
               <div class="btn--bookpage">
                 <a
-                  href="https://www.amazon.de/101-German-idioms-proverbs-translation-ebook/dp/B0B1966B8J/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr="
+                  href="https://www.amazon.de/Pirates-Tale-English-Raphael-Renard-ebook/dp/B07ZBJL7XX"
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Jetzt kaufen!</a
+                  >Buy Now!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Mehr erfahren &darr;</a
+                  >Learn more &darr;</a
                 >
               </div>
             </div>
@@ -222,39 +214,35 @@
       <section class="section-features" id="features">
         <div class="container grid--features">
           <div class="feature">
-            <ion-icon class="feature-icon" name="text-outline"></ion-icon>
-            <p class="feature-title">Wörtliche Übersetzung!</p>
+            <ion-icon class="feature-icon" name="skull-outline"></ion-icon>
+            <p class="feature-title">Blimey!</p>
             <p class="feature-text">
-              In Deutschland pfeifen Schweine und Leute meinen, sie spinnen.
-              Verständlich, dass da der Hund in der Pfanne verrückt wird!
+              Don't be a soddin' landlubber and pick up yer blunderbuss! Avast
+              ye or sink down to Davy Jones' Locker.
             </p>
           </div>
           <div class="feature">
-            <ion-icon class="feature-icon" name="bulb-outline"></ion-icon>
-            <p class="feature-title">Wahre Bedeutung!</p>
+            <ion-icon class="feature-icon" name="person-outline"></ion-icon>
+            <p class="feature-title">16 personalities!</p>
             <p class="feature-text">
-              Tauche tiefer ein in die deutsche Sprache und sprich wie ein
-              Muttersprachler! Diese Sprichwörter werden in Alltagsgesprächen
-              häufig verwendet.
+              The protagonists of this tale are based on personality typology
+              (e.g. Myers-Briggs Type Indicator). Yay, science!
             </p>
           </div>
           <div class="feature">
-            <ion-icon
-              class="feature-icon"
-              name="finger-print-outline"
-            ></ion-icon>
-            <p class="feature-title">Faszinierende Herkunft!</p>
+            <ion-icon class="feature-icon" name="eye-outline"></ion-icon>
+            <p class="feature-title">Multiple viewpoints!</p>
             <p class="feature-text">
-              Erfahre interessante historische Fakten und überraschende
-              Geschichten rund um deutsche Sagenwelt und seltsame Zufälle.
+              Who will make it to the end? There is no main character in this
+              novel:<br />There are 16!
             </p>
           </div>
           <div class="feature">
-            <ion-icon class="feature-icon" name="trail-sign-outline"></ion-icon>
-            <p class="feature-title">Hilfreiche Symbole!</p>
+            <ion-icon class="feature-icon" name="shuffle-outline"></ion-icon>
+            <p class="feature-title">It comes with a twist!</p>
             <p class="feature-text">
-              Dieses Buch kommt in schlichtem und klarem Design daher, das dir
-              beim Lernen und Merken hilft.
+              In the age of piracy, everyone had his or her secrets. Will you
+              reveal them before it is too late?
             </p>
           </div>
         </div>
@@ -266,12 +254,12 @@
         <div class="footer-logo-col">
           <a href="index.html" class="footer-logo">
             <img
-              srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+              srcset="../img/logo/rl_logo_96.avif 48w, ../img/logo/rl_logo.avif 70w"
               sizes="(max-width: 41em) 48px,
                           70px"
               class="logo"
               alt="Raphael L. Renard logo"
-              src="img/logo/rl_logo.avif"
+              src="../img/logo/rl_logo.avif"
               loading="lazy"
             />
           </a>
@@ -284,12 +272,12 @@
         </div>
         <div class="footer-nav-col">
           <div>
-            <a href="impressum.html" class="footer-link"
+            <a href="../impressum.html" class="footer-link"
               ><p class="footer-heading">Impressum</p></a
             >
           </div>
           <div>
-            <a href="datasecurity.html" class="footer-link"
+            <a href="../datasecurity.html" class="footer-link"
               ><p class="footer-heading">Datenschutz</p></a
             >
           </div>

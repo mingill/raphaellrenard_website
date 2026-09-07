@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Raphael L. Renard writes modern adventure novels for young readers and adults. Let yourself be carried away to the vast Orient, the rough seas of the Caribbean or the icy tundra of the North!"
+      content="Raphael L. Renard schreibt moderne Abenteuerromane für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Nordens!"
     />
 
-    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/oftheworld.html" />
+    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/oftheworld.html" />
+    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/oftheworld.html" />
     <link rel="icon" href="img/logo/favicon.png" />
     <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="css/books.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/saga.css" />
 
     <script
       type="module"
@@ -40,19 +28,17 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
 
     <script defer src="js/abenteurer.js"></script>
+
+    <script defer src="js/saga.js"></script>
 
     <script defer src="js/overall.js"></script>
 
     <title>Raphael L. Renard &mdash; Of the world!</title>
   </head>
 
-  <body>
+  <body class="accent-teal">
     <header class="header">
       <a href="index.html">
         <img
@@ -75,7 +61,7 @@
           <li class="lang-switch">
             <span class="lang-active">DE</span>
             <span class="lang-sep">|</span>
-            <a class="lang-link" data-lang="en" href="en/index.html">EN</a>
+            <a class="lang-link" data-lang="en" href="en/oftheworld.html">EN</a>
           </li>
         </ul>
         <div class="nav-books hidden">
@@ -132,7 +118,7 @@
             >
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="en/index.html">English</a>
+            <a class="nav-mobile-link" href="en/oftheworld.html">English</a>
           </li>
         </ul>
       </div>
@@ -149,14 +135,14 @@
                       4000px"
           class="background-img background-img-light"
           src="img/books_background/background_oftheworld_panorama.avif"
-          alt="Panorama background for the 'Of the world' book series"
+          alt="Panorama-Hintergrund zur Buchreihe 'Of the world'"
           style="object-fit: cover"
         />
-        <span class="subheading heading-background center-text"
+        <span class="subheading center-text"
           >"Of the world"-Series</span
         >
-        <h2 class="heading-secondary heading-background center-text">
-          Learn about the wonders of the world!
+        <h2 class="heading-secondary center-text">
+          Erfahre mehr über die Wunder der Welt!
         </h2>
         <div class="wrapper--bookpage">
           <div class="books-container--bookpage">
@@ -175,7 +161,7 @@
                       480px"
                   src="img/cover/cover_animalsoftheworld.avif"
                   class="book-img--bookpage"
-                  alt="Bookcover - Animals of the world - Fun Facts and Vivid Illustrations"
+                  alt="Buchcover - Animals of the world - Fun Facts und lebendige Illustrationen"
                   draggable="false"
                 />
               </a>
@@ -184,32 +170,32 @@
                   Animals of the world: Fun Facts & Vivid Illustrations
                 </h3>
                 <strong class="strong"
-                  ><p>Discover the Wonders of Our World</p></strong
+                  ><p>Entdecke die Wunder unserer Welt</p></strong
                 >
                 <p>
-                  Embark on an awe-inspiring journey through the vibrant
-                  tapestry of our planet's rich biodiversity with "Animals of
-                  the world". This captivating book is a treasure trove of
-                  fascinating wildlife encounters, fun facts, and stunning
-                  illustrations that will leave you enchanted and inspired.
+                  Begib dich mit „Animals of the World" auf eine faszinierende Reise
+                  durch die farbenfrohe Vielfalt unseres Planeten.
+                  Dieses Buch entführt dich in die Welt der Tiere –
+                  mit spannenden Begegnungen, überraschenden Fakten und atemberaubenden
+                  Illustrationen, die zum Staunen und Träumen einladen.
                 </p>
                 <p>
-                  <strong class="strong">Unveil the Diversity:</strong>
-                  <br />From the icy tundras of Canada to the lush rainforests
-                  of Brazil, and from the scorching deserts of Australia to the
-                  mystical landscapes of Japan – get ready to meet an incredible
-                  array of animals that call each country home.
+                  <strong class="strong">Vielfalt entdecken:</strong>
+                  <br />Von der eisigen Tundra Kanadas bis zu den üppigen Regenwäldern
+                  Brasiliens, von den glühenden Wüsten Australiens bis zu den
+                  mystischen Landschaften Japans – mach dich bereit für eine
+                  unglaubliche Vielfalt an Tieren, die jedes Land ihr Zuhause nennen.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Language:</span> English
+                  <span class="strong">Sprache:</span> Englisch
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Pages:</span> 196
+                  <span class="strong">Seiten:</span> 196
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Publication date:</span> July 21st 2023
+                  <span class="strong">Erscheinungsdatum:</span> 21. Juli 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
@@ -217,10 +203,10 @@
                   href="https://www.amazon.de/Animals-world-Facts-Vivid-Illustrations/dp/B0CCCX4Z5V/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Buy Now!</a
+                  >Jetzt kaufen!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Learn more &darr;</a
+                  >Mehr erfahren &darr;</a
                 >
               </div>
             </div>
@@ -240,7 +226,7 @@
                       480px"
                   src="img/cover/cover_plantsoftheworld.avif"
                   class="book-img--bookpage"
-                  alt="Bookcover - Plants of the world - Fun Facts and Vivid Illustrations"
+                  alt="Buchcover - Plants of the world - Fun Facts und lebendige Illustrationen"
                   draggable="false"
                   loading="lazy"
                 />
@@ -250,34 +236,33 @@
                   Plants of the world: Fun Facts & Vivid Illustrations
                 </h3>
                 <strong class="strong"
-                  ><p>Explore the Plants of Our World!</p></strong
+                  ><p>Erkunde die Pflanzen unserer Welt!</p></strong
                 >
                 <p>
-                  Embark on an awe-inspiring journey through the pages of
-                  "Plants of Our World," a captivating book celebrating the
-                  diverse flora that grace every corner of our globe. Delve into
-                  the enchanting world of plants as we take you on a botanical
-                  adventure like no other.
+                  Begib dich auf eine staunenswerte Reise durch die Seiten von
+                  "Plants of Our World", einem fesselnden Buch, das die vielfältige
+                  Flora feiert, die jeden Winkel unseres Globus schmückt. Tauche
+                  ein in die betörende Welt der Pflanzen und lass dich auf ein
+                  botanisches Abenteuer der besonderen Art entführen.
                 </p>
                 <p>
-                  <strong class="strong">Engaging Fun Facts:</strong> <br />Get
-                  ready to be entertained and enlightened! This book is brimming
-                  with captivating fun facts that will ignite curiosity and
-                  spark wonder in readers of all ages. Discover how the Venus
-                  flytrap tricks its prey, how the Rafflesia blooms as the
-                  world's largest flower, and how the ancient olive tree stands
-                  witness to millennia of history.
+                  <strong class="strong">Spannende Fun Facts:</strong> <br />Mach dich
+                  auf Unterhaltung und Erleuchtung gefasst! Dieses Buch strotzt vor
+                  fesselnden Fun Facts, die bei Lesern jeden Alters Neugier und
+                  Staunen wecken. Erfahre, wie die Venusfliegenfalle ihre Beute
+                  überlistet, wie die Rafflesie als größte Blume der Welt erblüht
+                  und wie der uralte Olivenbaum Jahrtausende Geschichte bezeugt.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Language:</span> English
+                  <span class="strong">Sprache:</span> Englisch
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Pages:</span> 196
+                  <span class="strong">Seiten:</span> 196
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Publication date:</span> July 25th 2023
+                  <span class="strong">Erscheinungsdatum:</span> 25. Juli 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
@@ -285,10 +270,10 @@
                   href="https://www.amazon.de/Plants-world-Facts-Vivid-Illustrations/dp/B0CCCQY9YD/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Buy Now!</a
+                  >Jetzt kaufen!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Learn more &darr;</a
+                  >Mehr erfahren &darr;</a
                 >
               </div>
             </div>
@@ -308,7 +293,7 @@
                       480px"
                   src="img/cover/cover_mysticalcreatures.avif"
                   class="book-img--bookpage"
-                  alt="Bookcover - Mythical Creatures - Fun Facts and Vivid Illustrations"
+                  alt="Buchcover - Mythical Creatures - Fun Facts und lebendige Illustrationen"
                   draggable="false"
                   loading="lazy"
                 />
@@ -319,33 +304,33 @@
                 </h3>
                 <strong class="strong"
                   ><p>
-                    A Captivating Journey into the World of Folklore
+                    Eine fesselnde Reise in die Welt der Sagen
                   </p></strong
                 >
                 <p>
-                  Discover the enchanting realm of mythical creatures from every
-                  corner of the world with this beautifully illustrated and
-                  informative book - "Mythical Creatures." Embark on an
-                  extraordinary adventure through ancient legends, folklore, and
-                  captivating tales that have stood the test of time.
+                  Entdecke das bezaubernde Reich der Fabelwesen aus allen Ecken
+                  der Welt mit diesem wunderschön illustrierten und informativen
+                  Buch — "Mythical Creatures". Begib dich auf ein außergewöhnliches
+                  Abenteuer durch uralte Legenden, Folklore und fesselnde
+                  Geschichten, die der Zeit standgehalten haben.
                 </p>
                 <p>
-                  <strong class="strong">A Visual Extravaganza:</strong>
-                  <br />Dive into a treasure trove of stunning illustrations
-                  that breathe life into these legendary beings. Let your
-                  imagination soar as you gaze upon majestic dragons, graceful
-                  unicorns, fierce griffins, and enigmatic phoenixes. Each page
-                  transports you to distant lands and unveils the diverse beauty
-                  of mythical creatures depicted in artistic styles.
+                  <strong class="strong">Ein Fest für die Augen:</strong>
+                  <br />Tauche ein in eine Schatztruhe atemberaubender Illustrationen,
+                  die diese legendären Wesen zum Leben erwecken. Lass deiner
+                  Fantasie freien Lauf beim Anblick majestätischer Drachen,
+                  anmutiger Einhörner, wilder Greife und rätselhafter Phönixe.
+                  Jede Seite entführt dich in ferne Länder und enthüllt die
+                  vielfältige Schönheit der Fabelwesen in künstlerischen Stilen.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Language:</span> English
+                  <span class="strong">Sprache:</span> Englisch
                 </li>
-                <li class="book-stat"><span class="strong">Pages:</span> 84</li>
+                <li class="book-stat"><span class="strong">Seiten:</span> 84</li>
                 <li class="book-stat">
-                  <span class="strong">Publication date:</span> July 30th 2023
+                  <span class="strong">Erscheinungsdatum:</span> 30. Juli 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
@@ -353,10 +338,10 @@
                   href="https://www.amazon.de/Mythical-Creatures-Facts-Vivid-Illustrations/dp/B0CD91ZLF9/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Buy Now!</a
+                  >Jetzt kaufen!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Learn more &darr;</a
+                  >Mehr erfahren &darr;</a
                 >
               </div>
             </div>
@@ -364,7 +349,7 @@
           <button
             class="btn-carousel--bookpage btn--left hidden"
             id="btn--left"
-            aria-label="carousel button left"
+            aria-label="Karussell links"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +369,7 @@
           <button
             class="btn-carousel--bookpage btn--right"
             id="btn--right"
-            aria-label="carousel button right"
+            aria-label="Karussell rechts"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -409,10 +394,10 @@
         <div class="container grid--features">
           <div class="feature">
             <ion-icon class="feature-icon" name="sparkles-outline"></ion-icon>
-            <p class="feature-title">Fascinating Facts!</p>
+            <p class="feature-title">Faszinierende Fakten!</p>
             <p class="feature-text">
-              What's the most dangerous plant in the world and which animal is
-              the fastest runner?
+              Was ist die gefährlichste Pflanze der Welt und welches Tier ist
+              der schnellste Läufer?
             </p>
           </div>
           <div class="feature">
@@ -420,26 +405,26 @@
               class="feature-icon"
               name="color-palette-outline"
             ></ion-icon>
-            <p class="feature-title">Vivid Illustrations!</p>
+            <p class="feature-title">Lebendige Illustrationen!</p>
             <p class="feature-text">
-              Enjoy the colorful illustrations of each animal or plant in its
-              natural habitat.
+              Genieße die farbenfrohen Illustrationen jedes Tieres und jeder
+              Pflanze in ihrem natürlichen Lebensraum.
             </p>
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
-            <p class="feature-title">Natural wonders!</p>
+            <p class="feature-title">Wunder der Natur!</p>
             <p class="feature-text">
-              Nature is breathtaking but also endangered. Build up awareness for
-              life on earth and act accordingly.
+              Die Natur ist atemberaubend, aber auch bedroht. Schärfe dein
+              Bewusstsein für das Leben auf der Erde und handle danach.
             </p>
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="earth-outline"></ion-icon>
-            <p class="feature-title">Travel around the world!</p>
+            <p class="feature-title">Reise um die Welt!</p>
             <p class="feature-text">
-              Learn about the culture, flora and fauna of every single country
-              in the world.
+              Erfahre mehr über Kultur, Flora und Fauna jedes einzelnen Landes
+              der Welt.
             </p>
           </div>
         </div>

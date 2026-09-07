@@ -4,14 +4,16 @@ Source: repo root HTML (German, migrated from Hostinger). EN column pre-filled o
 
 > Note: header/footer are structurally identical on all pages; only the active-nav marker differs per page.
 >
-> ## Language decision (2026-09-07, supersedes the /de/ plan)
-> German stays at root (main market reads everything; URLs stable). English is
-> a curated `/en/` section, NOT a 1:1 mirror: `/en/index.html` (bio + English
-> books + German-books teaser) links to the shared English book pages
-> (`apt.html`, `proverbs.html`, `oftheworld.html` — already English on the live
-> site, proofread 2026-09-07). Empty EN cells for German-only book pages are
-> intentionally untranslated. `.de` redirects to root until expiry (Nov 2026),
-> then dies.
+> ## Language decision (2026-09-07, TRUE TWINS update)
+> German stays at root (main market reads everything; URLs stable). English lives
+> in `/en/` as TRUE TWINS: `en/apt.html`, `en/proverbs.html`, `en/oftheworld.html`
+> are exact 1:1 copies of the English originals (snapshotted before root was
+> translated to German); root book pages are German, twins stay English, linked
+> via hreflang pairs + header switcher (same book, other language). Facts (covers,
+> Sprache/Language, dates, Amazon links) identical on both sides, only prose
+> differs. `/en/index.html` (bio + English books + German-books teaser) links to
+> the twins. Empty EN cells for German-only book pages are intentionally
+> untranslated. `.de` redirects to root until expiry (Nov 2026), then dies.
 
 ## Global chrome (header/nav/footer — identical on all pages)
 
@@ -167,7 +169,7 @@ Source: repo root HTML (German, migrated from Hostinger). EN column pre-filled o
 | L143 · div.section-impressum · p | Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. |  |
 | L149 · div.section-impressum · p | Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor. |  |
 
-## egds.html
+## egds.html — DELETED 2026-09-07 (old title of Die Festung; rows kept as record)
 
 | Location | DE | EN |
 |---|---|---|

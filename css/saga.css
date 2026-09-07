@@ -1,0 +1,789 @@
+/************************/
+ /* SAGA & SMOKE — pilot theme (index + apt)
+ /* Layered LAST: overrides style.css / books.css / general.css tokens.
+ /* System font stacks only — zero external requests.
+ /************************/
+
+:root {
+  --saga-bg0: #0d0b09;
+  --saga-bg1: #14110d;
+  --saga-bg2: #1e1812;
+  --saga-ink: #f0e6d2;
+  --saga-muted: #c9b896;
+  --saga-faint: #8a7a5f;
+  --saga-ember: #e8930c;
+  --saga-ember-hot: #f7b733;
+  --saga-gold: #d9a441;
+  --saga-blood: #a0301c;
+  --saga-accent-rgb: 232, 147, 12;
+  --saga-accent-hot-rgb: 247, 183, 51;
+  --saga-accent-gold-rgb: 217, 164, 65;
+  --saga-stage-mid: #171208;
+  --saga-line: rgba(var(--saga-accent-gold-rgb), 0.28);
+  --saga-glow: 0 0 4rem rgba(var(--saga-accent-rgb), 0.25);
+  --saga-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", serif;
+  --saga-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* elemental accents, one per book world */
+  --el-sand: #e8930c; /* Abenteurer — desert ember */
+  --el-sea: #2ea8a0; /* Pirate's Tale — caribbean teal */
+  --el-stone: #b0512c; /* Festung — baked clay */
+  --el-frost: #7fb6d9; /* Svalbard/north — ice blue */
+  --el-leaf: #7da05c; /* World/Germany — moss green */
+
+  /* retire the light-theme tokens for pilot pages */
+  --main-color: var(--saga-ember);
+  --main-color-light: var(--saga-ember-hot);
+  --main-color-dark: var(--saga-gold);
+  --secondary-color: var(--saga-bg0);
+  --tertiary-color: var(--saga-ember-hot);
+  --background-color: var(--saga-bg1);
+  --background-color2: var(--saga-bg2);
+  --text-color-light: var(--saga-ink);
+  --text-color-dark: var(--saga-ink);
+  --accent-color-primary: var(--saga-blood);
+}
+
+/************************/
+ /* base
+/************************/
+
+body {
+  font-family: var(--saga-body);
+  background-color: var(--saga-bg0);
+  color: var(--saga-ink);
+  background-image: radial-gradient(
+      120rem 60rem at 50% -10rem,
+      rgba(var(--saga-accent-rgb), 0.07),
+      transparent 70%
+    );
+}
+
+/* film grain, pure CSS, non-interactive */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.feature-title,
+.flipcard-text,
+.quote-text {
+  font-family: var(--saga-display);
+  color: var(--saga-ink);
+}
+
+.heading-primary {
+  font-size: 6.2rem;
+  text-wrap: balance;
+  text-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.8);
+}
+
+.heading-secondary {
+  margin-bottom: 6.4rem;
+}
+
+.subheading {
+  color: var(--saga-ember-hot);
+  letter-spacing: 0.35rem;
+}
+
+.subheading::before {
+  content: "— ";
+  color: var(--saga-faint);
+}
+
+.subheading::after {
+  content: " —";
+  color: var(--saga-faint);
+}
+
+.section {
+  position: relative;
+}
+
+.section:nth-of-type(even) {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(var(--saga-accent-gold-rgb), 0.04) 20%,
+    rgba(var(--saga-accent-gold-rgb), 0.04) 80%,
+    transparent
+  );
+}
+
+:focus-visible {
+  outline: 3px solid var(--saga-ember-hot);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/************************/
+ /* header + nav
+/************************/
+
+.header {
+  background-color: rgba(13, 11, 9, 0.92);
+  /* lift the whole header above page content: backdrop-filter traps the
+     Romane flyout inside the header's stacking context, so without this
+     the transformed hero strip paints over it and eats the clicks. */
+  z-index: 8000;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--saga-line);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6);
+}
+
+.main-nav-link:link,
+.main-nav-link:visited,
+.books-button {
+  color: var(--saga-ink);
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--saga-ember-hot);
+  text-shadow: 0 0 1.6rem rgba(var(--saga-accent-hot-rgb), 0.6);
+}
+
+.nav-cta {
+  border-color: var(--saga-ember);
+  color: var(--saga-ember-hot);
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: rgba(var(--saga-accent-rgb), 0.12);
+  color: var(--saga-ember-hot);
+  box-shadow: inset 0 0 0 2px var(--saga-ember), var(--saga-glow);
+}
+
+.nav-books {
+  background-color: var(--saga-bg2);
+  border: 1px solid var(--saga-line);
+  box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.7);
+}
+
+.nav-books-item:not(:first-child) {
+  border-top: 1px solid var(--saga-line);
+  border-image: none;
+}
+
+.nav-books-link:link,
+.nav-books-link:visited,
+.nav-mobile-link:link,
+.nav-mobile-link:visited {
+  color: var(--saga-ink);
+}
+
+.nav-books-link:hover,
+.nav-books-link:active,
+.nav-mobile-link:hover,
+.nav-mobile-link:active {
+  color: var(--saga-ember-hot);
+}
+
+.nav-mobile {
+  background-color: rgba(13, 11, 9, 0.97);
+}
+
+/* stacking repair: transformed hero strip creates its own stacking
+   context and paints above the header layer — lift the open header
+   (with overlay + close button inside) above everything. */
+.nav-open {
+  z-index: 9000;
+}
+
+.nav-open .nav-mobile {
+  z-index: 9001;
+}
+
+.btn-mobile-nav {
+  position: relative;
+  z-index: 9002;
+}
+
+.nav-books {
+  z-index: 9003;
+}
+
+.icon-mobile-nav {
+  color: var(--saga-ink);
+}
+
+.lang-active {
+  color: var(--saga-ember-hot);
+}
+
+.lang-link:link,
+.lang-link:visited {
+  color: var(--saga-muted);
+}
+
+.lang-link:hover,
+.lang-link:active {
+  color: var(--saga-ember-hot);
+}
+
+.sticky .header {
+  background-color: rgba(13, 11, 9, 0.95);
+}
+
+/************************/
+ /* hero — expedition banner
+/************************/
+
+.section-hero {
+  padding: 6.4rem 0 7.2rem 0;
+  overflow: hidden;
+}
+
+.hero-img-box {
+  width: 100vw;
+  max-width: 150rem;
+  max-height: 52rem;
+  height: 46vh;
+  min-height: 30rem;
+  margin: 4rem 0;
+  border-radius: 0;
+  box-shadow: var(--saga-glow), 0 3rem 6rem rgba(0, 0, 0, 0.6);
+  border-top: 1px solid var(--saga-line);
+  border-bottom: 1px solid var(--saga-line);
+  position: relative;
+  will-change: transform;
+}
+
+.hero-img-item {
+  max-width: none;
+  position: relative;
+}
+
+.hero-img-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 11, 9, 0.55),
+    transparent 30%,
+    transparent 65%,
+    rgba(13, 11, 9, 0.7)
+  );
+  pointer-events: none;
+}
+
+.hero-img-item:first-child,
+.hero-img-item:last-child {
+  border-radius: 0;
+}
+
+.hero-img {
+  filter: saturate(1.2) contrast(1.06);
+}
+
+.hero-img:hover {
+  transform: scale(1.06);
+  filter: saturate(1.35) contrast(1.08);
+}
+
+/************************/
+ /* buttons
+/************************/
+
+.btn--full:link,
+.btn--full:visited {
+  color: #1a1206;
+  background-color: var(--saga-ember);
+  border-color: var(--saga-ember);
+  box-shadow: var(--saga-glow);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--saga-ember-hot);
+  border-color: var(--saga-ember-hot);
+  color: #1a1206;
+  box-shadow: 0 0 5rem rgba(var(--saga-accent-hot-rgb), 0.45);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: transparent;
+  color: var(--saga-ink);
+  box-shadow: inset 0 0 0 2px var(--saga-faint);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: rgba(var(--saga-accent-gold-rgb), 0.1);
+  box-shadow: inset 0 0 0 2px var(--saga-ember);
+  color: var(--saga-ember-hot);
+}
+
+.btn--full-bookpage:link,
+.btn--full-bookpage:visited {
+  color: #1a1206;
+  background-color: var(--saga-ember);
+  border-color: var(--saga-ember);
+}
+
+.btn--full-bookpage:hover,
+.btn--full-bookpage:active {
+  background-color: var(--saga-ember-hot);
+  color: #1a1206;
+  box-shadow: 0 0 5rem rgba(var(--saga-accent-hot-rgb), 0.45);
+}
+
+.btn--carousel {
+  border-color: var(--saga-ember);
+  background-color: rgba(13, 11, 9, 0.8);
+}
+
+.btn--carousel:hover {
+  box-shadow: var(--saga-glow);
+}
+
+.btn-icon {
+  stroke: var(--saga-ember-hot);
+}
+
+/************************/
+ /* books carousel
+/************************/
+
+.book-img {
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7), var(--saga-glow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.book-item a:hover .book-img,
+.book-item a:focus-visible .book-img {
+  transform: translateY(-0.8rem);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.75),
+    0 0 5rem rgba(var(--saga-accent-rgb), 0.4);
+}
+
+.tag {
+  background-color: var(--saga-bg2);
+  border: 1px solid var(--saga-line);
+  color: var(--saga-muted);
+}
+
+.tag--language {
+  border-color: var(--el-leaf);
+  color: #cfe0b8;
+}
+
+.tag--place {
+  border-color: var(--saga-ember);
+  color: var(--saga-ember-hot);
+}
+
+.tag--genre {
+  border-color: var(--saga-faint);
+}
+
+.unfinished:after {
+  background-color: var(--saga-blood);
+  box-shadow: 0 0 2rem rgba(160, 48, 28, 0.6);
+}
+
+.books-container:focus-visible {
+  outline: 3px solid var(--saga-ember-hot);
+  outline-offset: 8px;
+}
+
+/************************/
+ /* features / author / quotes / flipcards
+/************************/
+
+.feature-icon {
+  background-color: rgba(var(--saga-accent-rgb), 0.1);
+  border: 1px solid var(--saga-line);
+  color: var(--saga-ember-hot);
+}
+
+.feature-text {
+  color: var(--saga-muted);
+}
+
+.author-box {
+  background-color: var(--saga-bg1);
+  border: 1px solid var(--saga-line);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+}
+
+.section-author .author-heading {
+  color: var(--saga-ember-hot);
+  font-style: italic;
+}
+
+.author-text-box {
+  background-color: var(--saga-bg2);
+  color: var(--saga-ink);
+}
+
+.author-img-box::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 60%,
+    rgba(13, 11, 9, 0.55)
+  );
+}
+
+.quote {
+  background-color: var(--saga-bg1);
+  border: 1px solid var(--saga-line);
+  border-radius: 10px;
+}
+
+.quote-text {
+  color: var(--saga-ink);
+}
+
+.quote-character,
+.quote-book,
+.flipcard-character,
+.flipcard-book {
+  color: var(--saga-muted);
+  border-top: 1px solid var(--saga-line);
+}
+
+.quote-img,
+.flipcard-img {
+  filter: grayscale(0.6) sepia(0.25) contrast(1.05);
+}
+
+.quote-img:hover,
+.flipcard-img:hover,
+.flipcard-container.flipped .flipcard-img {
+  filter: grayscale(0) sepia(0.1) contrast(1.08);
+}
+
+.flipcard-container {
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.65);
+  border: 1px solid var(--saga-line);
+  cursor: pointer;
+}
+
+.flipcard-item {
+  background-color: var(--saga-bg1);
+}
+
+.flipcard-back {
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--saga-accent-rgb), 0.14),
+    var(--saga-bg1) 45%
+  );
+}
+
+.flipcard-text {
+  color: var(--saga-ink);
+}
+
+/************************/
+ /* map
+/************************/
+
+.map-img {
+  filter: saturate(1.1) brightness(1.04) contrast(1.02);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.7), var(--saga-glow);
+}
+
+.marker {
+  background-color: var(--saga-bg2);
+  border: 2px solid var(--saga-ember-hot);
+  box-shadow: 0 0 1.6rem rgba(var(--saga-accent-hot-rgb), 0.8);
+}
+
+.marker-inside {
+  animation: markerPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes markerPulse {
+  50% {
+    transform: scale(0.72);
+    opacity: 0.75;
+  }
+}
+
+.info {
+  background-color: var(--saga-bg2);
+  border: 1px solid var(--saga-line);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.75);
+}
+
+.info-heading {
+  color: var(--saga-ember-hot);
+  border-bottom: 1px solid var(--saga-line);
+  border-image: none;
+}
+
+.info-text {
+  color: var(--saga-muted);
+}
+
+/************************/
+ /* book pages
+/************************/
+
+.section-book {
+  background:
+    radial-gradient(
+      90rem 42rem at 50% -4rem,
+      rgba(var(--saga-accent-rgb), 0.12),
+      transparent 70%
+    ),
+    linear-gradient(to bottom, #0d0b09, var(--saga-stage-mid) 55%, #0d0b09);
+  border-top: 1px solid var(--saga-line);
+  border-bottom: 1px solid var(--saga-line);
+}
+
+/* pilot: bright day-sky panorama retired — night-sea stage instead */
+.section-book .background-img {
+  display: none;
+}
+
+.section-book h2,
+.section-book h3 {
+  font-family: var(--saga-display);
+  color: var(--saga-ink);
+}
+
+.section-book .subheading {
+  color: var(--saga-ember-hot);
+}
+
+.section-book .subheading::before,
+.section-book .subheading::after {
+  color: var(--saga-faint);
+}
+
+.book-item--bookpage {
+  background-color: rgba(20, 17, 13, 0.88);
+  border: 1px solid var(--saga-line);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.65);
+}
+
+.book-img--bookpage {
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7), var(--saga-glow);
+}
+
+.book-item--bookpage a:hover .book-img--bookpage,
+.book-item--bookpage a:focus-visible .book-img--bookpage {
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.75),
+    0 0 5rem rgba(var(--saga-accent-rgb), 0.45);
+}
+
+.book-stats {
+  color: var(--saga-muted);
+}
+
+.book-stats .strong {
+  color: var(--saga-ember-hot);
+}
+
+.background--bookpage {
+  filter: brightness(0.55) saturate(1.1);
+}
+
+.btn-carousel--bookpage {
+  border-color: var(--saga-ember);
+  background-color: rgba(13, 11, 9, 0.8);
+}
+
+.btn-icon--bookpage {
+  stroke: var(--saga-ember-hot);
+}
+
+.btn-icon--bookpage:focus-visible,
+.btn--right:focus-visible,
+.btn--left:focus-visible {
+  outline: 3px solid var(--saga-ember-hot);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+
+/************************/
+ /* footer
+/************************/
+
+.footer {
+  border-top: 1px solid var(--saga-line);
+  color: var(--saga-muted);
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.45));
+}
+
+.footer-heading {
+  color: var(--saga-ink);
+  font-family: var(--saga-display);
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: var(--saga-muted);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--saga-ember-hot);
+}
+
+.footer-copyright {
+  color: var(--saga-faint);
+}
+
+.social-icon {
+  color: var(--saga-muted);
+}
+
+.social-icon:hover {
+  color: var(--saga-ember-hot);
+}
+
+/************************/
+ /* impressum / datenschutz
+/************************/
+
+.impressum,
+.datenschutz {
+  background-color: var(--saga-bg1);
+  border: 1px solid var(--saga-line);
+  color: var(--saga-ink);
+}
+
+/************************/
+ /* scroll reveals
+/************************/
+
+.saga-reveal {
+  opacity: 0;
+  transform: translateY(2.4rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.saga-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/************************/
+ /* reduced motion — the saga sits still
+/************************/
+
+@media (prefers-reduced-motion: reduce) {
+  .saga-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marker-inside {
+    animation: none;
+  }
+
+  .hero-img,
+  .book-img,
+  .quote-img,
+  .flipcard-img {
+    transition: none;
+  }
+
+  .hero-img-box {
+    will-change: auto;
+  }
+}
+
+/************************/
+ /* accents — one per page (body class). house default = index.
+/************************/
+
+body.accent-jungle {
+  /* apt.html — pirates, dark jungle green */
+  --saga-ember: #3fae6e;
+  --saga-ember-hot: #82e6a8;
+  --saga-gold: #6fbf8f;
+  --saga-accent-rgb: 63, 174, 110;
+  --saga-accent-hot-rgb: 130, 230, 168;
+  --saga-accent-gold-rgb: 111, 191, 143;
+  --saga-line: rgba(111, 191, 143, 0.28);
+  --saga-glow: 0 0 4rem rgba(63, 174, 110, 0.25);
+  --saga-stage-mid: #0b1a13;
+}
+
+body.accent-sand {
+  /* festung.html — desert fortress, pale sand */
+  --saga-ember: #d9b77c;
+  --saga-ember-hot: #f4dcaa;
+  --saga-gold: #c9a45f;
+  --saga-accent-rgb: 217, 183, 124;
+  --saga-accent-hot-rgb: 244, 220, 170;
+  --saga-accent-gold-rgb: 201, 164, 95;
+  --saga-line: rgba(201, 164, 95, 0.28);
+  --saga-glow: 0 0 4rem rgba(217, 183, 124, 0.25);
+  --saga-stage-mid: #1a140d;
+}
+
+body.accent-dusk {
+  /* abenteurer.html — orient, ember red */
+  --saga-ember: #c04527;
+  --saga-ember-hot: #ef7d4f;
+  --saga-gold: #d06a3f;
+  --saga-accent-rgb: 192, 69, 39;
+  --saga-accent-hot-rgb: 239, 125, 79;
+  --saga-accent-gold-rgb: 208, 106, 63;
+  --saga-line: rgba(208, 106, 63, 0.28);
+  --saga-glow: 0 0 4rem rgba(192, 69, 39, 0.25);
+  --saga-stage-mid: #1a0e0a;
+}
+
+body.accent-violet {
+  /* proverbs.html — purple cover */
+  --saga-ember: #9a6ee8;
+  --saga-ember-hot: #c4a6ff;
+  --saga-gold: #a884f0;
+  --saga-accent-rgb: 154, 110, 232;
+  --saga-accent-hot-rgb: 196, 166, 255;
+  --saga-accent-gold-rgb: 168, 132, 240;
+  --saga-line: rgba(168, 132, 240, 0.28);
+  --saga-glow: 0 0 4rem rgba(154, 110, 232, 0.25);
+  --saga-stage-mid: #141020;
+}
+
+body.accent-teal {
+  /* oftheworld.html — ocean teal */
+  --saga-ember: #2ea8a0;
+  --saga-ember-hot: #5fd6cc;
+  --saga-gold: #4fb8ae;
+  --saga-accent-rgb: 46, 168, 160;
+  --saga-accent-hot-rgb: 95, 214, 204;
+  --saga-accent-gold-rgb: 79, 184, 174;
+  --saga-line: rgba(79, 184, 174, 0.28);
+  --saga-glow: 0 0 4rem rgba(46, 168, 160, 0.25);
+  --saga-stage-mid: #0b181c;
+}
+
+body.accent-stone {
+  /* impressum / datasecurity — quiet bronze, stays out of the way */
+  --saga-ember: #a08c5b;
+  --saga-ember-hot: #c9b896;
+  --saga-gold: #a08c5b;
+  --saga-accent-rgb: 160, 140, 91;
+  --saga-accent-hot-rgb: 201, 184, 150;
+  --saga-accent-gold-rgb: 160, 140, 91;
+  --saga-line: rgba(160, 140, 91, 0.28);
+  --saga-glow: 0 0 4rem rgba(160, 140, 91, 0.25);
+  --saga-stage-mid: #14110d;
+}

@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Raphael L. Renard writes modern adventure novels for young readers and adults. Let yourself be carried away to the vast Orient, the rough seas of the Caribbean or the icy tundra of the North!"
+      content="Raphael L. Renard schreibt moderne Abenteuerromane für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Nordens!"
     />
 
-    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/apt.html" />
+    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/apt.html" />
+    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/apt.html" />
     <link rel="icon" href="img/logo/favicon.png" />
     <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="css/books.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/saga.css" />
 
     <script
       type="module"
@@ -40,23 +28,13 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- <script defer src="js/abenteurer.js"></script> -->
-
     <script defer src="js/overall.js"></script>
+    <script defer src="js/saga.js"></script>
 
     <title>Raphael L. Renard &mdash; A Pirate's Tale</title>
   </head>
 
-  <body>
+  <body class="accent-jungle">
     <header class="header">
       <a href="index.html">
         <img
@@ -79,7 +57,7 @@
           <li class="lang-switch">
             <span class="lang-active">DE</span>
             <span class="lang-sep">|</span>
-            <a class="lang-link" data-lang="en" href="en/index.html">EN</a>
+            <a class="lang-link" data-lang="en" href="en/apt.html">EN</a>
           </li>
         </ul>
         <div class="nav-books hidden">
@@ -136,7 +114,7 @@
             >
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="en/index.html">English</a>
+            <a class="nav-mobile-link" href="en/apt.html">English</a>
           </li>
         </ul>
       </div>
@@ -153,14 +131,14 @@
                       4000px"
           class="background-img background-img-da"
           src="img/books_background/background_apt_panorama.avif"
-          alt="Panorama background — pirate ship with red sails off a Caribbean island"
+          alt="Panorama-Hintergrund — Piratenschiff mit roten Segeln vor einer karibischen Insel"
           style="object-fit: cover"
         />
-        <span class="subheading heading-background center-text"
+        <span class="subheading center-text"
           >A Pirate's Tale</span
         >
-        <h2 class="heading-secondary heading-background center-text">
-          16 characters on the hunt for the one true treasure!
+        <h2 class="heading-secondary center-text">
+          16 Charaktere auf der Jagd nach dem einen wahren Schatz!
         </h2>
         <div class="wrapper--bookpage">
           <div class="books-container--bookpage">
@@ -180,39 +158,39 @@
                       480px"
                   src="img/cover/cover_apt.avif"
                   class="book-img--bookpage"
-                  alt="Bookcover - A Pirate's Tale - pirate ship with red sails in front of a lush caribbean island"
+                  alt="Buchcover - A Pirate's Tale - Piratenschiff mit roten Segeln vor einer üppigen karibischen Insel"
                   draggable="false"
               /></a>
               <div class="book-text">
                 <h3 class="heading-tertiary">A Pirate's Tale</h3>
-                <p class="strong">Caribbean Sea, end of the 17th century</p>
+                <p class="strong">Karibisches Meer, Ende des 17. Jahrhunderts</p>
                 <p>
-                  Infamous Cap’n Roger hid away the greatest treasure of all
-                  Seven Seas on a secret island.
+                  Der berüchtigte Cap'n Roger versteckte den größten Schatz der
+                  Sieben Weltmeere auf einer geheimen Insel.
                 </p>
                 <p>
-                  17 years later, Roger’s island is finally found again by a
-                  pirate crew, closely tied to the events of the past. Following
-                  their dreams, they find themselves in a drama that only starts
-                  to unfold when a strange, young woman gets washed up on the
-                  beach.
+                  17 Jahre später wird Rogers Insel endlich wiederentdeckt — von einer
+                  Piratencrew, die eng mit den Ereignissen der Vergangenheit verbunden
+                  ist. Ihren Träumen folgend, finden sie sich in einem Drama wieder,
+                  das sich erst zu entfalten beginnt, als eine seltsame junge Frau
+                  an den Strand gespült wird.
                 </p>
                 <p>
-                  This tale follows the paths of scurrilous scoundrels, dutiful
-                  marines and a brave native tribe, each chapter told from a
-                  different point of view, tying together the pieces of old
-                  Cap’n Roger’s legacy.
+                  Diese Geschichte folgt den Fußspuren gewissenloser Schurken,
+                  pflichtbewusster Marinesoldaten und eines mutigen Eingeborenenstammes —
+                  jedes Kapitel erzählt aus einer anderen Perspektive, bis sich
+                  die Teile von Cap'n Rogers Vermächtnis zusammenfügen.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Language:</span> English
+                  <span class="strong">Sprache:</span> Englisch
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Pages:</span> 329
+                  <span class="strong">Seiten:</span> 329
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Publication date:</span> October 26th
+                  <span class="strong">Erscheinungsdatum:</span> 26. Oktober
                   2019
                 </li>
               </ul>
@@ -221,10 +199,10 @@
                   href="https://www.amazon.de/Pirates-Tale-English-Raphael-Renard-ebook/dp/B07ZBJL7XX"
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Buy Now!</a
+                  >Jetzt kaufen!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Learn more &darr;</a
+                  >Mehr erfahren &darr;</a
                 >
               </div>
             </div>
@@ -239,32 +217,33 @@
             <ion-icon class="feature-icon" name="skull-outline"></ion-icon>
             <p class="feature-title">Blimey!</p>
             <p class="feature-text">
-              Don't be a soddin' landlubber and pick up yer blunderbuss! Avast
-              ye or sink down to Davy Jones' Locker.
+              Sei keine verdammte Landratte und greif zur Donnerbüchse!
+              Herhören, oder du landest in Davy Jones' Kiste.
             </p>
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="person-outline"></ion-icon>
-            <p class="feature-title">16 personalities!</p>
+            <p class="feature-title">16 Persönlichkeiten!</p>
             <p class="feature-text">
-              The protagonists of this tale are based on personality typology
-              (e.g. Myers-Briggs Type Indicator). Yay, science!
+              Die Protagonisten dieser Geschichte basieren auf
+              Persönlichkeitstypologie (Myers-Briggs-Typenindikator).
+              Hurra, Wissenschaft!
             </p>
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="eye-outline"></ion-icon>
-            <p class="feature-title">Multiple viewpoints!</p>
+            <p class="feature-title">Viele Perspektiven!</p>
             <p class="feature-text">
-              Who will make it to the end? There is no main character in this
-              novel:<br />There are 16!
+              Wer überlebt  bis zum Ende? Es gibt keine Hauptfigur in diesem
+              Roman:<br />Es gibt 16!
             </p>
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="shuffle-outline"></ion-icon>
-            <p class="feature-title">It comes with a twist!</p>
+            <p class="feature-title">Überraschende Wendung!</p>
             <p class="feature-text">
-              In the age of piracy, everyone had his or her secrets. Will you
-              reveal them before it is too late?
+              Im Zeitalter der Piraterie hatte jeder seine Geheimnisse. Wirst du
+              sie lüften, bevor es zu spät ist?
             </p>
           </div>
         </div>

@@ -279,6 +279,7 @@ function toggleFlip() {
 function handleTimer() {
   // Set an interval to check if the quotes gallery is in the viewport and toggle visibility
   setInterval(function () {
+    if (window.SAGA_MANUAL_FLIP) return; // saga.js: flipcards are manual now
     if (isElementInViewport(flipCardItems[currentIndex])) {
       console.log("Yeah viewport!");
       toggleFlip();

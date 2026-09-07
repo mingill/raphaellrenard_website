@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Raphael L. Renard ist ein Autor von modernen Abenteuerromanen für Jugendliche und Erwachsene. Lass dich entführen in die Weiten des Orients, die raue See der Karibik oder die eisige Tundra des Norderns!"
+      content="Raphael L. Renard writes modern adventure novels for young readers and adults. Let yourself be carried away to the vast Orient, the rough seas of the Caribbean or the icy tundra of the North!"
     />
 
-    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/egds.html" />
-    <link rel="icon" href="img/logo/favicon.png" />
-    <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/oftheworld.html" />
+    <link rel="alternate" hreflang="de" href="https://raphaellrenard.com/oftheworld.html" />
+    <link rel="icon" href="../img/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="../img/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/books.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="../css/books.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="../css/saga.css" />
 
     <script
       type="module"
@@ -40,48 +28,46 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
 
-    <script defer src="js/abenteurer.js"></script>
+    <script defer src="../js/abenteurer.js"></script>
 
-    <script defer src="js/overall.js"></script>
+    <script defer src="../js/saga.js"></script>
 
-    <title>Raphael L. Renard &mdash; Eine Geschichte des Sandes</title>
+    <script defer src="../js/overall.js"></script>
+
+    <title>Raphael L. Renard &mdash; Of the world!</title>
   </head>
 
-  <body>
+  <body class="accent-teal">
     <header class="header">
       <a href="index.html">
         <img
-          srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+          srcset="../img/logo/rl_logo_96.avif 48w, ../img/logo/rl_logo.avif 70w"
           sizes="(max-width: 41em) 48px,
                           70px"
           class="logo"
           alt="Raphael L. Renard logo"
-          src="img/logo/rl_logo.avif"
+          src="../img/logo/rl_logo.avif"
         />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="index.html#author">Autor</a></li>
+          <li><a class="main-nav-link" href="../index.html#author">Autor</a></li>
           <li>
-            <a class="main-nav-link" href="index.html#impressions">Impressionen</a>
+            <a class="main-nav-link" href="../index.html#impressions">Impressionen</a>
           </li>
-          <li><a class="main-nav-link" href="index.html#map">Orte</a></li>
+          <li><a class="main-nav-link" href="../index.html#map">Orte</a></li>
           <li class="main-nav-link books-button nav-cta">Romane</li>
           <li class="lang-switch">
-            <span class="lang-active">DE</span>
+            <a class="lang-link" data-lang="de" href="../oftheworld.html">DE</a>
             <span class="lang-sep">|</span>
-            <a class="lang-link" data-lang="en" href="en/index.html">EN</a>
+            <span class="lang-active">EN</span>
           </li>
         </ul>
         <div class="nav-books hidden">
           <ul class="nav-books-list">
             <li class="nav-books-item">
-              <a class="nav-books-link" href="abenteurer.html"
+              <a class="nav-books-link" href="../abenteurer.html"
                 >Der Abenteurer</a
               >
             </li>
@@ -89,9 +75,7 @@
               <a class="nav-books-link" href="apt.html">A Pirate's Tale</a>
             </li>
             <li class="nav-books-item">
-              <a class="nav-books-link" href="egds.html"
-                >Eine Geschichte des Sandes</a
-              >
+              <a class="nav-books-link" href="../festung.html">Die Festung</a>
             </li>
             <li class="nav-books-item">
               <a class="nav-books-link" href="proverbs.html"
@@ -115,15 +99,13 @@
       <div class="nav-mobile">
         <ul class="nav-mobile-list">
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>
+            <a class="nav-mobile-link" href="../abenteurer.html">Der Abenteurer</a>
           </li>
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="apt.html">A Pirate's Tale</a>
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="egds.html"
-              >Eine Geschichte des Sandes</a
-            >
+            <a class="nav-mobile-link" href="../festung.html">Die Festung</a>
           </li>
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="proverbs.html"
@@ -136,7 +118,7 @@
             >
           </li>
           <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="en/index.html">English</a>
+            <a class="nav-mobile-link" href="../oftheworld.html">Deutsch</a>
           </li>
         </ul>
       </div>
@@ -146,200 +128,221 @@
       <section class="section-book">
         <img
           srcset="
-            img/books_background/background_egds_panorama_mobile.avif 1300w,
-            img/books_background/background_egds_panorama.avif        4000w
+            ../img/books_background/background_oftheworld_panorama_mobile.avif 1300w,
+            ../img/books_background/background_oftheworld_panorama.avif        4000w
           "
           sizes="(max-width: 41em) 1300px,
                       4000px"
-          class="background-img background-img-da"
-          src="img/books_background/background_egds_panorama.avif"
-          alt="text"
+          class="background-img background-img-light"
+          src="../img/books_background/background_oftheworld_panorama.avif"
+          alt="Panorama background for the 'Of the world' book series"
           style="object-fit: cover"
         />
-        <span class="subheading heading-background center-text"
-          >Eine Geschichte des Sandes</span
+        <span class="subheading center-text"
+          >"Of the world"-Series</span
         >
-        <h2 class="heading-secondary heading-background center-text">
-          Rettung oder Untergang
+        <h2 class="heading-secondary center-text">
+          Learn about the wonders of the world!
         </h2>
         <div class="wrapper--bookpage">
           <div class="books-container--bookpage">
-            <!-- Eine Geschichte des Sandes - Band I -->
-
+            <!-- Animals of the world -->
             <div class="book-item--bookpage">
               <a
-                href="https://www.amazon.de/Eine-Geschichte-Sandes-Helden-S%C3%BCnden-ebook/dp/B076QMLSTZ/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=154O4YND3U9YW&keywords=raphael+l+renard&qid=1698834035&s=digital-text&sprefix=raphael+l+renar%2Cdigital-text%2C96&sr=1-1"
+                href="https://www.amazon.de/Animals-world-Facts-Vivid-Illustrations/dp/B0CCCX4Z5V/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                 target="_blank"
               >
                 <img
                   srcset="
-                    img/cover/cover_egds1_320.avif 320w,
-                    img/cover/cover_egds1.avif     480w
+                    ../img/cover/cover_animalsoftheworld_320.avif 320w,
+                    ../img/cover/cover_animalsoftheworld.avif     480w
                   "
                   sizes="(max-width: 79em) 320px,
                       480px"
-                  src="img/cover/cover_egds1.avif"
+                  src="../img/cover/cover_animalsoftheworld.avif"
                   class="book-img--bookpage"
-                  alt="Buchcover - Eine Geschichte des Sandes - Die 3 Helden und die 7 Sünden des Todes - Fußspuren im Wüstensand der Sahara"
+                  alt="Bookcover - Animals of the world - Fun Facts and Vivid Illustrations"
                   draggable="false"
                 />
               </a>
               <div class="book-text">
                 <h3 class="heading-tertiary">
-                  Band I - Die 3 Helden und die 7 Sünden des Todes
+                  Animals of the world: Fun Facts & Vivid Illustrations
                 </h3>
-                <p class="strong">Sahara, Ende des 19. Jahrhunderts</p>
+                <strong class="strong"
+                  ><p>Discover the Wonders of Our World</p></strong
+                >
                 <p>
-                  Das Leben in der Wüstenfestung Fortechala wird durch die
-                  Ankunft eines unscheinbaren Boten aus den Fugen gerissen.
+                  Embark on an awe-inspiring journey through the vibrant
+                  tapestry of our planet's rich biodiversity with "Animals of
+                  the world". This captivating book is a treasure trove of
+                  fascinating wildlife encounters, fun facts, and stunning
+                  illustrations that will leave you enchanted and inspired.
                 </p>
                 <p>
-                  Mit ihm kommen drei weitere Fremde nach Fortechala: Ein
-                  Krieger, ein Meisterschütze und ein Greis. Was als eine
-                  aussichtslos scheinende Befreiungsaktion beginnt, entwickelt
-                  sich mehr und mehr zum entscheidenden Kampf um das Schicksal
-                  einer gesamten Stadt.
+                  <strong class="strong">Unveil the Diversity:</strong>
+                  <br />From the icy tundras of Canada to the lush rainforests
+                  of Brazil, and from the scorching deserts of Australia to the
+                  mystical landscapes of Japan – get ready to meet an incredible
+                  array of animals that call each country home.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Sprache:</span> Deutsch
+                  <span class="strong">Language:</span> English
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Seiten:</span> 481
+                  <span class="strong">Pages:</span> 196
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Erscheinungsdatum:</span> 23. Oktober
-                  2017
+                  <span class="strong">Publication date:</span> July 21st 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
                 <a
-                  href="https://www.amazon.de/Eine-Geschichte-Sandes-Helden-S%C3%BCnden-ebook/dp/B076QMLSTZ/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=154O4YND3U9YW&keywords=raphael+l+renard&qid=1698834035&s=digital-text&sprefix=raphael+l+renar%2Cdigital-text%2C96&sr=1-1"
+                  href="https://www.amazon.de/Animals-world-Facts-Vivid-Illustrations/dp/B0CCCX4Z5V/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Jetzt kaufen!</a
+                  >Buy Now!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Mehr erfahren &darr;</a
+                  >Learn more &darr;</a
                 >
               </div>
             </div>
-            <!-- Eine Geschichte des Sandes - Band II -->
 
+            <!-- Plants of the world -->
             <div class="book-item--bookpage">
               <a
-                href="https://www.amazon.de/gp/product/B07H9M76YQ?notRedirectToSDP=1&ref_=dbs_mng_calw_1&storeType=ebooks"
+                href="https://www.amazon.de/Plants-world-Facts-Vivid-Illustrations/dp/B0CCCQY9YD/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                 target="_blank"
               >
                 <img
                   srcset="
-                    img/cover/cover_egds2_320.avif 320w,
-                    img/cover/cover_egds2.avif     480w
+                    ../img/cover/cover_plantsoftheworld_320.avif 320w,
+                    ../img/cover/cover_plantsoftheworld.avif     480w
                   "
                   sizes="(max-width: 79em) 320px,
                       480px"
-                  src="img/cover/cover_egds2.avif"
+                  src="../img/cover/cover_plantsoftheworld.avif"
                   class="book-img--bookpage"
-                  alt="Buchcover - Eine Geschichte des Sandes - Chaos - Fußspuren im Wüstensand der Sahara"
+                  alt="Bookcover - Plants of the world - Fun Facts and Vivid Illustrations"
                   draggable="false"
                   loading="lazy"
                 />
               </a>
               <div class="book-text">
-                <h3 class="heading-tertiary">Band II - Chaos</h3>
-                <p class="strong">Ein neuer Kommandant regiert die Stadt!</p>
+                <h3 class="heading-tertiary">
+                  Plants of the world: Fun Facts & Vivid Illustrations
+                </h3>
+                <strong class="strong"
+                  ><p>Explore the Plants of Our World!</p></strong
+                >
                 <p>
-                  Während ein folgenschweres Ereignis das Leben in Fortechala
-                  zunehmend ins Chaos stürzen lässt, werden die Bewohner der
-                  Wüstenfestung von einer neuen Gefahr heimgesucht und von ihrer
-                  dunklen Vergangenheit eingeholt.
+                  Embark on an awe-inspiring journey through the pages of
+                  "Plants of Our World," a captivating book celebrating the
+                  diverse flora that grace every corner of our globe. Delve into
+                  the enchanting world of plants as we take you on a botanical
+                  adventure like no other.
                 </p>
                 <p>
-                  Indessen versucht ein einfacher Bote verzweifelt, seine
-                  wenigen Gefährten zu vereinen, um Fortechala doch noch vor dem
-                  sicheren Untergang zu bewahren.
+                  <strong class="strong">Engaging Fun Facts:</strong> <br />Get
+                  ready to be entertained and enlightened! This book is brimming
+                  with captivating fun facts that will ignite curiosity and
+                  spark wonder in readers of all ages. Discover how the Venus
+                  flytrap tricks its prey, how the Rafflesia blooms as the
+                  world's largest flower, and how the ancient olive tree stands
+                  witness to millennia of history.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Sprache:</span> Deutsch
+                  <span class="strong">Language:</span> English
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Seiten:</span> 579
+                  <span class="strong">Pages:</span> 196
                 </li>
                 <li class="book-stat">
-                  <span class="strong">Erscheinungsdatum:</span> 12. September
-                  2018
+                  <span class="strong">Publication date:</span> July 25th 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
                 <a
-                  href="https://www.amazon.de/gp/product/B07H9M76YQ?notRedirectToSDP=1&ref_=dbs_mng_calw_1&storeType=ebooks"
+                  href="https://www.amazon.de/Plants-world-Facts-Vivid-Illustrations/dp/B0CCCQY9YD/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Jetzt kaufen!</a
+                  >Buy Now!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Mehr erfahren &darr;</a
+                  >Learn more &darr;</a
                 >
               </div>
             </div>
-            <!-- Der Abenteurer - Band 3 - Gegen den Sand -->
 
+            <!-- Mythical Creatures of the world -->
             <div class="book-item--bookpage">
               <a
-                href="https://www.amazon.de/gp/product/B07S1XFQYP?notRedirectToSDP=1&ref_=dbs_mng_calw_2&storeType=ebooks"
+                href="https://www.amazon.de/Mythical-Creatures-Facts-Vivid-Illustrations/dp/B0CD91ZLF9/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                 target="_blank"
               >
                 <img
                   srcset="
-                    img/cover/cover_egds3_320.avif 320w,
-                    img/cover/cover_egds3.avif     480w
+                    ../img/cover/cover_mysticalcreatures_320.avif 320w,
+                    ../img/cover/cover_mysticalcreatures.avif     480w
                   "
                   sizes="(max-width: 79em) 320px,
                       480px"
-                  src="img/cover/cover_egds3.avif"
+                  src="../img/cover/cover_mysticalcreatures.avif"
                   class="book-img--bookpage"
-                  alt="Buchcover - Eine Geschichte des Sandes - Zwei Pfade - Fußspuren im Wüstensand der Sahara"
+                  alt="Bookcover - Mythical Creatures - Fun Facts and Vivid Illustrations"
                   draggable="false"
                   loading="lazy"
                 />
               </a>
               <div class="book-text">
-                <h3 class="heading-tertiary">Band III - Zwei Pfade</h3>
-                <p class="strong">Rettung oder Untergang. Tugend oder Sünde.</p>
-                <p>Leben oder Tod. Gut oder böse.</p>
+                <h3 class="heading-tertiary">
+                  Mythical Creatures: Fun Facts & Vivid Illustrations
+                </h3>
+                <strong class="strong"
+                  ><p>
+                    A Captivating Journey into the World of Folklore
+                  </p></strong
+                >
                 <p>
-                  Dies sind die zwei Pfade, vor denen die Bewohner der
-                  Wüstenfestung Fortechala stehen. Doch welchen sie letztendlich
-                  beschreiten werden, kann ihnen niemand vorschreiben.
+                  Discover the enchanting realm of mythical creatures from every
+                  corner of the world with this beautifully illustrated and
+                  informative book - "Mythical Creatures." Embark on an
+                  extraordinary adventure through ancient legends, folklore, and
+                  captivating tales that have stood the test of time.
                 </p>
                 <p>
-                  Das Ende dieser Geschichte hängt nur davon ab, wer den Kampf
-                  im Innersten eines jeden Einzelnen gewinnen wird.
+                  <strong class="strong">A Visual Extravaganza:</strong>
+                  <br />Dive into a treasure trove of stunning illustrations
+                  that breathe life into these legendary beings. Let your
+                  imagination soar as you gaze upon majestic dragons, graceful
+                  unicorns, fierce griffins, and enigmatic phoenixes. Each page
+                  transports you to distant lands and unveils the diverse beauty
+                  of mythical creatures depicted in artistic styles.
                 </p>
               </div>
               <ul class="book-stats">
                 <li class="book-stat">
-                  <span class="strong">Sprache:</span> Deutsch
+                  <span class="strong">Language:</span> English
                 </li>
+                <li class="book-stat"><span class="strong">Pages:</span> 84</li>
                 <li class="book-stat">
-                  <span class="strong">Seiten:</span> 406
-                </li>
-                <li class="book-stat">
-                  <span class="strong">Erscheinungsdatum:</span> 20. Mai 2019
+                  <span class="strong">Publication date:</span> July 30th 2023
                 </li>
               </ul>
               <div class="btn--bookpage">
                 <a
-                  href="https://www.amazon.de/gp/product/B07S1XFQYP?notRedirectToSDP=1&ref_=dbs_mng_calw_2&storeType=ebooks"
+                  href="https://www.amazon.de/Mythical-Creatures-Facts-Vivid-Illustrations/dp/B0CD91ZLF9/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="
                   class="btn btn--full-bookpage"
                   target="_blank"
-                  >Jetzt kaufen!</a
+                  >Buy Now!</a
                 >
                 <a href="#features" class="btn btn--outline hidden"
-                  >Mehr erfahren &darr;</a
+                  >Learn more &darr;</a
                 >
               </div>
             </div>
@@ -391,41 +394,38 @@
       <section class="section-features" id="features">
         <div class="container grid--features">
           <div class="feature">
-            <ion-icon class="feature-icon" name="flash-outline"></ion-icon>
-            <p class="feature-title">Epische Schlacht!</p>
+            <ion-icon class="feature-icon" name="sparkles-outline"></ion-icon>
+            <p class="feature-title">Fascinating Facts!</p>
             <p class="feature-text">
-              Das Schicksal einer gesamten <br />Stadt steht auf dem Spiel.
-              <br />Ist ihr Ende noch abwendbar?
+              What's the most dangerous plant in the world and which animal is
+              the fastest runner?
             </p>
           </div>
           <div class="feature">
             <ion-icon
               class="feature-icon"
-              name="heart-circle-outline"
+              name="color-palette-outline"
             ></ion-icon>
-            <p class="feature-title">Die 7 Todsünden!</p>
+            <p class="feature-title">Vivid Illustrations!</p>
             <p class="feature-text">
-              Personifiziert als Charaktere führen sie ihre Heimat dem Untergang
-              entgegen. Oder sind sie der Schlüssel?
+              Enjoy the colorful illustrations of each animal or plant in its
+              natural habitat.
             </p>
           </div>
           <div class="feature">
-            <ion-icon class="feature-icon" name="cloudy-outline"></ion-icon>
-            <p class="feature-title">Philosophie!</p>
+            <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+            <p class="feature-title">Natural wonders!</p>
             <p class="feature-text">
-              Welcher Weg führt zur Rettung? Aktion oder Warten? Oder doch der
-              Griff zu den Waffen?
+              Nature is breathtaking but also endangered. Build up awareness for
+              life on earth and act accordingly.
             </p>
           </div>
           <div class="feature">
-            <ion-icon
-              class="feature-icon"
-              name="color-filter-outline"
-            ></ion-icon>
-            <p class="feature-title">Für Jung & Alt!</p>
+            <ion-icon class="feature-icon" name="earth-outline"></ion-icon>
+            <p class="feature-title">Travel around the world!</p>
             <p class="feature-text">
-              Die Geschichten, die das Leben schreibt, kennen kein Alter und
-              keine Nation. Sie sind für jeden da.
+              Learn about the culture, flora and fauna of every single country
+              in the world.
             </p>
           </div>
         </div>
@@ -437,12 +437,12 @@
         <div class="footer-logo-col">
           <a href="index.html" class="footer-logo">
             <img
-              srcset="img/logo/rl_logo_96.avif 48w, img/logo/rl_logo.avif 70w"
+              srcset="../img/logo/rl_logo_96.avif 48w, ../img/logo/rl_logo.avif 70w"
               sizes="(max-width: 41em) 48px,
                           70px"
               class="logo"
               alt="Raphael L. Renard logo"
-              src="img/logo/rl_logo.avif"
+              src="../img/logo/rl_logo.avif"
               loading="lazy"
             />
           </a>
@@ -455,12 +455,12 @@
         </div>
         <div class="footer-nav-col">
           <div>
-            <a href="impressum.html" class="footer-link"
+            <a href="../impressum.html" class="footer-link"
               ><p class="footer-heading">Impressum</p></a
             >
           </div>
           <div>
-            <a href="datasecurity.html" class="footer-link"
+            <a href="../datasecurity.html" class="footer-link"
               ><p class="footer-heading">Datenschutz</p></a
             >
           </div>
@@ -501,7 +501,13 @@
         </div>
         <div class="footer-copyright">
           <p class="copyright">
-            Copyright &copy; <span class="year">2023</span> by Raphael L. Renard
+            Copyright &copy;
+            <span class="year"
+              ><script>
+                document.write(new Date().getFullYear());
+              </script></span
+            >
+            by Raphael L. Renard
           </p>
         </div>
       </div>
