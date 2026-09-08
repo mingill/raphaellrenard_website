@@ -493,6 +493,41 @@ body::after {
   color: var(--saga-ink);
 }
 
+.flipcard-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--saga-ember-hot);
+  text-decoration: none;
+  border-bottom: 1px solid var(--saga-line);
+  padding-bottom: 0.3rem;
+}
+
+.flipcard-link:hover {
+  color: var(--saga-ink);
+  border-bottom-color: var(--saga-ember-hot);
+}
+
+/* desktop affordance: hovering tips the card a little so it reads as flippable */
+.flipcard-container {
+  perspective: 120rem;
+}
+
+@media (hover: hover) {
+  .flipcard-container:hover .flipcard-item:not(.flipcard-rotate) {
+    transform: rotateY(12deg);
+    transition-duration: 0.35s;
+  }
+
+  .flipcard-container:hover .flipcard-item.flipcard-rotate {
+    transform: rotateY(168deg);
+    transition-duration: 0.35s;
+  }
+}
+
 /************************/
  /* map
 /************************/

@@ -53,11 +53,11 @@
     );
   }
 
-  /* ---------- flipcards: desktop manual, touch dwell-auto ----------
-     Desktop (hover): click / Enter / Space flips, as before.
-     Touch: no hover, so a card flips itself — but only after sitting
-     FULLY in view, untouched, for 2.5s. Holds 4s, flips back, rests.
-     Any scroll/touch/tap disturbs it and the dwell starts over. */
+  /* ---------- flipcards: desktop manual, touch 5s metronome ----------
+     Desktop (hover): click / Enter / Space flips, hover tips the card.
+     Touch: no hover, so the card flips itself on a steady 5s rhythm —
+     but only while fully in view and untouched. Any scroll, touch or
+     tap resets the timer and pauses it; tap flips immediately. */
   var flipCards = Array.prototype.slice.call(
     document.querySelectorAll(".flipcard-container")
   );
@@ -67,6 +67,9 @@
     inner.classList.toggle("flipcard-rotate", on);
     card.classList.toggle("flipped", on);
     card.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function tappedLink(ev) {
+    return ev.target && ev.target.closest && ev.target.closest(".flipcard-link");
   }
   flipCards.forEach(function (card) {
     var inner = card.querySelector(".flipcard-item");
@@ -78,62 +81,60 @@
       card.querySelector(".flipcard-text")?.textContent?.trim().slice(0, 80) ||
       "quote card";
     card.setAttribute("aria-label", "Reveal quote: " + label);
-    card.addEventListener("click", function () {
+    card.addEventListener("click", function (ev) {
+      if (tappedLink(ev)) return; // book link navigates, card stays put
       setFlip(card, !card.classList.contains("flipped"));
-      coolUntil = Date.now() + 12000; // manual tap buys 12s of peace
+      disturbFlip();
+      scheduleFlipRearm();
     });
     card.addEventListener("keydown", function (ev) {
+      if (tappedLink(ev)) return;
       if (ev.key === "Enter" || ev.key === " ") {
         ev.preventDefault();
         setFlip(card, !card.classList.contains("flipped"));
-        coolUntil = Date.now() + 12000;
+        disturbFlip();
+        scheduleFlipRearm();
       }
     });
   });
 
   var touchFlip = window.matchMedia("(hover: none)").matches;
-  var coolUntil = 0;
+  var flipWatched = null;
+  var flipQuiet = true;
+  var flipT = 0;
+  var flipRearmT = 0;
+  function disturbFlip() {
+    flipQuiet = false;
+    clearTimeout(flipT);
+    clearTimeout(flipRearmT);
+  }
+  function scheduleFlipRearm() {
+    clearTimeout(flipRearmT);
+    flipRearmT = setTimeout(function () {
+      flipQuiet = true;
+      scheduleFlipTick();
+    }, 1500);
+  }
+  function scheduleFlipTick() {
+    clearTimeout(flipT);
+    if (!flipWatched) return;
+    flipT = setTimeout(function () {
+      if (flipWatched && flipQuiet) {
+        setFlip(flipWatched, !flipWatched.classList.contains("flipped"));
+      }
+      scheduleFlipTick(); // steady 5s rhythm while in view
+    }, 5000);
+  }
   if (touchFlip && !reduceMotion && flipCards.length && "IntersectionObserver" in window) {
-    var watched = null;
-    var dwellT = 0;
-    var holdT = 0;
-    var rearmT = 0;
-    var clearFlipTimers = function () {
-      clearTimeout(dwellT);
-      clearTimeout(holdT);
-    };
-    var armDwell = function () {
-      clearFlipTimers();
-      if (!watched || Date.now() < coolUntil) return;
-      if (watched.classList.contains("flipped")) return;
-      dwellT = setTimeout(function () {
-        if (!watched || Date.now() < coolUntil) return;
-        var card = watched;
-        setFlip(card, true);
-        holdT = setTimeout(function () {
-          setFlip(card, false);
-          coolUntil = Date.now() + 8000;
-        }, 4000);
-      }, 2500);
-    };
-    var disturb = function () {
-      clearFlipTimers();
-      clearTimeout(rearmT);
-      coolUntil = Date.now() + 3000;
-    };
-    var scheduleRearm = function () {
-      clearTimeout(rearmT);
-      rearmT = setTimeout(armDwell, 3200);
-    };
-    var watcher = new IntersectionObserver(
+    var flipWatcher = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.intersectionRatio >= 0.99) {
-            watched = entry.target;
-            armDwell();
-          } else if (watched === entry.target) {
-            watched = null;
-            clearFlipTimers();
+            flipWatched = entry.target;
+            if (flipQuiet) scheduleFlipTick();
+          } else if (flipWatched === entry.target) {
+            flipWatched = null;
+            clearTimeout(flipT);
             setFlip(entry.target, false);
           }
         });
@@ -141,18 +142,18 @@
       { threshold: [0, 0.99, 1] }
     );
     flipCards.forEach(function (card) {
-      watcher.observe(card);
+      flipWatcher.observe(card);
     });
     window.addEventListener(
       "scroll",
       function () {
-        disturb();
-        scheduleRearm();
+        disturbFlip();
+        scheduleFlipRearm();
       },
       { passive: true }
     );
-    window.addEventListener("touchstart", disturb, { passive: true });
-    window.addEventListener("touchend", scheduleRearm, { passive: true });
+    window.addEventListener("touchstart", disturbFlip, { passive: true });
+    window.addEventListener("touchend", scheduleFlipRearm, { passive: true });
   }
 
   /* ---------- carousel: arrow-key scrolling ---------- */
