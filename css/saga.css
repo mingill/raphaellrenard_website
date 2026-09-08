@@ -465,6 +465,14 @@ body::after {
   filter: grayscale(0.6) sepia(0.25) contrast(1.05);
 }
 
+/* flipcard images: always square, always the same height — crop, never stretch */
+.flipcard-img {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .quote-img:hover,
 .flipcard-img:hover,
 .flipcard-container.flipped .flipcard-img {
@@ -518,12 +526,12 @@ body::after {
 
 @media (hover: hover) {
   .flipcard-container:hover .flipcard-item:not(.flipcard-rotate) {
-    transform: rotateY(12deg);
+    transform: rotateY(7deg);
     transition-duration: 0.35s;
   }
 
   .flipcard-container:hover .flipcard-item.flipcard-rotate {
-    transform: rotateY(168deg);
+    transform: rotateY(173deg);
     transition-duration: 0.35s;
   }
 }
