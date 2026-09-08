@@ -95,4 +95,41 @@
       }
     });
   });
+  /* ---------- flipcards: scroll-driven color on touch devices ----------
+     No hover on mobile, so images bloom with visibility instead:
+     the more of a card is in view, the more saturated it gets. */
+  var touchOnly = window.matchMedia("(hover: none)").matches;
+  if (touchOnly && !reduceMotion) {
+    var wakeCards = Array.prototype.slice.call(
+      document.querySelectorAll(".flipcard-container")
+    );
+    if (wakeCards.length) {
+      var waking = false;
+      var wake = function () {
+        waking = false;
+        var vh = window.innerHeight;
+        wakeCards.forEach(function (card) {
+          var r = card.getBoundingClientRect();
+          var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
+          var ratio = Math.max(0, Math.min(1, vis / (r.height || 1)));
+          if (card.classList.contains("flipped")) ratio = 1;
+          var g = (0.6 * (1 - ratio)).toFixed(3);
+          var s = (0.25 * (1 - ratio)).toFixed(3);
+          card.querySelectorAll(".flipcard-img").forEach(function (img) {
+            img.style.filter =
+              "grayscale(" + g + ") sepia(" + s + ") contrast(1.05)";
+          });
+        });
+      };
+      var scheduleWake = function () {
+        if (!waking) {
+          waking = true;
+          window.requestAnimationFrame(wake);
+        }
+      };
+      window.addEventListener("scroll", scheduleWake, { passive: true });
+      window.addEventListener("resize", scheduleWake);
+      scheduleWake();
+    }
+  }
 })();
