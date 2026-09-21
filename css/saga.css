@@ -456,6 +456,30 @@ body::after {
   box-shadow: 0 0 2rem rgba(var(--saga-blood-rgb), 0.6);
 }
 
+/* Coming-soon ribbon: English wording per page language, and no clipping
+   of the cover glow inside shelf cards / index items. */
+html[lang="en"] .unfinished:after {
+  content: "Coming soon";
+}
+.book-item.unfinished,
+.book-index-list .unfinished {
+  overflow: visible;
+}
+
+/* Index covers are tiny (6.4rem wide) — the full-size ribbon would swallow
+   them, so the closing index gets a ~1/3-scale pill. Shelf cards keep the
+   full ribbon above. */
+.book-index-list .unfinished:after {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  top: 2%;
+  /* Covers are 6.4rem wide and centered in their cell at every breakpoint,
+     so the cover's right edge sits 3.2rem right of the cell center: pin the
+     badge's own middle exactly there (half on, half off the cover). */
+  right: calc(50% - 3.2rem);
+  transform: translateX(50%);
+}
+
 .books-container:focus-visible {
   outline: 3px solid var(--saga-ember-hot);
   outline-offset: 8px;
