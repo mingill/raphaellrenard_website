@@ -709,8 +709,8 @@
           <!-- beginning of quotes-gallery -->
           <div class="flipcard-gallery">
             <div class="flipcard-container">
-              <div class="flipcard-item">
-                <div class="flipcard-front">
+              <div class="flipcard-item" id="flipcard-abenteurer">
+                <div class="flipcard-front" aria-hidden="false">
                   <img
                       src="img/gallery/gallery_1.avif"
                       class="flipcard-img"
@@ -727,9 +727,17 @@
                     </p>
                     <p class="flipcard-book">Der Abenteurer</p>
                     <a class="flipcard-link" href="abenteurer.html">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      aria-controls="flipcard-abenteurer"
+                      aria-expanded="false"
+                    >
+                      Zitat wenden
+                    </button>
                   </div>
                 </div>
-                <div class="flipcard-back">
+                <div class="flipcard-back" aria-hidden="true">
                   <img
                       src="img/gallery/gallery_2.avif"
                       class="flipcard-img"
@@ -743,14 +751,23 @@
                       sich der Lüge zu zeihen."
                     </p>
                     <p class="flipcard-book">Der Abenteurer</p>
-                    <a class="flipcard-link" href="abenteurer.html">Zum Buch →</a>
+                    <a class="flipcard-link" href="abenteurer.html" tabindex="-1">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      tabindex="-1"
+                      aria-controls="flipcard-abenteurer"
+                      aria-expanded="false"
+                    >
+                      Vorderseite anzeigen
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="flipcard-container">
-              <div class="flipcard-item">
-                <div class="flipcard-front">
+              <div class="flipcard-item" id="flipcard-pirate">
+                <div class="flipcard-front" aria-hidden="false">
                   <img
                       src="img/gallery/gallery_8.avif"
                       class="flipcard-img"
@@ -766,9 +783,17 @@
                     </p>
                     <p class="flipcard-book">A Pirate's Tale</p>
                     <a class="flipcard-link" href="apt.html">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      aria-controls="flipcard-pirate"
+                      aria-expanded="false"
+                    >
+                      Zitat wenden
+                    </button>
                   </div>
                 </div>
-                <div class="flipcard-back">
+                <div class="flipcard-back" aria-hidden="true">
                   <img
                       src="img/gallery/gallery_7.avif"
                       class="flipcard-img"
@@ -784,14 +809,23 @@
                       <br />It ends."
                     </p>
                     <p class="flipcard-book">A Pirate's Tale</p>
-                    <a class="flipcard-link" href="apt.html">Zum Buch →</a>
+                    <a class="flipcard-link" href="apt.html" tabindex="-1">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      tabindex="-1"
+                      aria-controls="flipcard-pirate"
+                      aria-expanded="false"
+                    >
+                      Vorderseite anzeigen
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="flipcard-container">
-              <div class="flipcard-item">
-                <div class="flipcard-front">
+              <div class="flipcard-item" id="flipcard-festung">
+                <div class="flipcard-front" aria-hidden="false">
                   <img
                       src="img/gallery/gallery_5.avif"
                       class="flipcard-img"
@@ -807,9 +841,17 @@
                     </p>
                     <p class="flipcard-book">Die Festung</p>
                     <a class="flipcard-link" href="festung.html">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      aria-controls="flipcard-festung"
+                      aria-expanded="false"
+                    >
+                      Zitat wenden
+                    </button>
                   </div>
                 </div>
-                <div class="flipcard-back">
+                <div class="flipcard-back" aria-hidden="true">
                   <img
                       src="img/gallery/gallery_4.avif"
                       class="flipcard-img"
@@ -823,7 +865,16 @@
                       werden verstehen."
                     </p>
                     <p class="flipcard-book">Die Festung</p>
-                    <a class="flipcard-link" href="festung.html">Zum Buch →</a>
+                    <a class="flipcard-link" href="festung.html" tabindex="-1">Zum Buch →</a>
+                    <button
+                      class="flipcard-toggle"
+                      type="button"
+                      tabindex="-1"
+                      aria-controls="flipcard-festung"
+                      aria-expanded="false"
+                    >
+                      Vorderseite anzeigen
+                    </button>
                   </div>
                 </div>
               </div>

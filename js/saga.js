@@ -53,49 +53,52 @@
     );
   }
 
-  /* ---------- flipcards: desktop manual, touch 5s metronome ----------
-     Desktop (hover): click / Enter / Space flips, hover tips the card.
-     Touch: no hover, so the card flips itself on a steady 5s rhythm —
-     but only while fully in view and untouched. Any scroll, touch or
-     tap resets the timer and pauses it; tap flips immediately. */
+  /* ---------- flipcards: explicit face controls ---------- */
   var flipCards = Array.prototype.slice.call(
     document.querySelectorAll(".flipcard-container")
   );
-  function setFlip(card, on) {
+  function setFaceAccessibility(face, visible) {
+    if (!face) return;
+    face.setAttribute("aria-hidden", visible ? "false" : "true");
+    face.querySelectorAll("a, button").forEach(function (control) {
+      control.tabIndex = visible ? 0 : -1;
+    });
+  }
+  function setFlip(card, on, moveFocus) {
     var inner = card.querySelector(".flipcard-item");
+    var front = card.querySelector(".flipcard-front");
+    var back = card.querySelector(".flipcard-back");
     if (!inner) return;
+
+    var hiddenFace = on ? front : back;
+    var visibleFace = on ? back : front;
     inner.classList.toggle("flipcard-rotate", on);
     card.classList.toggle("flipped", on);
-    card.setAttribute("aria-pressed", on ? "true" : "false");
-  }
-  function tappedLink(ev) {
-    return ev.target && ev.target.closest && ev.target.closest(".flipcard-link");
+    setFaceAccessibility(front, !on);
+    setFaceAccessibility(back, on);
+    card.querySelectorAll(".flipcard-toggle").forEach(function (button) {
+      button.setAttribute("aria-expanded", on ? "true" : "false");
+    });
+
+    var activeElement = document.activeElement;
+    var focusHiddenControl =
+      moveFocus || (activeElement && hiddenFace && hiddenFace.contains(activeElement));
+    if (focusHiddenControl && visibleFace) {
+      var visibleToggle = visibleFace.querySelector(".flipcard-toggle");
+      if (visibleToggle) visibleToggle.focus();
+    }
   }
   flipCards.forEach(function (card) {
     var inner = card.querySelector(".flipcard-item");
     if (!inner) return;
-    card.setAttribute("tabindex", "0");
-    card.setAttribute("role", "button");
-    card.setAttribute("aria-pressed", "false");
-    var label =
-      card.querySelector(".flipcard-text")?.textContent?.trim().slice(0, 80) ||
-      "quote card";
-    card.setAttribute("aria-label", "Reveal quote: " + label);
-    card.addEventListener("click", function (ev) {
-      if (tappedLink(ev)) return; // book link navigates, card stays put
-      setFlip(card, !card.classList.contains("flipped"));
-      disturbFlip();
-      scheduleFlipRearm();
-    });
-    card.addEventListener("keydown", function (ev) {
-      if (tappedLink(ev)) return;
-      if (ev.key === "Enter" || ev.key === " ") {
-        ev.preventDefault();
-        setFlip(card, !card.classList.contains("flipped"));
+    card.querySelectorAll(".flipcard-toggle").forEach(function (button) {
+      button.addEventListener("click", function () {
+        setFlip(card, !card.classList.contains("flipped"), true);
         disturbFlip();
         scheduleFlipRearm();
-      }
+      });
     });
+    setFlip(card, false, false);
   });
 
   var touchFlip = window.matchMedia("(hover: none)").matches;

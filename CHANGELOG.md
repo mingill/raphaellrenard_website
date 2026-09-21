@@ -16,3 +16,8 @@
 - Added synchronized ARIA state to the mobile menu across all 12 pages.
 - Added focus management, keyboard focus containment, Escape and link closing,
   scroll locking, and desktop-resize cleanup for the mobile menu.
+- Converted the German homepage map markers into labelled button controls with
+  synchronized panel state and accessible touch targets.
+- Added keyboard and outside-click closing, Escape handling, close controls, and
+  focus return for the map information panels.
+- Preserved all existing map positions, content, cover links, and destinations.

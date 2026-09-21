@@ -74,8 +74,9 @@ motion and reduced-motion review.
       exposes synchronized ARIA state, manages focus, closes on Escape and link
       activation, locks page scrolling while open, and resets on desktop resize.
       (2026-09-21)
-- [ ] Repair the map markers as separate keyboard-operable controls with
+- [x] Repair the map markers as separate keyboard-operable controls with
       labelled state, accessible information panels, and usable touch targets.
+      (2026-09-21)
 - [ ] Remove the nested-interactive flipcard pattern: links currently sit inside
       a container exposed as `role="button"`. Provide a separate manual flip
       control, update its accessible state, and prevent hidden-side links from
