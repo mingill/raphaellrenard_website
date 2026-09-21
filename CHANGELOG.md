@@ -225,3 +225,10 @@
   under reduced-motion.
 - Halved the map info header bottom margin (`1.2rem` → `0.6rem`) so the
   headline sits closer to the panel text.
+- Removed the map info-header bottom margin entirely after two halvings
+  (`0.6rem` → `0.3rem` → struck) — the panel grid holds the rhythm alone.
+- Fixed the closing book index at tablet widths: the five covers now form a
+  centered 3+2 layout instead of an uneven 2-column grid (`queries.css`
+  wrapping flex; single column below 26em unchanged).
+- Reordered the English closing index so the two German-only covers sit in
+  the second row; English-available books lead. German page order unchanged.

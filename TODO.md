@@ -107,7 +107,11 @@ issues below are the actionable ones.
 - [x] Add a compact image-led closing book index to both homepages using the
       existing cover assets and routes. Covers are centered, rounded, and
       softly lit like the main carousel; visible title spans and divider lines
-      were removed while accessible image names remain. (2026-09-21)
+      were removed while accessible image names remain. (2026-09-21) Update:
+      at tablet widths the five covers now form a centered 3+2 layout (wrapping
+      flex in `queries.css`) instead of an uneven 2-column grid, and on the
+      English page the two German-only covers were moved to the second row.
+      (2026-09-21)
 - [x] Establish a title-led book choice on the homepage. The `Wähle ein Buch`
       / `Choose a book` heading and direct links to the curated books provide
       the clear next step; the compact image index reinforces the same routes.
@@ -200,6 +204,10 @@ for preserving routes, labels, and the existing visual system.
       closing-index covers; English-available destinations carry no badge.
       The unreleased Svalbard cover was delinked on both homepages instead of
       pointing at a dead `href="#"`. (2026-09-21)
+- [x] Remove the map info-header bottom margin entirely. The gap between the
+      panel headline and text was first halved twice (`1.2rem` → `0.6rem` →
+      `0.3rem`) and then struck per approval — the grid layout holds the
+      rhythm on its own. (2026-09-21)
 
 ### P1 — Mobile usability and responsive rhythm
 

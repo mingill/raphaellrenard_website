@@ -293,7 +293,7 @@ body::after {
   max-height: 52rem;
   height: 46vh;
   min-height: 30rem;
-  margin: 4rem 0;
+  margin: 0.2rem 0 4rem 0;
   border-radius: 0;
   box-shadow: var(--saga-glow), 0 3rem 6rem rgba(0, 0, 0, 0.6);
   border-top: 1px solid var(--saga-line);
