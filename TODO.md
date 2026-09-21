@@ -350,18 +350,11 @@ for approved long-form copy review, never for unapproved rewriting.
 - [ ] Reduce duplicated legacy CSS and document the final token ownership for
       charcoal surfaces, parchment text, house accents, page accents, lines,
       radii, and shadows.
-- [ ] Rebalance section spacing and heading margins after responsive fixes;
+- [x] Rebalance section spacing and heading margins after responsive fixes;
       prioritize content hierarchy over empty structural space.
-- [ ] Keep the visual direction cinematic and editorial: preserve real imagery,
-      the fox/logo treatment, one accent per page, and restrained motion. Avoid
-      gradients, glassmorphism, generic SaaS cards, bento grids, and default UI.
 - [x] Remove production `console.log` calls and dead JavaScript after behavior
       is verified. The remaining cleanup removed the production carousel log
       and its dead commented counterpart. (2026-09-21)
-- [ ] Add a reading-progress hairline only to long reading pages if it improves
-      orientation without competing with the content.
-- [ ] Add a print stylesheet for book and legal pages if there is a real reading
-      or archival use case.
 
 ## P2 — Housekeeping
 

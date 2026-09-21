@@ -92,6 +92,7 @@
   so they keep their aspect ratio instead of stretching.
 - Fixed the mosaic gap: image cells now fill the box edge to edge (row-height
   fill, figure margins reset, images displayed as blocks).
+- Fixed the mobile headline cascade: phone `.heading-primary` sizes
   (`3.6rem` below 41em, `3rem` below 26em) now live in `site/css/saga.css`,
   which loads last, so the homepage headline no longer renders at the 6.2rem
   desktop size on phones.
