@@ -301,8 +301,12 @@ for approved long-form copy review, never for unapproved rewriting.
 - [x] Replace or correct the remaining `href="#"` placeholders. Never invent a
       destination for an unreleased book; use a non-link state or an explicit
       unavailable treatment instead.
-- [ ] Decide whether English visitors should receive regional Amazon links or
-      whether the existing Amazon.de links are intentional.
+- [x] Decide whether English visitors should receive regional Amazon links or
+      whether the existing Amazon.de links are intentional. Decided (2026-09-21):
+      the 20 product links for English-language books and the 4 author-store
+      links on English pages now point to amazon.com (all ASINs verified live);
+      German-only volumes, German footers, legal pages, and 404.html stay on
+      Amazon.de.
 - [ ] Add a contact form only after deciding on the service and privacy copy.
       Include a honeypot, validation, success state, failure state, and no
       unapproved form field names.

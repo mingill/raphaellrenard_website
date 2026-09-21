@@ -177,3 +177,7 @@
   Zero visual change.
 - Confirmed `img/fox_logo_website.png` is used as the social preview image on
   both legal pages — kept, not removed.
+- Pointed the 20 product links for English-language books and the 4
+  author-store links on English pages to amazon.com (all ASINs verified live
+  with correct titles). German-only volumes, German footers, legal pages, and
+  404.html stay on Amazon.de.
