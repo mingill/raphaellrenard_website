@@ -267,10 +267,14 @@ motion-specific follow-up.
       imagery; do not invent book facts or promotional claims. All 12 public
       pages now carry page-specific titles, descriptions, URLs, and real
       cover/hero/logo images with matching Twitter cards. (2026-09-21)
-- [ ] Add `robots.txt`, `sitemap.xml`, and JSON-LD for the website, author,
-      books, and breadcrumbs where the existing facts support it.
-- [ ] Promote the top visible heading on book and legal pages from `h2` to
-      `h1`, preserving the visible copy and page voice.
+- [x] Add `robots.txt`, `sitemap.xml`, and JSON-LD for the website, author,
+      books, and breadcrumbs where the existing facts support it. `robots.txt`
+      and `sitemap.xml` (12 pages, hreflang alternates on the 8 pairs) are
+      live; all 12 pages carry one JSON-LD block (WebSite/Book/BookSeries/
+      WebPage) with no invented facts. (2026-09-21)
+- [x] Promote the top visible heading on book and legal pages from `h2` to
+      `h1`, preserving the visible copy and page voice. All 10 pages now carry
+      exactly one `h1`; homepages were already correct. (2026-09-21)
 - [ ] Replace generic descriptions with accurate page-specific descriptions and
       correct the German `Norderns` typo to `Nordens` where applicable.
 - [ ] Audit every internal and external link after metadata changes, including

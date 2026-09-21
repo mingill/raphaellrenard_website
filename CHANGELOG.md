@@ -137,3 +137,11 @@
   pages: page-specific titles, existing descriptions, canonical URLs, real
   cover/hero/logo images with alt text, German/English locales, large-image
   cards for home and book pages, and compact cards for legal pages.
+- Added `site/robots.txt` and `site/sitemap.xml` covering all 12 public pages
+  with hreflang alternates on the eight German/English pairs.
+- Added one JSON-LD structured-data block per public page (WebSite, Book,
+  BookSeries, or WebPage as the existing facts support), with no invented
+  identifiers, prices, or claims.
+- Promoted the top visible heading on all 8 book pages and both legal pages
+  from `h2` to `h1` with copy and styling untouched, so every public page now
+  has exactly one `h1`.
