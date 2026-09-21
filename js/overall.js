@@ -90,7 +90,12 @@ navMobile.addEventListener("click", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.matchMedia("(min-width: 63.001em)").matches) {
+  // matchMedia guarded: on very old browsers the mobile nav simply stays
+  // as-is on resize instead of throwing.
+  if (
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(min-width: 63.001em)").matches
+  ) {
     setMobileNav(false);
   }
 });

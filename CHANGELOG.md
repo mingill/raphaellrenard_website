@@ -92,6 +92,10 @@
   so they keep their aspect ratio instead of stretching.
 - Fixed the mosaic gap: image cells now fill the box edge to edge (row-height
   fill, figure margins reset, images displayed as blocks).
+- Guarded `matchMedia`, `IntersectionObserver`, and `requestAnimationFrame`
+  assumptions in `script.js`, `saga.js` (including an rAF timer fallback),
+  and `overall.js`, so unsupported environments degrade gracefully instead
+  of throwing. No behavior change on modern browsers.
 - Fixed the mobile headline cascade: phone `.heading-primary` sizes
   (`3.6rem` below 41em, `3rem` below 26em) now live in `site/css/saga.css`,
   which loads last, so the homepage headline no longer renders at the 6.2rem

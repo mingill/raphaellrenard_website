@@ -346,8 +346,12 @@ for approved long-form copy review, never for unapproved rewriting.
       not in sitemap. (2026-09-21)
 - [ ] Define failure behavior for future forms, external purchase links,
       language switching, carousel initialization, and map panels.
-- [ ] Guard or document assumptions around `IntersectionObserver`, `matchMedia`,
+- [x] Guard or document assumptions around `IntersectionObserver`, `matchMedia`,
       and `requestAnimationFrame` so unsupported environments fail gracefully.
+      Done (2026-09-21): `script.js` (top-level and sticky-nav observer),
+      `saga.js` (media queries plus an rAF helper with timer fallback), and
+      `overall.js` (resize handler) are guarded; `icons.js` and `abenteurer.js`
+      use none of these APIs. Zero behavior change on modern browsers.
 
 ## P2 — Visual system and motion maintenance
 

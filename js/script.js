@@ -1,6 +1,8 @@
 "use strict";
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion =
+  typeof window.matchMedia === "function" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const carouselTracks = document.querySelectorAll(".books-container");
 const isEnglishHomepage = document.documentElement.lang === "en";
 
@@ -272,28 +274,32 @@ document.addEventListener("keydown", (event) => {
 
 const sectionHeroEl = document.querySelector(".section-hero");
 
-// create an intersection observer, which watches for an intersection of the viewport with the section-hero-Element
-const obs = new IntersectionObserver(
-  // this function will be called when the hero-section enters or exists the viewport
-  function (entries) {
-    const ent = entries[0]; //gets the first and only entry of the section-hero-element
-    // if we don't see the hero_section, add class sticky
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
+// Sticky nav needs IntersectionObserver; without it the header simply stays
+// in normal document flow (graceful degradation, no throw).
+if (sectionHeroEl && "IntersectionObserver" in window) {
+  // create an intersection observer, which watches for an intersection of the viewport with the section-hero-Element
+  const obs = new IntersectionObserver(
+    // this function will be called when the hero-section enters or exists the viewport
+    function (entries) {
+      const ent = entries[0]; //gets the first and only entry of the section-hero-element
+      // if we don't see the hero_section, add class sticky
+      if (ent.isIntersecting === false) {
+        document.body.classList.add("sticky");
+      }
+      // if we see the hero_section, remove class sticky
+      if (ent.isIntersecting === true) {
+        document.body.classList.remove("sticky");
+      }
+    },
+    {
+      // In the viewport - options for intersection observer
+      root: null, // means the viewport
+      threshold: 0, // defines percentage of visibility of hero_section
+      rootMargin: "-80px", // because header is 8rem in height
     }
-    // if we see the hero_section, remove class sticky
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport - options for intersection observer
-    root: null, // means the viewport
-    threshold: 0, // defines percentage of visibility of hero_section
-    rootMargin: "-80px", // because header is 8rem in height
-  }
-);
-obs.observe(sectionHeroEl);
+  );
+  obs.observe(sectionHeroEl);
+}
 
 // ************************************* //
 /* NOTE: flipcard animation now lives in saga.js (single system).

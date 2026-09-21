@@ -4,7 +4,18 @@
 (function () {
   "use strict";
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduceMotion =
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* rAF fallback for very old browsers: fall back to setTimeout so scroll
+     handlers never throw; identical timing behavior on modern browsers. */
+  var raf =
+    typeof window.requestAnimationFrame === "function"
+      ? window.requestAnimationFrame.bind(window)
+      : function (cb) {
+          return window.setTimeout(cb, 16);
+        };
 
   document.body.classList.add("saga");
 
@@ -39,7 +50,7 @@
       "scroll",
       function () {
         if (!ticking) {
-          window.requestAnimationFrame(function () {
+          raf(function () {
             var y = window.scrollY;
             if (y < window.innerHeight) {
               heroStrip.style.transform = "translateY(" + y * 0.08 + "px)";
@@ -160,7 +171,9 @@
   /* ---------- flipcards: scroll-driven color on touch devices ----------
      No hover on mobile, so images bloom with visibility instead:
      the more of a card is in view, the more saturated it gets. */
-  var touchOnly = window.matchMedia("(hover: none)").matches;
+  var touchOnly =
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(hover: none)").matches;
   if (touchOnly && !reduceMotion) {
     var wakeCards = Array.prototype.slice.call(
       document.querySelectorAll(".flipcard-container")
@@ -186,7 +199,7 @@
       var scheduleWake = function () {
         if (!waking) {
           waking = true;
-          window.requestAnimationFrame(wake);
+          raf(wake);
         }
       };
       window.addEventListener("scroll", scheduleWake, { passive: true });
