@@ -375,6 +375,18 @@ for approved long-form copy review, never for unapproved rewriting.
       B0DRMJ7YNG) on its book page: both clickables point to the verified
       Amazon URL, date set to Dezember 2024, button changed from
       Bald-erhältlich to Jetzt kaufen!. (2026-09-21)
+- [x] Add the “How they saved the world” book pages (`htstw.html` +
+      `en/htstw.html`) as full A Pirate's Tale twins: ice-blue `accent-frost`
+      theme, site-wide nav entries, 4th shelf card and 6th index item on both
+      homepages, Svalbard map panels linked, sitemap extended. (2026-09-21)
+- [ ] Replace the marked FILL-IN copy on both htstw pages (headline, teaser,
+      features, stats, availability) with final approved copy. Do not invent
+      book facts.
+- [x] Show a “Bald erhältlich / Coming soon” ribbon on the unreleased htstw
+      book: existing `.unfinished:after` pill wired to the shelf card and
+      index item on both homepages (small variant pinned to the cover edge
+      in the index), plus an `aria-disabled` coming-soon button rule matching
+      the buy-button look. (2026-09-21)
 - [x] Decide whether English visitors should receive regional Amazon links or
       whether the existing Amazon.de links are intentional. Decided (2026-09-21):
       the 20 product links for English-language books and the 4 author-store

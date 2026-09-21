@@ -250,3 +250,12 @@
 - Widened the closing book index to six covers in one desktop row with two
   centered rows of three below ~860px (2.4rem row gap); moved htstw before
   proverbs on both homepages.
+- Added the “How they saved the world” book pages (`htstw.html` +
+  `en/htstw.html`) as full A Pirate's Tale twins with an ice-blue
+  `accent-frost` theme, site-wide nav entries, 4th shelf card and 6th index
+  item on both homepages, linked Svalbard map panels, and sitemap entries.
+  Page copy is marked FILL-IN until final text is approved.
+- Showed a “Bald erhältlich / Coming soon” ribbon on the unreleased htstw
+  book in the shelf and index on both homepages (small edge-pinned variant
+  in the index), and gave the `aria-disabled` coming-soon button the exact
+  buy-button resting look.
