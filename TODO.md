@@ -105,23 +105,20 @@ motion and reduced-motion review.
 **Fitting skills:** Impeccable `distill`, `clarify`, and `layout`;
 `design-taste-frontend` for preserving the established editorial language.
 
-- [ ] Shape the homepage as a deliberate emotional sequence: invitation,
-      featured story choice, author premise, selected excerpts, optional map
-      capstone, and final book action. The current German page asks visitors to
-      process a hero mosaic, long catalogue, four feature claims, author panel,
-      three flipcards, and seven map markers without a single clear peak.
+- [x] Shape the homepage as a deliberate emotional sequence: book choice,
+      atmosphere, author premise, selected excerpts, optional map capstone, and
+      a final return to book links. Both language homepages now follow this
+      backbone without replacing the existing SAGA & SMOKE assets.
 - [ ] Reduce competing discovery mechanisms. Hero links, book carousel,
       flyout, flipcards, and map all expose different paths; preserve the
       adventure atmosphere but make map and flipcards optional enrichment rather
       than required ways to understand the catalogue.
-- [ ] Make the English homepage a deliberate journey rather than a reduced
-      German page. It omits the map and most impressions, lacks `Places` in
-      navigation, and ends abruptly after one impression. Decide whether it is a
-      complete catalogue, an English-fiction landing page, or an intentionally
-      shorter introduction, then express that choice in headings and CTA copy.
-- [ ] Preserve the strong emotional assets: real expedition imagery, physical
+- [x] Make the English homepage a deliberate journey rather than a reduced
+      German page. The German-only teaser was removed and the world map was
+      added; `Places` now appears in desktop and mobile navigation. (2026-09-21)
+- [x] Preserve the strong emotional assets: real expedition imagery, physical
       book covers, quotations, geography, and the charcoal/ember visual world.
-      The fix is prioritization, not a replacement aesthetic.
+      The fix remained prioritization, not a replacement aesthetic. (2026-09-21)
 
 ### P1 — Navigation and information architecture
 
@@ -132,10 +129,9 @@ for preserving routes, labels, and the existing visual system.
       fiction, `101 German Proverbs`, and the nonfiction `Of the world` series;
       preserve the public label until approved, but decide whether the flyout
       needs visible grouping or explanatory structure.
-- [ ] Resolve the English homepage teaser mismatch: the displayed
-      `Eine Geschichte des Sandes` cover/title does not clearly match its
-      `festung.html` destination. Keep the existing route until the content
-      decision is made.
+- [x] Resolve the English homepage teaser mismatch by removing the obsolete
+      German-only teaser while preserving the existing public book routes.
+      (2026-09-21)
 - [ ] Localize English internal-page navigation and footer chrome, and decide
       whether German-only pages should have English equivalents or be explicitly
       presented as German-only.
@@ -171,9 +167,10 @@ for preserving routes, labels, and the existing visual system.
 - [ ] Audit heading scale, paragraph width, and section-label repetition as one
       system. Keep the cinematic serif/display treatment, but use size and space
       to clarify hierarchy rather than adding more glow or motion.
-- [ ] Fix visible copy issues found during review, including `Norderns`,
-      `aktische`, `Vielschichte`, and `Myterien`, after confirming the intended
-      German wording.
+- [x] Fix visible copy issues found during review, including `Norderns`,
+      `aktische`, `Vielschichte`, and `Myterien`, using the confirmed German
+      wording; the repeated metadata typo was corrected across German pages.
+      (2026-09-21)
 
 ### P1 — Complexity and performance
 

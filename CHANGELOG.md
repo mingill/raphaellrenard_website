@@ -20,6 +20,11 @@
 - Confirmed the homepage's title-led book choice as complete: the
   `Wähle ein Buch` / `Choose a book` heading and direct book links provide the
   closing decision without requiring a separate CTA section.
+- Removed the obsolete German-only teaser from the English homepage.
+- Added the translated world map and `Places` links to the English desktop and
+  mobile navigation, preserving all existing place and book associations.
+- Corrected the reviewed German typography and metadata errors, including
+  `Nordens`, `arktische`, and `Vielschichtige`.
 
 ### Accessibility
 
@@ -54,3 +59,5 @@
 - Removed all automatic flip timers and touch visibility observers.
 - Fixed the flipcard quote layout so quote text, novel names, and book links
   use aligned rows without clipping the links inside the card.
+- Aligned map info headings and close buttons in a two-column header row on both
+  homepages, with the existing focus and close behavior preserved.

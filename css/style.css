@@ -636,10 +636,10 @@
 }
 
 .info-close {
-  align-self: flex-end;
   min-width: 4.4rem;
   min-height: 4.4rem;
-  margin: -0.8rem -0.8rem 0.4rem auto;
+  justify-self: end;
+  margin: -0.8rem -0.8rem 0 0;
   padding: 0.4rem 0.8rem;
   border: 0;
   background: transparent;
@@ -693,7 +693,7 @@
   color: #190c00;
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin: 1.2rem 0 0;
 
   border-bottom: 1px solid var(--secondary-color);
   border-image: linear-gradient(
@@ -702,6 +702,14 @@
     rgba(0, 0, 0, 0) 50%
   ); /* to right - at 50% transparent */
   border-image-slice: 1;
+}
+
+.info-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .info-text {

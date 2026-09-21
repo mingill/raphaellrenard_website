@@ -52,9 +52,12 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#author">Author</a></li>
-          <li>
-            <a class="main-nav-link" href="#impressions">Impressions</a>
-          </li>
+           <li>
+             <a class="main-nav-link" href="#impressions">Impressions</a>
+           </li>
+           <li>
+             <a class="main-nav-link" href="#map">Places</a>
+           </li>
            <li>
              <button
                class="main-nav-link books-button nav-cta"
@@ -126,11 +129,14 @@
               >101 German Proverbs</a
             >
           </li>
-          <li class="nav-mobile-item">
-            <a class="nav-mobile-link" href="oftheworld.html"
-              >"Of the world" Series</a
-            >
-          </li>
+           <li class="nav-mobile-item">
+             <a class="nav-mobile-link" href="oftheworld.html"
+               >"Of the world" Series</a
+             >
+           </li>
+           <li class="nav-mobile-item">
+             <a class="nav-mobile-link" href="#map">Places</a>
+           </li>
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="../index.html">Deutsch</a>
           </li>
@@ -354,86 +360,6 @@
         </div>
       </section>
 
-      <!-- SECTION GERMAN BOOKS TEASER -->
-      <section class="section section-books" id="german-books">
-        <span class="subheading center-text">Even More</span>
-        <h2 class="heading-secondary center-text">Three Series in German</h2>
-        <p class="center-text" style="margin-bottom: 3.2rem">
-          Der Abenteurer (6 volumes), Die Festung and Eine Geschichte des
-          Sandes (2 volumes) are currently available in German only.
-        </p>
-        <div class="container">
-          <div class="books-container">
-            <div class="book-item">
-              <a href="../abenteurer.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_abenteurer1_320.avif 320w,
-                    ../img/cover/cover_abenteurer1.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_abenteurer1.avif"
-                  class="book-img"
-                  alt="Bookcover - Der Abenteurer - Alte Bekannte - red Stetson"
-                  draggable="false"
-                  loading="lazy"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">German</span>
-                <span class="tag tag--place">Orient</span>
-                <span class="tag tag--genre">Fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="../festung.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_festung1_320.avif 320w,
-                    ../img/cover/cover_festung1.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_festung1.avif"
-                  class="book-img"
-                  alt="Bookcover - Die Festung - volume 1 Arrival - messenger entering desert fortress"
-                  draggable="false"
-                  loading="lazy"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">German</span>
-                <span class="tag tag--place">Sahara</span>
-                <span class="tag tag--genre">Fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="../festung.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_egds1_320.avif 320w,
-                    ../img/cover/cover_egds1.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_egds1.avif"
-                  class="book-img"
-                  alt="Bookcover - Eine Geschichte des Sandes - volume 1"
-                  draggable="false"
-                  loading="lazy"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">German</span>
-                <span class="tag tag--place">Sahara</span>
-                <span class="tag tag--genre">Fiction</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- SECTION FEATURES -->
       <section class="section-features" id="features">
         <div class="container grid--features">
@@ -554,6 +480,354 @@
                     <a class="flipcard-link" href="apt.html" tabindex="-1">To the book →</a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION MAP -->
+      <section class="section section-map" id="map">
+        <div class="container-map">
+          <span class="subheading center-text">Places</span>
+          <h2 class="heading-secondary center-text">A Journey Around the World</h2>
+          <div class="map">
+            <img
+              srcset="
+                ../img/map/map_colored_300.avif  300w,
+                ../img/map/map_colored.png      1200w
+              "
+              sizes="(max-width: 41em) 300px,
+                          1200px"
+              src="../img/map/map_colored.png"
+              class="map-img"
+              alt="Stylized map of the world"
+            />
+            <!-- Arabia - Der Abenteurer -->
+            <button
+              class="marker marker-arabia"
+              type="button"
+              aria-label="Open Arabia"
+              aria-controls="info-arabia"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-arabia hidden"
+              id="info-arabia"
+              role="region"
+              aria-labelledby="info-heading-arabia"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-arabia">Arabia</p>
+                <button class="info-close" type="button" aria-label="Close Arabia">&times;</button>
+              </div>
+              <p class="info-text">
+                Endless dunes, abandoned ruins, and dangerous Bedouin tribes.
+                The desert is full of dangers and mysteries.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer1.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 1 - Alte Bekannte"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer3.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 3 - Gegen den Sand"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer5.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 5 - F&uuml;nf gegen f&uuml;nf"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Persia - Der Abenteurer -->
+            <button
+              class="marker marker-persia"
+              type="button"
+              aria-label="Open Persia"
+              aria-controls="info-persia"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-persia hidden"
+              id="info-persia"
+              role="region"
+              aria-labelledby="info-heading-persia"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-persia">Persia</p>
+                <button class="info-close" type="button" aria-label="Close Persia">&times;</button>
+              </div>
+              <p class="info-text">
+                Whether fighting criminal gangs in Isfahan or searching for the
+                mysterious city at the Twin Rocks, every trail leads to the
+                Persian realm.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer2.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 2 - Faradisi"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer4.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 4 - Der Pakt"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Caribbean - A Pirate's Tale -->
+            <button
+              class="marker marker-caribbean"
+              type="button"
+              aria-label="Open the Caribbean"
+              aria-controls="info-caribbean"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-caribbean hidden"
+              id="info-caribbean"
+              role="region"
+              aria-labelledby="info-heading-caribbean"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-caribbean">The Caribbean</p>
+                <button class="info-close" type="button" aria-label="Close the Caribbean">&times;</button>
+              </div>
+              <p class="info-text">
+                In search of Captain Roger's treasure, ruthless pirates,
+                sanctimonious marines, and the dangers of the dark jungle await.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="apt.html">
+                  <img
+                    src="../img/cover/cover_apt.avif"
+                    class="info-cover"
+                    alt="Book cover A Pirate's Tale - ship with red sails in the Caribbean"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Sahara - Die Festung -->
+            <button
+              class="marker marker-sahara"
+              type="button"
+              aria-label="Open the Sahara"
+              aria-controls="info-sahara"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-sahara hidden"
+              id="info-sahara"
+              role="region"
+              aria-labelledby="info-heading-sahara"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-sahara">The Sahara</p>
+                <button class="info-close" type="button" aria-label="Close the Sahara">&times;</button>
+              </div>
+              <p class="info-text">
+                The endless expanse of the mighty Sahara. Here stands the
+                fortress of Fortechala, whose fate lies in the hands of three
+                strangers.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="../festung.html">
+                  <img
+                    src="../img/cover/cover_festung1.avif"
+                    class="info-cover"
+                    alt="Book cover Die Festung - Volume 1 - Ankunft"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../festung.html">
+                  <img
+                    src="../img/cover/cover_festung2.avif"
+                    class="info-cover"
+                    alt="Book cover Die Festung - Volume 2 - Chaos"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../festung.html">
+                  <img
+                    src="../img/cover/cover_festung3.avif"
+                    class="info-cover"
+                    alt="Book cover Die Festung - Volume 3 - Hoffnung"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer1.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 1 - Alte Bekannte"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Colorado - Der Abenteurer / Katherine -->
+            <button
+              class="marker marker-colorado"
+              type="button"
+              aria-label="Open Colorado"
+              aria-controls="info-colorado"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-colorado hidden"
+              id="info-colorado"
+              role="region"
+              aria-labelledby="info-heading-colorado"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-colorado">Colorado</p>
+                <button class="info-close" type="button" aria-label="Close Colorado">&times;</button>
+              </div>
+              <p class="info-text">
+                In the wide-open plains of the West, Sawyer faces a harsh
+                education. Here he learns what it means to be a true adventurer,
+                without understanding it at first.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer5.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 5 - F&uuml;nf gegen f&uuml;nf"
+                    loading="lazy"
+                  />
+                </a>
+                <a class="info-link" href="../abenteurer.html">
+                  <img
+                    src="../img/cover/cover_abenteurer6.avif"
+                    class="info-cover"
+                    alt="Book cover Der Abenteurer - Volume 6 - Die Wahrheit"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Svalbard - How they saved the world -->
+            <button
+              class="marker marker-svalbard"
+              type="button"
+              aria-label="Open Svalbard"
+              aria-controls="info-svalbard"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-svalbard hidden"
+              id="info-svalbard"
+              role="region"
+              aria-labelledby="info-heading-svalbard"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-svalbard">Svalbard</p>
+                <button class="info-close" type="button" aria-label="Close Svalbard">&times;</button>
+              </div>
+              <p class="info-text">
+                A secret in the far north threatens life around the world. Fate
+                brings four unusual characters to this place. But can they
+                really make a difference?
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="#">
+                  <img
+                    src="../img/cover/cover_htstw.avif"
+                    class="info-cover"
+                    alt="Book cover How they saved the world"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Germany - Der Abenteurer / 101 German Proverbs -->
+            <button
+              class="marker marker-germany"
+              type="button"
+              aria-label="Open Germany"
+              aria-controls="info-germany"
+              aria-expanded="false"
+            >
+              <span class="marker-inside" aria-hidden="true"></span>
+            </button>
+            <div
+              class="info info-germany hidden"
+              id="info-germany"
+              role="region"
+              aria-labelledby="info-heading-germany"
+              aria-hidden="true"
+            >
+              <div class="info-header">
+                <p class="info-heading" id="info-heading-germany">Germany</p>
+                <button class="info-close" type="button" aria-label="Close Germany">&times;</button>
+              </div>
+              <p class="info-text">
+                Learn more about the origins and meanings of the most common
+                German proverbs.
+              </p>
+              <div class="info-img">
+                <a class="info-link" href="proverbs.html">
+                  <img
+                    src="../img/cover/cover_germanproverbs.avif"
+                    class="info-cover"
+                    alt="Book cover 101 German Proverbs"
+                    loading="lazy"
+                  />
+                </a>
               </div>
             </div>
           </div>
