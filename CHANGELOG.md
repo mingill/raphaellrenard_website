@@ -80,3 +80,21 @@
 - Centered the single English impressions flipcard in the middle grid column
   on desktop while preserving the single-column mobile layout and the German
   three-card layout.
+- Removed the links from the six atmosphere mosaic images on both homepages.
+  The mosaic is now purely decorative: same images, same layout, but no Tab
+  stops and no duplicate destinations. All book pages remain reachable through
+  the shelf, navigation, map, flipcards, and closing index.
+- Fixed the mobile headline cascade: phone `.heading-primary` sizes
+  (`3.6rem` below 41em, `3rem` below 26em) now live in `site/css/saga.css`,
+  which loads last, so the homepage headline no longer renders at the 6.2rem
+  desktop size on phones.
+- Fixed the sticky-header compensation: replaced `.sticky .section-hero` with
+  `.sticky main > section:first-of-type` in `site/css/general.css`, so the
+  homepage book shelf (and book-page tops) no longer slide underneath the
+  fixed header and the opening subheading stays reachable.
+- Tightened the mobile `#books` top padding (`4.8rem` → `2.4rem`) so less of
+  the small phone viewport is header plus whitespace.
+- Widened the phone map to nearly full width (`max-width: 100%` instead of
+  `30rem` below 41em); markers and panels scale along automatically.
+- Enlarged homepage and book-page carousel arrows from 40px to the 44px
+  minimum touch-target size.

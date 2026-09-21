@@ -386,7 +386,10 @@ body.mobile-nav-open {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 }
 
-.sticky .section-hero {
+/* When the header becomes fixed, it leaves the document flow. Compensate the
+   first content section — whichever it is (books shelf on the homepages,
+   book detail on book pages) — so its top is never hidden underneath it. */
+.sticky main > section:first-of-type {
   margin-top: 9.6rem;
 }
 
@@ -539,8 +542,8 @@ body.mobile-nav-open {
 /*******************************/
 
 .btn--carousel {
-  height: 40px;
-  width: 40px;
+  height: 44px;
+  width: 44px;
 
   background-color: transparent;
   border: solid 1px var(--main-color);

@@ -140,21 +140,33 @@ for preserving routes, labels, and the existing visual system.
       Section links point to the English homepage sections, and German-only
       titles stay explicitly grouped under `German novels` with no English
       equivalents. (2026-09-21)
-- [ ] Add visible labels to clickable hero panels and book items using existing
-      titles. Do not make visitors infer destinations from cover art alone.
+- [x] Add visible labels to clickable hero panels and book items. Resolved by
+      decision (2026-09-21): the primary book cards already show visible
+      titles, the closing index stays intentionally image-only, and the
+      six-image atmosphere mosaic was made non-interactive instead of labeled
+      — its links duplicated destinations available elsewhere.
 
 ### P1 — Mobile usability and responsive rhythm
 
 **Fitting skills:** Impeccable `adapt`, `layout`, and `audit`.
 
-- [ ] Fix the final-loaded Saga cascade overriding mobile typography. The hero
-      heading can reach `6.2rem`, pushing the primary action below the first
-      viewport and replacing cinematic restraint with oversized empty space.
+- [x] Fix the final-loaded Saga cascade overriding mobile typography. The hero
+      heading reached `6.2rem` on phones; mobile `.heading-primary` sizes now
+      live in `saga.css` (2026-09-21), restoring the intended phone sizes.
+- [x] Fix sticky-header compensation hiding the first section's top. The old
+      `.sticky .section-hero` rule matched nothing first after the homepage
+      reorder, so the book shelf slid under the fixed header; replaced with
+      `.sticky main > section:first-of-type` in `general.css` (2026-09-21).
 - [ ] Test the first viewport at 320px, 375px, and 414px so the message, useful
       imagery, and primary action are visible without scroll-dependent discovery.
-- [ ] Increase carousel controls from the current approximately 40px square and
-      enlarge map marker targets, which can shrink to roughly 25px inner targets
-      on smaller screens.
+      (2026-09-21: headline cascade and sticky overlap fixed; `#books` mobile
+      top padding tightened `4.8rem` → `2.4rem`. Micro-fix approved, first
+      viewport verified good by Renard.)
+- [x] Increase carousel controls from the former 40px square to the 44px
+      minimum on homepages and book pages (2026-09-21). Map marker buttons
+      were already 44px at every breakpoint — verified, no change needed.
+- [x] Widen the phone map to nearly full width: the `@41em` cap is now
+      `max-width: 100%` instead of `30rem` (2026-09-21).
 - [ ] Rework the fixed map dimensions and tall flipcards for narrow viewports;
       verify that panels, long copy, and controls do not rely on overflow hidden.
 - [ ] Rebalance section spacing after the cascade fix. The current rhythm gives
