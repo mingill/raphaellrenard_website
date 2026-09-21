@@ -95,12 +95,18 @@
         </div>
       </nav>
 
-      <button class="btn-mobile-nav" aria-label="menu button">
+      <button
+        class="btn-mobile-nav"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+      >
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
 
-      <div class="nav-mobile">
+      <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
         <ul class="nav-mobile-list">
           <li class="nav-mobile-item">
             <a class="nav-mobile-link" href="abenteurer.html">Der Abenteurer</a>

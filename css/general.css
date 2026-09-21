@@ -325,6 +325,10 @@ body {
   z-index: 101;
 }
 
+body.mobile-nav-open {
+  overflow: hidden;
+}
+
 .nav-open .icon-mobile-nav[name="close-outline"] {
   display: block;
 }

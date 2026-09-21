@@ -66,10 +66,16 @@ issues below are the actionable ones.
 **Fitting skills:** Impeccable `audit` and `harden`; `review-animations` for
 motion and reduced-motion review.
 
-- [ ] Repair the non-semantic `Romane` / `Novels` flyout trigger, mobile menu,
-      map markers, and flipcards as described in the existing accessibility
-      backlog. These controls look interactive but are not consistently exposed
-      to keyboard or assistive-technology users.
+- [x] Repair the non-semantic `Romane` / `Novels` flyout trigger across the
+      shared navigation. It is now a labelled button with synchronized state,
+      keyboard activation, outside-click closing, and Escape-to-close behavior.
+      (2026-09-21)
+- [x] Repair the mobile menu's accessible state and keyboard behavior. It now
+      exposes synchronized ARIA state, manages focus, closes on Escape and link
+      activation, locks page scrolling while open, and resets on desktop resize.
+      (2026-09-21)
+- [ ] Repair the map markers as separate keyboard-operable controls with
+      labelled state, accessible information panels, and usable touch targets.
 - [ ] Remove the nested-interactive flipcard pattern: links currently sit inside
       a container exposed as `role="button"`. Provide a separate manual flip
       control, update its accessible state, and prevent hidden-side links from
