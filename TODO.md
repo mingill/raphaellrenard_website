@@ -275,8 +275,11 @@ motion-specific follow-up.
 - [x] Promote the top visible heading on book and legal pages from `h2` to
       `h1`, preserving the visible copy and page voice. All 10 pages now carry
       exactly one `h1`; homepages were already correct. (2026-09-21)
-- [ ] Replace generic descriptions with accurate page-specific descriptions and
-      correct the German `Norderns` typo to `Nordens` where applicable.
+- [x] Replace generic descriptions with accurate page-specific descriptions and
+      correct the German `Norderns` typo to `Nordens` where applicable. All 8
+      book pages now carry unique descriptions across meta/OG/Twitter tags;
+      legal pages use short factual descriptions. Zero `Norderns` remains in
+      HTML. (2026-09-21)
 - [ ] Audit every internal and external link after metadata changes, including
       `.de` redirects and all Amazon URLs.
 

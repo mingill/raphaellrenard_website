@@ -145,3 +145,7 @@
 - Promoted the top visible heading on all 8 book pages and both legal pages
   from `h2` to `h1` with copy and styling untouched, so every public page now
   has exactly one `h1`.
+- Replaced the shared generic description with unique page-specific
+  descriptions on all 8 book pages (meta, Open Graph, and Twitter tags), and
+  aligned the legal-page descriptions with their existing OG wording. Zero
+  `Norderns` occurrences remain in HTML.
