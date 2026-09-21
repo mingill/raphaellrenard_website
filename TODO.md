@@ -134,9 +134,12 @@ for preserving routes, labels, and the existing visual system.
 - [x] Resolve the English homepage teaser mismatch by removing the obsolete
       German-only teaser while preserving the existing public book routes.
       (2026-09-21)
-- [ ] Localize English internal-page navigation and footer chrome, and decide
-      whether German-only pages should have English equivalents or be explicitly
-      presented as German-only.
+- [x] Localize English internal-page navigation and footer chrome. The three
+      English book pages now use `Author`, `Impressions`, `Places`, `Novels`
+      and `Contact` / `Imprint` / `Privacy`, matching the English homepage.
+      Section links point to the English homepage sections, and German-only
+      titles stay explicitly grouped under `German novels` with no English
+      equivalents. (2026-09-21)
 - [ ] Add visible labels to clickable hero panels and book items using existing
       titles. Do not make visitors infer destinations from cover art alone.
 

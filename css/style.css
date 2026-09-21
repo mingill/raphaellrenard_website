@@ -447,6 +447,11 @@
   justify-content: center;
 }
 
+/* single-card galleries (e.g. English impressions): use the middle column */
+.flipcard-gallery > .flipcard-container:only-child {
+  grid-column: 2;
+}
+
 .flipcard-container {
   position: relative;
   width: 36rem;

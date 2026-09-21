@@ -68,3 +68,15 @@
   keeping group headings non-interactive and readable by assistive technology.
 - Separated the mobile language switch with its own divider using the existing
   divider color.
+- Localized the three English internal pages (`en/apt.html`,
+  `en/proverbs.html`, `en/oftheworld.html`): desktop header and footer now use
+  `Author`, `Impressions`, `Places`, `Novels` and `Contact` / `Imprint` /
+  `Privacy`, matching the English homepage.
+- Repointed the English internal header section links to the English homepage
+  sections (`index.html#author`, `#impressions`, `#map`).
+- Added `Author` / `Impressions` / `Places` links to the internal English
+  mobile navigation, placed after the book groups and before the language
+  switch.
+- Centered the single English impressions flipcard in the middle grid column
+  on desktop while preserving the single-column mobile layout and the German
+  three-card layout.
