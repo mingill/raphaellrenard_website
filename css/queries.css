@@ -361,7 +361,14 @@ Instead, 1rem = 1em = 16px */
     padding: 4.8rem 0;
   }
   .book-index-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 5 items: wrapping centered flex forms 3 + 2 rows instead of a
+       lopsided 2-column grid (3 left, 2 right). */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .book-index-list > li {
+    flex: 0 1 calc(33.333% - 1.6rem);
   }
   /* FEATURES */
   .wrapper--bookpage {
@@ -515,7 +522,8 @@ Instead, 1rem = 1em = 16px */
     height: 24rem;
   }
   .book-index-list {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
   /* FEATURES */
