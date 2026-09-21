@@ -979,3 +979,89 @@ body.accent-stone {
     font-size: 3rem;
   }
 }
+
+/************************/
+ /* tactile press feedback (Emil review item 1)
+ /************************/
+
+/* Base transitions ONLY for pressables that don't already transition.
+   (Buttons, nav links and footer links already have `transition: all`,
+   so transform is covered there — restating it here would clobber their
+   color/box-shadow smoothing.) */
+.btn--carousel,
+.btn-carousel--bookpage,
+.btn-mobile-nav,
+.marker,
+.info-close,
+.flipcard-container,
+.book-item > a {
+  transition: transform 160ms ease-out;
+}
+
+/* The closing-index links transition color only — extend, don't replace. */
+.book-index-link {
+  transition: color 0.3s, transform 160ms ease-out;
+}
+
+/* Inline links can't transform — make them pressable boxes. Short labels
+   only, so layout is unaffected. (Lang links are flex items already.) */
+.nav-books-link,
+.nav-mobile-link,
+.footer-link {
+  display: inline-block;
+}
+
+/* Generic press: subtle push on anything pressable with a transition. */
+.btn--full:active,
+.btn--outline:active,
+.btn--full-bookpage:active,
+.main-nav-link:active,
+.books-button:active,
+.nav-books-link:active,
+.nav-mobile-link:active,
+.footer-link:active,
+.lang-link:active,
+.link:active,
+.book-item > a:active,
+.book-index-link:active,
+.flipcard-container:active {
+  transform: scale(0.97);
+}
+
+/* Snappy press, gentle release: shorten the press phase only. Release
+   still uses each element's base transition. */
+.btn--full:active,
+.btn--outline:active,
+.btn--full-bookpage:active,
+.main-nav-link:active,
+.books-button:active,
+.book-index-link:active {
+  transition-duration: 120ms;
+}
+
+/* Carousel arrows are centered with translate — preserve it under press. */
+.btn--left:active {
+  transform: translate(-50%, -50%) scale(0.93);
+}
+.btn--right:active {
+  transform: translate(50%, -50%) scale(0.93);
+}
+.btn-carousel--bookpage:active,
+.btn-mobile-nav:active {
+  transform: scale(0.93);
+}
+
+/* Markers hover at scale(1.1) — press dips below resting size instead. */
+.marker:active,
+.info-close:active {
+  transform: scale(0.9);
+}
+
+/* Covers lift on hover — keep the lift and add the press on top. */
+.book-item a:active .book-img {
+  transform: translateY(-0.8rem) scale(0.97);
+  transition-duration: 160ms, 160ms;
+}
+.book-img--bookpage:active {
+  transform: scale(0.87);
+}

@@ -1,5 +1,42 @@
 # TODO — raphaellrenard.com
 
+## Motion & Feel (Emil Kowalski review)
+
+Source: `emil-design-eng` evaluation of the live site. Ordered by leverage —
+highest feel-gain per change first. All CSS-only, no markup or behavior
+changes. Explicitly out of scope (review-approved, do not "fix"): the
+rAF-throttled passive parallax, the hover-gated flip tip, the marker pulse,
+the finite language pulse, and the reduced-motion coverage.
+
+- [ ] Add `:active` press feedback to all pressable controls (`.btn--*`,
+      carousel arrows, map markers, links). No `:active` rule on the site
+      currently uses `transform` — add `scale(0.97)` so every press confirms
+      instantly. Single highest-leverage feel fix.
+- [ ] Define one custom ease-out token (e.g. `--ease-out:
+      cubic-bezier(0.23, 1, 0.32, 1)`) and use it everywhere. Every
+      transition on the site currently uses weak built-in easings; one token
+      upgrades them all.
+- [ ] Fix the flipcard transition (`style.css:464`
+      `transition: all 1s ease-in`). Triple violation: unbounded `all`,
+      1s duration, sluggish `ease-in`. Replace with transform-only ~0.7s
+      custom ease-out.
+- [ ] Replace all `transition: all` instances (7 in `general.css`, plus
+      `books.css:114`, `style.css:121,418,518`) with exact property lists
+      so hovers never re-animate unintended properties.
+- [ ] Calm the hero hover (`style.css:121-134`
+      `scale(1.1)` over 0.6s). Reduce to ~`scale(1.04)` over ~0.3s — a
+      caress, not a lunge.
+- [ ] Speed up the book-cover hover (`saga.css:411`
+      `transform 0.4s ease, box-shadow 0.4s ease`). Props are correctly
+      specified; reduce to ~0.22s with the custom ease-out so hovers feel
+      awake.
+- [ ] Swap the reveal easing (`saga.css:822` `0.7s ease`). Keep the
+      duration (once-per-element ambient reveals may run long) but use the
+      custom ease-out token instead of weak built-in `ease`.
+- [ ] Optional: give map `.info` panels a small fade + `translateY(4px)`
+      enter transition so user-summoned panels don't appear from nothing.
+      Lowest priority; skip if it complicates the panel logic.
+
 ## Done
 
 Migration + rebuild (2026-09-06/07), all pushed to `main` and live:
