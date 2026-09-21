@@ -263,8 +263,10 @@ motion-specific follow-up.
       eight true German/English page pairs now include `x-default` pointing to
       the German/default route; German-only and legal pages remain unchanged.
       (2026-09-21)
-- [ ] Add page-specific Open Graph and Twitter Card metadata with real existing
-      imagery; do not invent book facts or promotional claims.
+- [x] Add page-specific Open Graph and Twitter Card metadata with real existing
+      imagery; do not invent book facts or promotional claims. All 12 public
+      pages now carry page-specific titles, descriptions, URLs, and real
+      cover/hero/logo images with matching Twitter cards. (2026-09-21)
 - [ ] Add `robots.txt`, `sitemap.xml`, and JSON-LD for the website, author,
       books, and breadcrumbs where the existing facts support it.
 - [ ] Promote the top visible heading on book and legal pages from `h2` to

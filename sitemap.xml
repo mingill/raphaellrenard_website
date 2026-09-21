@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://raphaellrenard.com/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/apt.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/apt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/apt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/apt.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/en/apt.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/apt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/apt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/apt.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/proverbs.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/proverbs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/proverbs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/proverbs.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/en/proverbs.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/proverbs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/proverbs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/proverbs.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/oftheworld.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/oftheworld.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/oftheworld.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/oftheworld.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/en/oftheworld.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/oftheworld.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/oftheworld.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/oftheworld.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/abenteurer.html</loc>
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/festung.html</loc>
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/impressum.html</loc>
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/datasecurity.html</loc>
+  </url>
+</urlset>

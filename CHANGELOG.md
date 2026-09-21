@@ -133,3 +133,7 @@
   the homepage feature icons, menu, close, Amazon, and Instagram marks.
 - Restored the feature icon geometry and alignment by constraining native SVGs
   to the original 3.2rem glyph box, 1.6rem padding, and circular background.
+- Added page-specific Open Graph and Twitter Card metadata to all 12 public
+  pages: page-specific titles, existing descriptions, canonical URLs, real
+  cover/hero/logo images with alt text, German/English locales, large-image
+  cards for home and book pages, and compact cards for legal pages.
