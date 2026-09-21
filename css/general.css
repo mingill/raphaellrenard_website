@@ -569,13 +569,6 @@ body {
   line-height: 1.2;
 }
 
-*:focus {
-  outline: none;
-  /* outline: 4px dotted var(--tertiary-color);
-  outline-offset: 8px; */
-  /* box-shadow: 0 0 0 0.8rem var(--main-color); */
-}
-
 /************************/
 /**** 10.) FOOTER *******/
 /************************/

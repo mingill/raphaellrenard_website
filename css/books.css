@@ -206,13 +206,6 @@
   border-radius: 50%;
 }
 
-.btn-icon--bookpage:focus,
-.btn--right:focus,
-.btn--left:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 /************************/
 /*** 2.) FEATURES *******/
 /************************/
