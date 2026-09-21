@@ -193,3 +193,7 @@
 - Flagged German-only destinations on the English homepage with `German only`
   badges on four map panels and two closing-index covers; delinked the
   unreleased Svalbard cover on both homepages.
+- Micro-defect sweep: removed obsolete `name=`/`alt=` attributes from footer
+  social anchors and icons, shipped German carousel `aria-label`s in markup,
+  rewrote the fragile stacked `saga.css` header comment, and evened
+  feature-copy indentation. No visual or behavioral change.

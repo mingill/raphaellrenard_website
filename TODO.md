@@ -377,6 +377,11 @@ for approved long-form copy review, never for unapproved rewriting.
 - [x] Remove production `console.log` calls and dead JavaScript after behavior
       is verified. The remaining cleanup removed the production carousel log
       and its dead commented counterpart. (2026-09-21)
+- [x] Micro-defect sweep from the fresh audit (2026-09-21): removed obsolete
+      `name=`/`alt=` attributes from footer social anchors and icons on both
+      homepages, shipped German carousel `aria-label`s in markup, rewrote the
+      fragile stacked `saga.css` header comment, and evened feature-copy
+      indentation. No visual or behavioral change.
 
 ## P2 — Housekeeping
 
