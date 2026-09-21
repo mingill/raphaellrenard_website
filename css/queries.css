@@ -346,6 +346,9 @@ Instead, 1rem = 1em = 16px */
   .section-books {
     padding: 4.8rem 0 0 0;
   }
+  #books.section-books {
+    padding-top: 4.8rem;
+  }
   /* FEATURES */
   .wrapper--bookpage {
     max-width: 42rem;

@@ -30,6 +30,14 @@
   padding: 9.6rem 0 4.8rem 0;
 }
 
+.section-hero .heading-secondary {
+  margin-bottom: 2.4rem;
+}
+
+#books.section-books {
+  padding-top: 12.8rem;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -80,6 +88,7 @@
 
 .btn--hero {
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   margin-top: 4rem;
 }
@@ -153,6 +162,25 @@
   align-items: center;
   box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
+}
+
+.book-item > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.book-title {
+  display: block;
+  min-height: 2.8rem;
+  max-width: 24rem;
+  color: var(--saga-ink, var(--text-color-dark));
+  font-family: var(--saga-display, Georgia, serif);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .book-tags {

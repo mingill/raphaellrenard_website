@@ -139,10 +139,126 @@
     </header>
 
     <main>
-      <!-- SECTION HERO -->
+      <!-- SECTION BOOKS -->
+      <section class="section section-books" id="books">
+        <span class="subheading center-text">The Books</span>
+        <h1 class="heading-primary center-text">Choose a book</h1>
+
+        <!-- Start of Slider -->
+        <div class="wrapper">
+          <div class="books-container">
+            <div class="book-item">
+              <a href="proverbs.html">
+                <img
+                  srcset="
+                    ../img/cover/cover_germanproverbs_320.avif 320w,
+                    ../img/cover/cover_germanproverbs.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="../img/cover/cover_germanproverbs.avif"
+                  class="book-img"
+                  alt="Bookcover - 101 German Proverbs - violet background"
+                  draggable="false"
+                />
+                <span class="book-title">101 German Proverbs</span>
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">English</span>
+                <span class="tag tag--genre">Non-fiction</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="apt.html">
+                <img
+                  srcset="
+                    ../img/cover/cover_apt_320.avif 320w,
+                    ../img/cover/cover_apt.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="../img/cover/cover_apt.avif"
+                  class="book-img"
+                  alt="Bookcover - A Pirate's Tale - pirate ship with red sails in front of a Caribbean island"
+                  draggable="false"
+                />
+                <span class="book-title">A Pirate's Tale</span>
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">English</span>
+                <span class="tag tag--place">Caribbean</span>
+                <span class="tag tag--genre">Fiction</span>
+              </div>
+            </div>
+            <div class="book-item">
+              <a href="oftheworld.html">
+                <img
+                  srcset="
+                    ../img/cover/cover_animalsoftheworld_320.avif 320w,
+                    ../img/cover/cover_animalsoftheworld.avif     480w
+                  "
+                  sizes="(max-width: 26em) 320px,
+                      480px"
+                  src="../img/cover/cover_animalsoftheworld.avif"
+                  class="book-img"
+                  alt="Bookcover - Animals of the world - penguin in an arctic scene at a pink sunset"
+                  draggable="false"
+                />
+                <span class="book-title">&quot;Of the world&quot; Series</span>
+              </a>
+              <div class="book-tags">
+                <span class="tag tag--language">English</span>
+                <span class="tag tag--genre">Non-fiction</span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn--carousel btn--left"
+            id="btn--left"
+            aria-label="carousel button left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn--carousel btn--right"
+            id="btn--right"
+            aria-label="carousel button right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECTION ATMOSPHERE -->
       <section class="section section-hero" id="hero">
         <div class="hero">
-          <h1 class="heading-primary">Begin Your Adventure</h1>
+          <h2 class="heading-secondary center-text">Begin Your Adventure</h2>
           <div class="hero-img-box">
             <figure class="hero-img-item">
               <a href="../festung.html">
@@ -152,7 +268,7 @@
                     ../img/hero/hero_single_1.avif      200w
                   "
                   sizes="(max-width: 416px) 120px,
-                          200px"
+                      200px"
                   src="../img/hero/hero_single_1.avif"
                   class="hero-img"
                   alt="Fortress in a desert"
@@ -235,191 +351,6 @@
               </a>
             </figure>
           </div>
-          <div class="btn--hero">
-            <a
-              href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
-              class="btn btn--full margin-right-sm"
-              target="_blank"
-              >Buy Now!</a
-            >
-            <a href="#books" class="btn btn--outline hidden"
-              >Learn more &darr;</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION BOOKS -->
-      <section class="section section-books" id="books">
-        <span class="subheading center-text">The Books</span>
-        <h2 class="heading-secondary center-text">Discover New Worlds</h2>
-
-        <!-- Start of Slider -->
-        <div class="wrapper">
-          <div class="books-container">
-            <div class="book-item">
-              <a href="apt.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_apt_320.avif 320w,
-                    ../img/cover/cover_apt.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_apt.avif"
-                  class="book-img"
-                  alt="Bookcover - A Pirate's Tale - pirate ship with red sails in front of a Caribbean island"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--place">Caribbean</span>
-                <span class="tag tag--genre">Fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="proverbs.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_germanproverbs_320.avif 320w,
-                    ../img/cover/cover_germanproverbs.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_germanproverbs.avif"
-                  class="book-img"
-                  alt="Bookcover - 101 German Proverbs - violet background"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--genre">Non-fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="oftheworld.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_animalsoftheworld_320.avif 320w,
-                    ../img/cover/cover_animalsoftheworld.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_animalsoftheworld.avif"
-                  class="book-img"
-                  alt="Bookcover - Animals of the world - penguin in an arctic scene at a pink sunset"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--genre">Non-fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="oftheworld.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_plantsoftheworld_320.avif 320w,
-                    ../img/cover/cover_plantsoftheworld.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_plantsoftheworld.avif"
-                  class="book-img"
-                  alt="Bookcover - Plants of the world - mighty green tree under a clear blue sky"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--genre">Non-fiction</span>
-              </div>
-            </div>
-            <div class="book-item">
-              <a href="oftheworld.html">
-                <img
-                  srcset="
-                    ../img/cover/cover_mysticalcreatures_320.avif 320w,
-                    ../img/cover/cover_mysticalcreatures.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_mysticalcreatures.avif"
-                  class="book-img"
-                  alt="Bookcover - Mythical Creatures - orange dragon flying over a medieval landscape"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--genre">Non-fiction</span>
-              </div>
-            </div>
-            <div class="book-item unfinished">
-              <a href="#">
-                <img
-                  srcset="
-                    ../img/cover/cover_htstw_320.avif 320w,
-                    ../img/cover/cover_htstw.avif     480w
-                  "
-                  sizes="(max-width: 26em) 320px,
-                      480px"
-                  src="../img/cover/cover_htstw.avif"
-                  class="book-img"
-                  alt="Bookcover - How they saved the world - arctic landscape in Svalbard"
-                  draggable="false"
-                />
-              </a>
-              <div class="book-tags">
-                <span class="tag tag--language">English</span>
-                <span class="tag tag--place">Svalbard</span>
-                <span class="tag tag--genre">Fiction</span>
-              </div>
-            </div>
-          </div>
-          <button
-            class="btn--carousel btn--left"
-            id="btn--left"
-            aria-label="carousel button left"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="btn-icon"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </button>
-          <button
-            class="btn--carousel btn--right"
-            id="btn--right"
-            aria-label="carousel button right"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="btn-icon"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </button>
         </div>
       </section>
 

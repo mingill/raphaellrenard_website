@@ -17,6 +17,19 @@ function getCarouselMaxScroll(track) {
   return Math.max(0, track.scrollWidth - track.clientWidth);
 }
 
+function getVisibleBookCount(track) {
+  const cards = track.querySelectorAll(".book-item");
+  const firstCard = cards[0];
+  if (!firstCard) return 0;
+
+  const styles = window.getComputedStyle(track);
+  const gap = parseFloat(styles.columnGap) || parseFloat(styles.gap) || 0;
+  const step = getCarouselStep(track);
+  const visibleCount = Math.floor((track.clientWidth + gap + 1) / step);
+
+  return Math.min(cards.length, Math.max(1, visibleCount));
+}
+
 function updateCarouselButtons(track) {
   const wrapper = track.closest(".wrapper");
   if (!wrapper) return;
@@ -26,6 +39,17 @@ function updateCarouselButtons(track) {
   const atEnd = track.scrollLeft >= maxScroll - 1;
   const leftButton = wrapper.querySelector(".btn--left");
   const rightButton = wrapper.querySelector(".btn--right");
+  const buttons = [leftButton, rightButton].filter(Boolean);
+  const cards = track.querySelectorAll(".book-item");
+  const allBooksVisible =
+    track.closest("#books") && getVisibleBookCount(track) >= cards.length;
+
+  buttons.forEach((button) => {
+    button.hidden = Boolean(allBooksVisible);
+    button.style.display = allBooksVisible ? "none" : "";
+  });
+
+  if (allBooksVisible) return;
 
   if (leftButton) {
     leftButton.disabled = atStart;
@@ -60,6 +84,19 @@ function scrollCarousel(track, direction) {
   } else {
     track.scrollLeft = target;
   }
+}
+
+function alignPrimaryCarousel(track) {
+  if (!track.closest("#books")) return;
+
+  const target =
+    getVisibleBookCount(track) === 1
+      ? Math.min(getCarouselMaxScroll(track), getCarouselStep(track))
+      : 0;
+
+  if (Math.abs(track.scrollLeft - target) <= 1) return;
+
+  track.scrollLeft = target;
 }
 
 carouselTracks.forEach((track, index) => {
@@ -112,11 +149,15 @@ carouselTracks.forEach((track, index) => {
   track.addEventListener("mouseleave", stopDragging);
   track.addEventListener("scroll", () => updateCarouselButtons(track));
   document.addEventListener("mouseup", stopDragging);
+  alignPrimaryCarousel(track);
   updateCarouselButtons(track);
 });
 
 window.addEventListener("resize", () => {
-  carouselTracks.forEach((track) => updateCarouselButtons(track));
+  carouselTracks.forEach((track) => {
+    alignPrimaryCarousel(track);
+    updateCarouselButtons(track);
+  });
 });
 
 // MAP INFO BOX //

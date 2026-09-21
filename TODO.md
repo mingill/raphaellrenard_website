@@ -77,18 +77,18 @@ motion and reduced-motion review.
 - [x] Repair the map markers as separate keyboard-operable controls with
       labelled state, accessible information panels, and usable touch targets.
       (2026-09-21)
-- [ ] Remove the nested-interactive flipcard pattern: links currently sit inside
-      a container exposed as `role="button"`. Provide a separate manual flip
-      control, update its accessible state, and prevent hidden-side links from
-      receiving focus.
+- [x] Remove the nested-interactive flipcard pattern. The visible flip buttons
+      were removed; cards now provide the click and keyboard interaction while
+      preserving separate book links and hidden-side focus protection.
+      (2026-09-21)
 - [x] Replace infinite carousel cloning with finite, labelled regions. Hidden
       scrollbars were replaced with visible themed scrollbars; duplicated cards
       and their duplicate focus targets are gone. Homepage shelves now expose
       bounded arrow navigation, keyboard Home/End/Arrow support, and dynamic
       card-plus-gap measurements. (2026-09-21)
-- [ ] Remove automatic five-second touch flip behavior. It interrupts reading,
-      takes control away from the visitor, and adds motion without helping book
-      discovery.
+- [x] Remove automatic five-second touch flip behavior. Cards now flip only
+      when the visitor clicks or activates them with Enter/Space.
+      (2026-09-21)
 - [x] Restore robust focus treatment. Removed the global focus reset from
       `general.css` and the book-page carousel suppression from `books.css`;
       the Saga `:focus-visible` treatment now remains visible. (2026-09-21)

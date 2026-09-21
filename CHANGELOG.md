@@ -29,3 +29,9 @@
 - Restored visible, SAGA-themed horizontal scrollbars and removed duplicate
   cloned focus targets. Book-page carousels and touch-flip behavior were not
   changed.
+- Removed the visible flip controls from both homepages and made each full
+  flipcard clickable and keyboard-operable with Enter and Space.
+- Preserved independent book-link navigation and hidden-face focus protection.
+- Removed all automatic flip timers and touch visibility observers.
+- Fixed the flipcard quote layout so quote text, novel names, and book links
+  use aligned rows without clipping the links inside the card.
