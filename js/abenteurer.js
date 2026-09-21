@@ -23,7 +23,6 @@ arrowBtns.forEach(function (btn) {
 
     // hide left button if scrollLeft is 0; hide right button if scrollLeft is 1 scrollWidth away from offsetWidth; else show both buttons
     setTimeout(function () {
-      console.log(carousel.scrollLeft);
 
       if (carousel.scrollLeft === 0) {
         leftButton.classList.add("hidden");

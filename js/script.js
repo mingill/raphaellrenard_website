@@ -277,7 +277,6 @@ const obs = new IntersectionObserver(
   // this function will be called when the hero-section enters or exists the viewport
   function (entries) {
     const ent = entries[0]; //gets the first and only entry of the section-hero-element
-    /* console.log(ent); */
     // if we don't see the hero_section, add class sticky
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");

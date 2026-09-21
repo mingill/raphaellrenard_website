@@ -241,8 +241,10 @@ motion-specific follow-up.
 - [ ] Review the detector's tight-leading and cramped-padding findings against
       actual rendered text after browser tooling is available; some are
       intentional full-bleed image treatments.
-- [ ] Remove production carousel logging and correct external `_blank` links
-      after interaction behavior is stabilized.
+- [x] Remove production carousel logging and correct external `_blank` links
+      after interaction behavior is stabilized. Completed across the shared
+      pages and scripts: logs removed, safe rel attributes added, and malformed
+      targets corrected. (2026-09-21)
 - [ ] Run a real desktop/mobile browser pass before implementing visual changes.
       Confirm overflow, contrast, focus, touch targets, first-viewport CTA
       placement, and the German/English journey with screenshots.
@@ -295,15 +297,16 @@ for approved long-form copy review, never for unapproved rewriting.
 
 **Fitting skills:** Impeccable `optimize`, `audit`, and `harden`.
 
-- [ ] Stop requesting panorama/background assets that `saga.css` subsequently
-      hides. Check all hero, book, map, and author images for appropriate sizes,
-      loading behavior, and reserved layout space.
-- [ ] Decide whether the Ionicons CDN is still justified. If replacing it,
-      provide a local fallback or approved inline icon set without changing the
-      logo treatment.
-- [ ] Add safe `rel="noopener noreferrer"` to external links using
-      `target="_blank"`, while preserving their exact destinations.
-- [ ] Correct malformed `target="”_blank”"` attributes in `abenteurer.html`.
+- [x] Stop requesting panorama/background assets that `saga.css` subsequently
+      hides. Hidden panorama tags were removed from the book pages, and
+      below-fold homepage mosaic/map images use lazy loading. (2026-09-21)
+- [x] Decide whether the Ionicons CDN is still justified. Replaced it with
+      exact local Ionicons SVG assets and the local `icons.js` renderer without
+      changing the logo treatment. (2026-09-21)
+- [x] Add safe `rel="noopener noreferrer"` to external links using
+      `target="_blank"`, while preserving their exact destinations. (2026-09-21)
+- [x] Correct malformed `target="”_blank”"` attributes in `abenteurer.html`.
+      (2026-09-21)
 - [ ] Run Lighthouse or equivalent checks and target LCP under 2.5s, INP under
       200ms, and CLS under 0.1 on representative German and English pages.
 
@@ -331,8 +334,9 @@ for approved long-form copy review, never for unapproved rewriting.
 - [ ] Keep the visual direction cinematic and editorial: preserve real imagery,
       the fox/logo treatment, one accent per page, and restrained motion. Avoid
       gradients, glassmorphism, generic SaaS cards, bento grids, and default UI.
-- [ ] Remove production `console.log` calls and dead JavaScript after behavior
-      is verified.
+- [x] Remove production `console.log` calls and dead JavaScript after behavior
+      is verified. The remaining cleanup removed the production carousel log
+      and its dead commented counterpart. (2026-09-21)
 - [ ] Add a reading-progress hairline only to long reading pages if it improves
       orientation without competing with the content.
 - [ ] Add a print stylesheet for book and legal pages if there is a real reading

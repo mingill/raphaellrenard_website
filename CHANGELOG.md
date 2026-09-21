@@ -117,6 +117,11 @@
   so h3 (author name, book volume titles) now steps down to 2.0rem in
   `site/css/queries.css`. Justified text and line spacing intentionally
   unchanged per approval.
+- Removed the remaining production carousel console log and its dead
+  commented counterpart.
+- Added `rel="noopener noreferrer"` to external links opened with
+  `target="_blank"`, and corrected malformed quoted targets in
+  `abenteurer.html` while preserving every destination.
 - Replaced the Ionicons CDN dependency across all 12 pages with the local
   `site/js/icons.js` inline SVG renderer. Added exact local Ionicons assets for
   the homepage feature icons, menu, close, Amazon, and Instagram marks.
