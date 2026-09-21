@@ -192,6 +192,11 @@ body {
   cursor: pointer;
 }
 
+.books-button {
+  background: transparent;
+  font-family: inherit;
+}
+
 .main-nav-link:hover,
 .main-nav-link:active {
   color: var(--main-color);

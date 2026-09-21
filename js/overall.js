@@ -12,16 +12,34 @@ const headerEl = document.querySelector(".header");
 // ************************************* //
 // ************************************* //
 
-const showBooksFlyout = function () {
-  navBooks.classList.toggle("hidden");
+const setBooksFlyout = function (isOpen, returnFocus = false) {
+  navBooks.classList.toggle("hidden", !isOpen);
+  booksButton.setAttribute("aria-expanded", String(isOpen));
+
+  if (!isOpen && returnFocus) {
+    booksButton.focus();
+  }
 };
 
-booksButton.addEventListener("click", showBooksFlyout);
+booksButton.addEventListener("click", () => {
+  const isOpen = booksButton.getAttribute("aria-expanded") === "true";
+  setBooksFlyout(!isOpen);
+});
 
 /* CLOSE MENU WHEN CLICK EVENT OUTSIDE THE MENU */
 document.addEventListener("click", (event) => {
   if (!navBooks.contains(event.target) && !booksButton.contains(event.target)) {
-    navBooks.classList.add("hidden");
+    setBooksFlyout(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    booksButton.getAttribute("aria-expanded") === "true"
+  ) {
+    event.preventDefault();
+    setBooksFlyout(false, true);
   }
 });
 

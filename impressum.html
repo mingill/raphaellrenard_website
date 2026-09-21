@@ -53,14 +53,22 @@
             <a class="main-nav-link" href="index.html#impressions">Impressionen</a>
           </li>
           <li><a class="main-nav-link" href="index.html#map">Orte</a></li>
-          <li class="main-nav-link books-button nav-cta">Romane</li>
+          <li>
+            <button
+              class="main-nav-link books-button nav-cta"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="nav-books"
+            >Romane</button>
+          </li>
           <li class="lang-switch">
             <span class="lang-active">DE</span>
             <span class="lang-sep">|</span>
             <a class="lang-link" data-lang="en" href="en/index.html">EN</a>
           </li>
         </ul>
-        <div class="nav-books hidden">
+        <div class="nav-books hidden" id="nav-books">
           <ul class="nav-books-list">
             <li class="nav-books-item">
               <a class="nav-books-link" href="abenteurer.html"

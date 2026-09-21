@@ -55,14 +55,22 @@
           <li>
             <a class="main-nav-link" href="#impressions">Impressions</a>
           </li>
-           <li class="main-nav-link books-button nav-cta">Novels</li>
+           <li>
+             <button
+               class="main-nav-link books-button nav-cta"
+               type="button"
+               aria-haspopup="true"
+               aria-expanded="false"
+               aria-controls="nav-books"
+             >Novels</button>
+           </li>
           <li class="lang-switch">
             <a class="lang-link" data-lang="de" href="../index.html">DE</a>
             <span class="lang-sep">|</span>
             <span class="lang-active">EN</span>
           </li>
         </ul>
-        <div class="nav-books hidden">
+        <div class="nav-books hidden" id="nav-books">
           <ul class="nav-books-list">
             <li class="nav-books-item">
               <a class="nav-books-link" href="../abenteurer.html"
