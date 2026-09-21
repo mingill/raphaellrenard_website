@@ -147,6 +147,12 @@ for preserving routes, labels, and the existing visual system.
       titles, the closing index stays intentionally image-only, and the
       six-image atmosphere mosaic was made non-interactive instead of labeled
       — its links duplicated destinations available elsewhere.
+- [x] Flag German-only destinations for English visitors. The English homepage
+      now shows `German only` badges (existing `.tag` styling) on the Arabia,
+      Persia, Sahara, and Colorado map panels and on the Festung/Abenteurer
+      closing-index covers; English-available destinations carry no badge.
+      The unreleased Svalbard cover was delinked on both homepages instead of
+      pointing at a dead `href="#"`. (2026-09-21)
 
 ### P1 — Mobile usability and responsive rhythm
 

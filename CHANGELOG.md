@@ -190,3 +190,6 @@
   title + chips.
 - Gave the homepage carousel scroll container 5rem of top padding so the
   cover glow no longer ends abruptly at the container's top edge.
+- Flagged German-only destinations on the English homepage with `German only`
+  badges on four map panels and two closing-index covers; delinked the
+  unreleased Svalbard cover on both homepages.
