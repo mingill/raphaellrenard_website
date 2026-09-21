@@ -56,6 +56,9 @@
   --text-color-light: var(--saga-ink);
   --text-color-dark: var(--saga-ink);
   --accent-color-primary: var(--saga-blood);
+
+  /* motion token (Emil review item 2): one strong ease-out for all UI */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /************************/
@@ -408,7 +411,7 @@ body::after {
 
 .book-img {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7), var(--saga-glow);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 
 /* The cover glow (up to 5rem blur + 0.8rem hover lift) extends above the
@@ -819,7 +822,7 @@ svg.feature-icon {
 .saga-reveal {
   opacity: 0;
   transform: translateY(2.4rem);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
 .saga-revealed {
@@ -985,8 +988,8 @@ body.accent-stone {
  /************************/
 
 /* Base transitions ONLY for pressables that don't already transition.
-   (Buttons, nav links and footer links already have `transition: all`,
-   so transform is covered there — restating it here would clobber their
+   (Buttons, nav links and footer links already transition transform via
+   their narrowed property lists, so restating it here would clobber their
    color/box-shadow smoothing.) */
 .btn--carousel,
 .btn-carousel--bookpage,
@@ -995,12 +998,12 @@ body.accent-stone {
 .info-close,
 .flipcard-container,
 .book-item > a {
-  transition: transform 160ms ease-out;
+  transition: transform 160ms var(--ease-out);
 }
 
 /* The closing-index links transition color only — extend, don't replace. */
 .book-index-link {
-  transition: color 0.3s, transform 160ms ease-out;
+  transition: color 0.3s, transform 160ms var(--ease-out);
 }
 
 /* Inline links can't transform — make them pressable boxes. Short labels
@@ -1046,7 +1049,16 @@ body.accent-stone {
 .btn--right:active {
   transform: translate(50%, -50%) scale(0.93);
 }
-.btn-carousel--bookpage:active,
+/* Book-page arrows ALSO carry .btn--left/.btn--right centering — a plain
+   scale here would drop their translate, fling them on press, and steal the
+   click (the button moves out from under the cursor before mouseup). Preserve
+   the translate; the double class wins over both single-class press rules. */
+.btn-carousel--bookpage.btn--left:active {
+  transform: translate(-50%, -50%) scale(0.93);
+}
+.btn-carousel--bookpage.btn--right:active {
+  transform: translate(50%, -50%) scale(0.93);
+}
 .btn-mobile-nav:active {
   transform: scale(0.93);
 }

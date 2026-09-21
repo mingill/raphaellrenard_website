@@ -8,18 +8,20 @@ changes. Explicitly out of scope (review-approved, do not "fix"): the
 rAF-throttled passive parallax, the hover-gated flip tip, the marker pulse,
 the finite language pulse, and the reduced-motion coverage.
 
-- [ ] Add `:active` press feedback to all pressable controls (`.btn--*`,
-      carousel arrows, map markers, links). No `:active` rule on the site
-      currently uses `transform` — add `scale(0.97)` so every press confirms
-      instantly. Single highest-leverage feel fix.
-- [ ] Define one custom ease-out token (e.g. `--ease-out:
-      cubic-bezier(0.23, 1, 0.32, 1)`) and use it everywhere. Every
-      transition on the site currently uses weak built-in easings; one token
-      upgrades them all.
-- [ ] Fix the flipcard transition (`style.css:464`
-      `transition: all 1s ease-in`). Triple violation: unbounded `all`,
-      1s duration, sluggish `ease-in`. Replace with transform-only ~0.7s
-      custom ease-out.
+- [x] Add `:active` press feedback to all pressable controls (`.btn--*`,
+      carousel arrows, map markers, links). Done (2026-09-21): one
+      consolidated block at the end of `saga.css` — generic `scale(0.97)`
+      press, translate-preserving arrow presses, deeper marker/close dips,
+      cover presses stacking on hover lift. Zero behavior change beyond feel.
+- [x] Define one custom ease-out token (e.g. `--ease-out:
+      cubic-bezier(0.23, 1, 0.32, 1)`) and use it everywhere. Done
+      (2026-09-21): token lives in `saga.css` `:root`, 18 uses across all
+      four stylesheets; property lists and durations unchanged, flipcard/
+      hero/pulse easings intentionally held for their own items.
+- [x] Fix the flipcard transition (`style.css:464`
+      `transition: all 1s ease-in`). Done (2026-09-21): now
+      `transform 0.7s var(--ease-out, ...)` — transform-only, snappier
+      curve; `background-color` no longer animated (never visibly changed).
 - [ ] Replace all `transition: all` instances (7 in `general.css`, plus
       `books.css:114`, `style.css:121,418,518`) with exact property lists
       so hovers never re-animate unintended properties.

@@ -177,7 +177,7 @@ body {
   color: var(--text-color-dark);
   font-weight: 500;
   font-size: 2rem;
-  transition: all 0.3s;
+  transition: color 0.3s var(--ease-out), background-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), text-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
   cursor: pointer;
 }
 
@@ -275,7 +275,7 @@ body {
   text-decoration: none;
   font-size: 1.8rem;
   line-height: 1.8;
-  transition: all 0.3s;
+  transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
   cursor: pointer;
 }
 
@@ -320,7 +320,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in;
+  /* no transition: showing/hiding is a display toggle, nothing animates */
   text-align: center;
 
   display: none;
@@ -482,7 +482,7 @@ body.mobile-nav-open {
   cursor: pointer;
   font-family: inherit;
 
-  transition: all 0.3s;
+  transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 
 .btn--full:link,
@@ -572,7 +572,7 @@ body.mobile-nav-open {
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
-  transition: all 0.3s;
+  transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 
 .link:hover,
@@ -649,7 +649,7 @@ body.mobile-nav-open {
 .footer-link:visited {
   color: var(--secondary-color);
   font-size: 1.6rem;
-  transition: all 0.3s;
+  transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
   text-decoration: none;
 }
 
@@ -728,7 +728,7 @@ strong {
 .lang-link:visited {
   text-decoration: none;
   color: var(--text-color-dark);
-  transition: all 0.3s;
+  transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 
 .lang-link:hover,

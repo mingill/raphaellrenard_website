@@ -111,7 +111,7 @@
 
   box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.2);
 
-  transition: all 0.3s;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
 
 .book-img--bookpage:hover {

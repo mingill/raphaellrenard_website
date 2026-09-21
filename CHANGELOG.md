@@ -197,3 +197,14 @@
   social anchors and icons, shipped German carousel `aria-label`s in markup,
   rewrote the fragile stacked `saga.css` header comment, and evened
   feature-copy indentation. No visual or behavioral change.
+- Press feedback (Emil item 1): one consolidated `saga.css` block gives every
+  pressable control a tactile `:active` transform (`scale(0.97)` generic,
+  translate-preserving arrow presses, deeper marker/close dips, cover presses
+  stacking on hover lift). Feel only, no behavior change.
+- Custom easing token (Emil item 2): `--ease-out:
+  cubic-bezier(0.23, 1, 0.32, 1)` in `saga.css` `:root`, used 18 times
+  across all four stylesheets. Same properties and durations — only the
+  curve got stronger.
+- Fixed the flipcard transition (Emil item 3): `style.css:464`
+  `.flipcard-item` from `transition: all 1s ease-in` to transform-only
+  0.7s custom ease-out.
