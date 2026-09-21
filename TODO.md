@@ -167,11 +167,24 @@ for preserving routes, labels, and the existing visual system.
       were already 44px at every breakpoint — verified, no change needed.
 - [x] Widen the phone map to nearly full width: the `@41em` cap is now
       `max-width: 100%` instead of `30rem` (2026-09-21).
-- [ ] Rework the fixed map dimensions and tall flipcards for narrow viewports;
-      verify that panels, long copy, and controls do not rely on overflow hidden.
-- [ ] Rebalance section spacing after the cascade fix. The current rhythm gives
-      several modules equal visual weight, even though book discovery should be
-      the dominant middle-page action.
+- [x] Rework the fixed map dimensions and tall flipcards for narrow viewports.
+      Done conservatively (2026-09-21): phone panels capped with
+      `max-width: 72%` so they stay inside the map; stacked flipcard gap
+      `6rem` → `4rem`. Card heights deliberately untouched — the cards are
+      already content-sized and cuts would risk clipping the aligned links.
+- [x] Realign map markers after the touch-target enlargement. The buttons grew
+      from 2.2rem to 4.4rem below 63em while anchored by their top-left
+      corner, shifting every dot 1.1rem down-right; restored with
+      `translate: -1.1rem -1.1rem` in `queries.css` (2026-09-21).
+      Done conservatively (2026-09-21): phone panels capped with
+      `max-width: 72%` so they stay inside the map; stacked flipcard gap
+      `6rem` → `4rem`. Card heights deliberately untouched — the cards are
+      already content-sized and cuts would risk clipping the aligned links.
+- [x] Rebalance section spacing after the cascade fix. Done (2026-09-21):
+      shelf keeps 12.8/9.6 and index widened to 6.4/8 as the two dominant
+      moments; mosaic 4.8/4.8, features 4.8/6.4, author/impressions/map 8/8.
+      Mobile mirrors it (3.2 for mosaic/features, 4.8 elsewhere); flipcards
+      fixed from a silent inherited 9.6rem on phones.
 
 ### P1 — Reading and typography
 

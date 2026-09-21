@@ -225,7 +225,7 @@ Instead, 1rem = 1em = 16px */
   }
   .flipcard-gallery {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 6rem;
+    row-gap: 4rem;
   }
   .flipcard-gallery > .flipcard-container:only-child {
     grid-column: 1;
@@ -250,6 +250,11 @@ Instead, 1rem = 1em = 16px */
   .marker {
     height: 4.4rem;
     width: 4.4rem;
+    /* Markers are anchored by their top-left corner, so enlarging the
+       buttons moved every dot's center down-right. Shift them back up-left
+       by half the size increase to restore the authored alignment.
+       Separate `translate` property composes with the hover scale. */
+    translate: -1.1rem -1.1rem;
   }
   .marker-inside {
     height: 2.2rem;
@@ -343,7 +348,7 @@ Instead, 1rem = 1em = 16px */
     font-size: 3.6rem;
   }
   .section-hero {
-    padding: 4.8rem 0 4.8rem 0;
+    padding: 3.2rem 0;
   }
   /* BOOKS */
   .section-books {
@@ -378,10 +383,13 @@ Instead, 1rem = 1em = 16px */
     line-height: 1.6;
   }
   .section-features {
-    padding: 4.8rem 0;
+    padding: 3.2rem 0;
   }
   /* AUTHOR */
   .section-author {
+    padding: 4.8rem 0;
+  }
+  .section-flipcards {
     padding: 4.8rem 0;
   }
   .heading-secondary {
@@ -531,6 +539,10 @@ Instead, 1rem = 1em = 16px */
   /* MAP */
   .container-map {
     padding: 0 1.6rem;
+  }
+  /* Keep panels inside the map on the narrowest screens. */
+  .info {
+    max-width: 72%;
   }
 
   /* FLIPCARDS */

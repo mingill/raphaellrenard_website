@@ -98,3 +98,13 @@
   `30rem` below 41em); markers and panels scale along automatically.
 - Enlarged homepage and book-page carousel arrows from 40px to the 44px
   minimum touch-target size.
+- Capped phone map panels at `max-width: 72%` so long panels stay inside the
+  map on narrow screens; reduced the stacked flipcard gap (`6rem` → `4rem`).
+  Card heights intentionally unchanged to protect the aligned novel links.
+- Realigned map markers on tablets and phones: the earlier touch-target
+  enlargement had shifted every dot 1.1rem down-right; restored with
+  `translate: -1.1rem -1.1rem`, which composes with the hover zoom.
+- Rebalanced section spacing around book discovery: the shelf keeps the most
+  air (12.8/9.6) and the closing index was widened (6.4/8); mosaic, features,
+  author, impressions, and map sit closer together. Mobile mirrors the rhythm,
+  and flipcards were fixed from a silently inherited 9.6rem phone padding.
