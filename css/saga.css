@@ -411,6 +411,13 @@ body::after {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* The cover glow (up to 5rem blur + 0.8rem hover lift) extends above the
+   images, but the scroll container clips anything past its top edge —
+   give the glow room to render instead of ending abruptly. */
+.books-container {
+  padding-top: 5rem;
+}
+
 .book-item a:hover .book-img,
 .book-item a:focus-visible .book-img {
   transform: translateY(-0.8rem);

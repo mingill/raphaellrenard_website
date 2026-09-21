@@ -64,7 +64,9 @@ issues below are the actionable ones.
 - [x] Establish a title-led book choice on the homepage. The `Wähle ein Buch`
       / `Choose a book` heading and direct links to the curated books provide
       the clear next step; the compact image index reinforces the same routes.
-      (2026-09-21)
+      (2026-09-21) Update: German heading renamed to `Wähle ein Abenteuer`
+      per approval; a per-book hook-line experiment was tried and reverted —
+      the shelf stays cover + title + chips. (2026-09-21)
 
 ### P0 — Accessibility and interaction clarity
 

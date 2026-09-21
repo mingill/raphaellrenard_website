@@ -185,3 +185,8 @@
   author-store links on English pages to amazon.com (all ASINs verified live
   with correct titles). German-only volumes, German footers, legal pages, and
   404.html stay on Amazon.de.
+- Renamed the German homepage H1 to `Wähle ein Abenteuer` and removed the
+  short-lived per-book hook lines plus their CSS — the shelf stays cover +
+  title + chips.
+- Gave the homepage carousel scroll container 5rem of top padding so the
+  cover glow no longer ends abruptly at the container's top edge.
