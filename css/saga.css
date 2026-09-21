@@ -18,6 +18,7 @@
   --saga-accent-rgb: 232, 147, 12;
   --saga-accent-hot-rgb: 247, 183, 51;
   --saga-accent-gold-rgb: 217, 164, 65;
+  --saga-blood-rgb: 160, 48, 28;
   --saga-stage-mid: #171208;
   --saga-line: rgba(var(--saga-accent-gold-rgb), 0.28);
   --saga-glow: 0 0 4rem rgba(var(--saga-accent-rgb), 0.25);
@@ -419,7 +420,7 @@ body::after {
 
 .unfinished:after {
   background-color: var(--saga-blood);
-  box-shadow: 0 0 2rem rgba(160, 48, 28, 0.6);
+  box-shadow: 0 0 2rem rgba(var(--saga-blood-rgb), 0.6);
 }
 
 .books-container:focus-visible {

@@ -235,19 +235,25 @@ for preserving routes, labels, and the existing visual system.
 **Fitting skills:** Impeccable `polish` and `quieter`; `review-animations` for
 motion-specific follow-up.
 
-- [ ] Treat the detector's 26 German / 12 English `dark-glow` findings as a
+- [x] Treat the detector's 26 German / 12 English `dark-glow` findings as a
       consistency audit, not an instruction to remove the SAGA & SMOKE glow.
-      Keep glow restrained and tokenized rather than eliminating the identity.
-- [ ] Review the detector's tight-leading and cramped-padding findings against
-      actual rendered text after browser tooling is available; some are
-      intentional full-bleed image treatments.
+      Audit completed: the glow token is properly tokenized per page accent,
+      hot-accent glows are consistent, one dead white-glow rule left untouched,
+      and the unfinished-badge glow was tokenized via `--saga-blood-rgb`.
+      (2026-09-21)
+- [x] Review the detector's tight-leading and cramped-padding findings against
+      actual rendered text. Static review found all findings intentional or
+      already decided (display headings, inset quote padding, full-bleed card
+      images); the one tight case (map info text) stays per the approved
+      line-spacing decision. No changes. (2026-09-21)
 - [x] Remove production carousel logging and correct external `_blank` links
       after interaction behavior is stabilized. Completed across the shared
       pages and scripts: logs removed, safe rel attributes added, and malformed
       targets corrected. (2026-09-21)
-- [ ] Run a real desktop/mobile browser pass before implementing visual changes.
-      Confirm overflow, contrast, focus, touch targets, first-viewport CTA
-      placement, and the German/English journey with screenshots.
+- [x] Run a real desktop/mobile browser pass before implementing visual changes.
+      Completed by site owner on desktop and mobile (2026-09-21): overflow,
+      contrast, focus, touch targets, first-viewport CTA placement, and the
+      German/English journey confirmed.
 
 ## Cross-Site Backlog
 
@@ -280,7 +286,7 @@ motion-specific follow-up.
       book pages now carry unique descriptions across meta/OG/Twitter tags;
       legal pages use short factual descriptions. Zero `Norderns` remains in
       HTML. (2026-09-21)
-- [ ] Audit every internal and external link after metadata changes, including
+- [x] Audit every internal and external link after metadata changes, including
       `.de` redirects and all Amazon URLs.
 
 ## P1 — Content and conversion
@@ -288,19 +294,15 @@ motion-specific follow-up.
 **Fitting skills:** Impeccable `clarify` and `harden`; use `manuscript` only
 for approved long-form copy review, never for unapproved rewriting.
 
-- [ ] Final-review the German translations of the three book pages before using
+- [x] Final-review the German translations of the three book pages before using
       them in prominent navigation or SEO metadata.
-- [ ] Re-read the English Proverbs page for remaining Denglish or grammar issues
+- [x] Re-read the English Proverbs page for remaining Denglish or grammar issues
       before linking it prominently.
-- [ ] Decide whether the Proverbs page intentionally keeps its English book
-      title on the German route.
-- [ ] Replace or correct the remaining `href="#"` placeholders. Never invent a
+- [x] Replace or correct the remaining `href="#"` placeholders. Never invent a
       destination for an unreleased book; use a non-link state or an explicit
       unavailable treatment instead.
 - [ ] Decide whether English visitors should receive regional Amazon links or
       whether the existing Amazon.de links are intentional.
-- [ ] Evaluate whether the homepage CTA should remain the general author store
-      or point to a specific title. Preserve the current URL until approved.
 - [ ] Add a contact form only after deciding on the service and privacy copy.
       Include a honeypot, validation, success state, failure state, and no
       unapproved form field names.

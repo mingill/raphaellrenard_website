@@ -149,3 +149,14 @@
   descriptions on all 8 book pages (meta, Open Graph, and Twitter tags), and
   aligned the legal-page descriptions with their existing OG wording. Zero
   `Norderns` occurrences remain in HTML.
+- Ran the full link audit: all internal links resolve, the .de domain serves
+  the live site, and Amazon/Instagram URLs resolve. The 4 remaining `href="#"`
+  placeholders are intentional markers for unreleased books.
+- Audited all 61 shadow/glow declarations: the SAGA glow token is properly
+  tokenized per page accent and hot-accent glows are consistent. Tokenized the
+  unfinished-badge glow via `--saga-blood-rgb`; one dead white-glow rule was
+  intentionally left untouched.
+- Reviewed tight-leading and cramped-padding findings: all intentional
+  (display headings, inset quote padding, full-bleed card images). No changes.
+- Site owner completed the desktop/mobile browser pass: overflow, contrast,
+  focus, touch targets, first viewport, and both language journeys confirmed.
