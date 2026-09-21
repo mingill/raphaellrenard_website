@@ -122,6 +122,12 @@
 - Added `rel="noopener noreferrer"` to external links opened with
   `target="_blank"`, and corrected malformed quoted targets in
   `abenteurer.html` while preserving every destination.
+- Added page-specific canonical URLs to all 12 public HTML pages. Canonicals
+  use `https://raphaellrenard.com`, preserve every existing route, use `/` and
+  `/en/` for the homepages, and use `.html` for document pages.
+- Completed the hreflang matrix for the eight true German/English page pairs
+  and added `x-default` links pointing to the German/default routes. German-
+  only book pages and legal pages were intentionally left unchanged.
 - Replaced the Ionicons CDN dependency across all 12 pages with the local
   `site/js/icons.js` inline SVG renderer. Added exact local Ionicons assets for
   the homepage feature icons, menu, close, Amazon, and Instagram marks.

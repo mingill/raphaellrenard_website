@@ -255,9 +255,14 @@ motion-specific follow-up.
 
 **Fitting skills:** Impeccable `harden` and `audit`.
 
-- [ ] Add page-specific canonical URLs without changing any existing `.html`
-      slug, anchor, language route, legal route, or redirect behavior.
-- [ ] Complete the hreflang matrix and add `x-default` where appropriate.
+- [x] Add page-specific canonical URLs without changing any existing `.html`
+      slug, anchor, language route, legal route, or redirect behavior. All 12
+      public pages now use the confirmed apex-host policy with directory
+      slashes for the two homepages. (2026-09-21)
+- [x] Complete the hreflang matrix and add `x-default` where appropriate. The
+      eight true German/English page pairs now include `x-default` pointing to
+      the German/default route; German-only and legal pages remain unchanged.
+      (2026-09-21)
 - [ ] Add page-specific Open Graph and Twitter Card metadata with real existing
       imagery; do not invent book facts or promotional claims.
 - [ ] Add `robots.txt`, `sitemap.xml`, and JSON-LD for the website, author,
