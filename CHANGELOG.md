@@ -84,7 +84,14 @@
   The mosaic is now purely decorative: same images, same layout, but no Tab
   stops and no duplicate destinations. All book pages remain reachable through
   the shelf, navigation, map, flipcards, and closing index.
-- Fixed the mobile headline cascade: phone `.heading-primary` sizes
+- Passed Lighthouse checks: 100 performance on desktop, 92 on mobile with 100
+  in accessibility, best practices, and SEO.
+- Added `fetchpriority="high"` to the first book-shelf cover on both
+  homepages for a faster LCP.
+- Gave all 12 mosaic images explicit `width`/`height` and `object-fit: cover`
+  so they keep their aspect ratio instead of stretching.
+- Fixed the mosaic gap: image cells now fill the box edge to edge (row-height
+  fill, figure margins reset, images displayed as blocks).
   (`3.6rem` below 41em, `3rem` below 26em) now live in `site/css/saga.css`,
   which loads last, so the homepage headline no longer renders at the 6.2rem
   desktop size on phones.

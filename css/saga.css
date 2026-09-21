@@ -291,6 +291,12 @@ body::after {
 .hero-img-item {
   max-width: none;
   position: relative;
+  /* Fill the stretched grid row: kills the black strip below the mosaic.
+     (Browser default figure margins + inline-img baseline gap shrank cells;
+     the old 40rem item cap also guaranteed a gap on tall viewports.) */
+  height: 100%;
+  max-height: none;
+  margin: 0;
 }
 
 .hero-img-item::after {
@@ -314,6 +320,9 @@ body::after {
 
 .hero-img {
   filter: saturate(1.2) contrast(1.06);
+  /* Block kills the inline baseline gap under each image. Cropping itself
+     is handled by object-fit: cover on the base .hero-img rule. */
+  display: block;
 }
 
 .hero-img:hover {

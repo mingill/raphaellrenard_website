@@ -323,8 +323,13 @@ for approved long-form copy review, never for unapproved rewriting.
       `target="_blank"`, while preserving their exact destinations. (2026-09-21)
 - [x] Correct malformed `target="”_blank”"` attributes in `abenteurer.html`.
       (2026-09-21)
-- [ ] Run Lighthouse or equivalent checks and target LCP under 2.5s, INP under
+- [x] Run Lighthouse or equivalent checks and target LCP under 2.5s, INP under
       200ms, and CLS under 0.1 on representative German and English pages.
+      Passed (2026-09-21): 100 performance desktop, 92 mobile with 100 in
+      accessibility, best practices, and SEO. Fixes along the way:
+      `fetchpriority="high"` on the first shelf cover of both homepages,
+      `width`/`height` + `object-fit: cover` on the 12 mosaic images, and a
+      mosaic gap fix (cells fill the row, figure margins reset, images block).
 
 ## P1 — Loading, error, and fallback states
 
