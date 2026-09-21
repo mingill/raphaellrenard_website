@@ -22,7 +22,7 @@
   /* ---------- scroll reveals ---------- */
   var revealTargets = document.querySelectorAll(
     ".section-hero .hero, .section-books .wrapper, .feature, .author-box, " +
-      ".quotes-item, .flipcard-container, .map, .section-book, .impressum, .datenschutz"
+      ".quotes-item, .map, .section-book, .impressum, .datenschutz"
   );
   if ("IntersectionObserver" in window && !reduceMotion) {
     var observer = new IntersectionObserver(
@@ -110,6 +110,22 @@
       card.focus();
     }
   }
+  /* A tap mid-flight must not reverse the rotation (that reads as an
+     A-to-A flip): lock each card until its 0.7s transition ends, with a
+     timeout fallback so the lock always releases. */
+  function lockFlip(card, inner) {
+    card.classList.add("flipping");
+    var done = false;
+    var release = function () {
+      if (done) return;
+      done = true;
+      card.classList.remove("flipping");
+    };
+    if (inner && inner.addEventListener) {
+      inner.addEventListener("transitionend", release, { once: true });
+    }
+    window.setTimeout(release, 800);
+  }
   flipCards.forEach(function (card) {
     var inner = card.querySelector(".flipcard-item");
     if (!inner) return;
@@ -117,12 +133,16 @@
     card.setAttribute("role", "group");
     card.addEventListener("click", function (event) {
       if (event.target.closest && event.target.closest("a")) return;
+      if (card.classList.contains("flipping")) return;
+      lockFlip(card, inner);
       setFlip(card, !card.classList.contains("flipped"), true);
     });
     card.addEventListener("keydown", function (event) {
       if (event.target !== card) return;
       if (event.key !== "Enter" && event.key !== " ") return;
       event.preventDefault();
+      if (card.classList.contains("flipping")) return;
+      lockFlip(card, inner);
       setFlip(card, !card.classList.contains("flipped"), true);
     });
     setFlip(card, false, false);
@@ -168,43 +188,4 @@
       }
     });
   });
-  /* ---------- flipcards: scroll-driven color on touch devices ----------
-     No hover on mobile, so images bloom with visibility instead:
-     the more of a card is in view, the more saturated it gets. */
-  var touchOnly =
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(hover: none)").matches;
-  if (touchOnly && !reduceMotion) {
-    var wakeCards = Array.prototype.slice.call(
-      document.querySelectorAll(".flipcard-container")
-    );
-    if (wakeCards.length) {
-      var waking = false;
-      var wake = function () {
-        waking = false;
-        var vh = window.innerHeight;
-        wakeCards.forEach(function (card) {
-          var r = card.getBoundingClientRect();
-          var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
-          var ratio = Math.max(0, Math.min(1, vis / (r.height || 1)));
-          if (card.classList.contains("flipped")) ratio = 1;
-          var g = (0.6 * (1 - ratio)).toFixed(3);
-          var s = (0.25 * (1 - ratio)).toFixed(3);
-          card.querySelectorAll(".flipcard-img").forEach(function (img) {
-            img.style.filter =
-              "grayscale(" + g + ") sepia(" + s + ") contrast(1.05)";
-          });
-        });
-      };
-      var scheduleWake = function () {
-        if (!waking) {
-          waking = true;
-          raf(wake);
-        }
-      };
-      window.addEventListener("scroll", scheduleWake, { passive: true });
-      window.addEventListener("resize", scheduleWake);
-      scheduleWake();
-    }
-  }
 })();
