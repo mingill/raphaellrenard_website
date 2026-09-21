@@ -445,6 +445,16 @@ body::after {
   border-color: var(--saga-faint);
 }
 
+/* English-honesty badges: flag German-only destinations for EN visitors
+   using the existing tag language. Spacing only — colors come from .tag. */
+.info .tag {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+.book-index-list li {
+  text-align: center;
+}
+
 .unfinished:after {
   background-color: var(--saga-blood);
   box-shadow: 0 0 2rem rgba(var(--saga-blood-rgb), 0.6);
