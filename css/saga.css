@@ -440,6 +440,17 @@ body::after {
   background-color: rgba(var(--saga-accent-rgb), 0.1);
   border: 1px solid var(--saga-line);
   color: var(--saga-ember-hot);
+  overflow: visible;
+}
+
+/* Native SVGs do not inherit the intrinsic sizing of the old ion-icon
+   element. Keep the original 3.2rem glyph box and 1.6rem circle padding. */
+svg.feature-icon {
+  display: block;
+  box-sizing: content-box;
+  width: 3.2rem;
+  height: 3.2rem;
+  flex: 0 0 auto;
 }
 
 .feature-text {

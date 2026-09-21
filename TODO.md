@@ -190,13 +190,16 @@ for preserving routes, labels, and the existing visual system.
 
 **Fitting skills:** Impeccable `typeset`, `layout`, and `clarify`.
 
-- [ ] Give long-form map and book text a comfortable readable measure and line
-      height. The detector flagged tight leading, and map information text drops
-      toward `1rem` on smaller screens.
-- [ ] Remove or review justified text where it creates uneven word spacing.
-- [ ] Audit heading scale, paragraph width, and section-label repetition as one
-      system. Keep the cinematic serif/display treatment, but use size and space
-      to clarify hierarchy rather than adding more glow or motion.
+- [x] Give long-form map and book text a comfortable readable measure and line
+      height. Skipped by decision (2026-09-21): the current justification and
+      line spacing stay as they are.
+- [x] Remove or review justified text where it creates uneven word spacing.
+      Skipped by decision (2026-09-21): the current text rendering stays as
+      it is.
+- [x] Audit heading scale, paragraph width, and section-label repetition as one
+      system. Desktop scale was already coherent (6.2 → 4.4 → 3.0 → 2.4rem);
+      fixed phone level-collapse where h2 and h3 both rendered 2.4rem at
+      ≤416px — h3 now steps down to 2.0rem in `queries.css`. (2026-09-21)
 - [x] Fix visible copy issues found during review, including `Norderns`,
       `aktische`, `Vielschichte`, and `Myterien`, using the confirmed German
       wording; the repeated metadata typo was corrected across German pages.
@@ -206,17 +209,21 @@ for preserving routes, labels, and the existing visual system.
 
 **Fitting skills:** Impeccable `distill`, `optimize`, and `audit`.
 
-- [ ] Remove or subordinate modules that do not help the first book decision.
-      The homepage currently combines six hero links, a long carousel, four
-      feature claims, three flipcards, and seven map interactions.
+- [x] Remove or subordinate modules that do not help the first book decision.
+      Verdict (2026-09-21): already resolved by earlier work — the shelf is
+      cut to three books, the mosaic is non-interactive atmosphere, and the
+      closing index carries the final action. No further removals needed.
 - [x] Verify the primary homepage carousel behavior after user browser testing.
       Homepage scroll steps measure the current card-plus-gap distance per
       action; responsive alignment, arrow visibility, and boundary state now
       update correctly. Book-page carousel behavior remains separate.
       (2026-09-21)
-- [ ] Lazy-load below-fold book covers and the German map where appropriate,
+- [x] Lazy-load below-fold book covers and the German map where appropriate,
       reserve image space, and avoid loading background assets that are later
-      hidden by `saga.css`.
+      hidden by `saga.css`. Done (2026-09-21): the 8 hidden panorama `<img>`
+      tags (up to 4000w) were removed from all book pages with zero visual
+      change, and `loading="lazy"` was added to both homepage mosaics and map
+      images. Logos, shelf covers, and first book-page covers stay eager.
 - [ ] Decide whether the Ionicons CDN is justified. The current dependency adds
       an external request despite the site's system-font/privacy-clean direction.
 

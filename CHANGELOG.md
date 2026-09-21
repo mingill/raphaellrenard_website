@@ -108,3 +108,12 @@
   air (12.8/9.6) and the closing index was widened (6.4/8); mosaic, features,
   author, impressions, and map sit closer together. Mobile mirrors the rhythm,
   and flipcards were fixed from a silently inherited 9.6rem phone padding.
+- Removed the hidden panorama images from all 8 book pages (files up to
+  4000px wide, suppressed by `saga.css` on every page) with no visual change;
+  the asset files remain on disk.
+- Added `loading="lazy"` to both homepage mosaics and map images. Logos,
+  shelf covers, and first book-page covers intentionally stay eager.
+- Fixed phone heading hierarchy: h2 and h3 both rendered 2.4rem at ≤416px,
+  so h3 (author name, book volume titles) now steps down to 2.0rem in
+  `site/css/queries.css`. Justified text and line spacing intentionally
+  unchanged per approval.

@@ -525,6 +525,10 @@ Instead, 1rem = 1em = 16px */
   .heading-secondary {
     font-size: 2.4rem;
   }
+  /* Keep h3 a visible step below h2 on phones (both were 2.4rem). */
+  .heading-tertiary {
+    font-size: 2rem;
+  }
   .subheading {
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
