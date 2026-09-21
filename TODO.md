@@ -22,22 +22,30 @@ the finite language pulse, and the reduced-motion coverage.
       `transition: all 1s ease-in`). Done (2026-09-21): now
       `transform 0.7s var(--ease-out, ...)` — transform-only, snappier
       curve; `background-color` no longer animated (never visibly changed).
-- [ ] Replace all `transition: all` instances (7 in `general.css`, plus
+- [x] Replace all `transition: all` instances (7 in `general.css`, plus
       `books.css:114`, `style.css:121,418,518`) with exact property lists
-      so hovers never re-animate unintended properties.
-- [ ] Calm the hero hover (`style.css:121-134`
-      `scale(1.1)` over 0.6s). Reduce to ~`scale(1.04)` over ~0.3s — a
-      caress, not a lunge.
-- [ ] Speed up the book-cover hover (`saga.css:411`
-      `transform 0.4s ease, box-shadow 0.4s ease`). Props are correctly
-      specified; reduce to ~0.22s with the custom ease-out so hovers feel
-      awake.
-- [ ] Swap the reveal easing (`saga.css:822` `0.7s ease`). Keep the
-      duration (once-per-element ambient reveals may run long) but use the
-      custom ease-out token instead of weak built-in `ease`.
-- [ ] Optional: give map `.info` panels a small fade + `translateY(4px)`
+      so hovers never re-animate unintended properties. Done (2026-09-21):
+      11 spots narrowed (one dead `.nav-mobile` line removed); zero live
+      `transition: all` remains. Follow-up fix same day: book-page arrows
+      carry both centering classes, so the plain press scale dropped their
+      translate (fling + dead click) — fixed with double-class
+      translate-preserving `:active` rules in `saga.css`.
+- [x] Calm the hero hover (`style.css:121-134`
+      `scale(1.1)` over 0.6s). Done (2026-09-21): removed entirely instead —
+      both `.hero-img:hover` rules (style + saga) deleted since the delinked
+      mosaic needs no hover affordance; resting appearance unchanged.
+- [x] Speed up the book-cover hover (`saga.css:411`
+      `transform 0.4s ease, box-shadow 0.4s ease`). Done (2026-09-21):
+      tightened to ~0.22s on the custom ease-out curve, same properties;
+      book-page covers (already 0.3s) untouched.
+- [x] Swap the reveal easing (`saga.css:822` `0.7s ease`). Done (2026-09-21):
+      already covered by the item-2 token swap — verified on the custom
+      ease-out token, duration unchanged, zero new edits needed.
+- [x] Optional: give map `.info` panels a small fade + `translateY(4px)`
       enter transition so user-summoned panels don't appear from nothing.
-      Lowest priority; skip if it complicates the panel logic.
+      Done (2026-09-21): 0.2s custom ease-out transition + nested
+      `@starting-style` on the saga `.info` theme rule, reduced-motion
+      covered, old engines keep the instant pop.
 
 ## Done
 

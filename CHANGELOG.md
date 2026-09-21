@@ -208,3 +208,20 @@
 - Fixed the flipcard transition (Emil item 3): `style.css:464`
   `.flipcard-item` from `transition: all 1s ease-in` to transform-only
   0.7s custom ease-out.
+- Narrowed every `transition: all` (Emil item 4) to exact property lists
+  across all four stylesheets; removed one dead line on `.nav-mobile`.
+- Fixed book-page carousel arrows flinging on press and swallowing clicks:
+  the buttons carry both centering classes, so the press scale dropped
+  their translate — now preserved via double-class `:active` rules.
+- Removed the mosaic hover zoom (Emil item 5): both `.hero-img:hover` rules
+  deleted — a delinked decorative strip needs no hover affordance. Resting
+  appearance unchanged.
+- Sped up the book-cover hover (Emil item 6): `saga.css` `.book-img`
+  transition `0.4s` → `~0.22s` on the custom ease-out, same properties.
+- Confirmed the scroll-reveal easing (Emil item 7) was already on the custom
+  ease-out token from the item-2 swap — verified, no change needed.
+- Gave map info panels a small enter transition (Emil item 8): 0.2s fade +
+  4px rise on the custom ease-out via nested `@starting-style`, covered
+  under reduced-motion.
+- Halved the map info header bottom margin (`1.2rem` → `0.6rem`) so the
+  headline sits closer to the panel text.
