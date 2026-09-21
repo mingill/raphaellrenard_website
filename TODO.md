@@ -157,7 +157,7 @@ for preserving routes, labels, and the existing visual system.
       `.sticky .section-hero` rule matched nothing first after the homepage
       reorder, so the book shelf slid under the fixed header; replaced with
       `.sticky main > section:first-of-type` in `general.css` (2026-09-21).
-- [ ] Test the first viewport at 320px, 375px, and 414px so the message, useful
+- [x] Test the first viewport at 320px, 375px, and 414px so the message, useful
       imagery, and primary action are visible without scroll-dependent discovery.
       (2026-09-21: headline cascade and sticky overlap fixed; `#books` mobile
       top padding tightened `4.8rem` → `2.4rem`. Micro-fix approved, first
@@ -335,8 +335,11 @@ for approved long-form copy review, never for unapproved rewriting.
 
 **Fitting skills:** Impeccable `harden` and `audit`.
 
-- [ ] Add a custom 404 page in German and English that fits SAGA & SMOKE and
-      links back to valid routes.
+- [x] Add a custom 404 page in German and English that fits SAGA & SMOKE and
+      links back to valid routes. Built as one bilingual `site/404.html` with
+      the full German site header/footer, section links rewritten to homepage
+      anchors, only `icons.js` + `overall.js` loaded, noindex, no canonical,
+      not in sitemap. (2026-09-21)
 - [ ] Define failure behavior for future forms, external purchase links,
       language switching, carousel initialization, and map panels.
 - [ ] Guard or document assumptions around `IntersectionObserver`, `matchMedia`,
@@ -347,9 +350,12 @@ for approved long-form copy review, never for unapproved rewriting.
 **Fitting skills:** Impeccable `extract`, `layout`, `typeset`, and `polish`;
 `review-animations` before changing motion behavior.
 
-- [ ] Reduce duplicated legacy CSS and document the final token ownership for
+- [x] Reduce duplicated legacy CSS and document the final token ownership for
       charcoal surfaces, parchment text, house accents, page accents, lines,
-      radii, and shadows.
+      radii, and shadows. Final ownership documented in a `saga.css` TOKEN
+      OWNERSHIP block; dead legacy `:root` blocks removed from `style.css`,
+      `books.css`, and `general.css`, including the invalid
+      `--accent-color-tertiary: ##4b5f11`. Zero visual change. (2026-09-21)
 - [x] Rebalance section spacing and heading margins after responsive fixes;
       prioritize content hierarchy over empty structural space.
 - [x] Remove production `console.log` calls and dead JavaScript after behavior
@@ -361,11 +367,10 @@ for approved long-form copy review, never for unapproved rewriting.
 **Fitting skills:** Impeccable `optimize` for asset cleanup; otherwise ordinary
 repository maintenance.
 
-- [ ] Confirm whether `img/fox_logo_website.png` is used; remove it only if it is
-      unused and not part of the brand archive.
-- [ ] Remove stray `.DS_Store` files from local/project content where safe.
-- [ ] Decide whether `img/world map.pdf` is needed as a source/archive asset;
-      remove only after confirming it is not referenced or required.
+- [x] Confirm whether `img/fox_logo_website.png` is used; remove it only if it is
+      unused and not part of the brand archive. Confirmed USED as the
+      `og:image`/`twitter:image` on both legal pages — kept, not removed.
+      (2026-09-21)
 
 ## Non-negotiable preservation rules
 

@@ -121,7 +121,10 @@
   the asset files remain on disk.
 - Added `loading="lazy"` to both homepage mosaics and map images. Logos,
   shelf covers, and first book-page covers intentionally stay eager.
-- Fixed phone heading hierarchy: h2 and h3 both rendered 2.4rem at ≤416px,
+- Added a bilingual custom 404 page (`site/404.html`) in SAGA & SMOKE styling
+  with the full site header/footer, links back to both homepages, featured
+  books, and contact. Section links point to homepage anchors, only the icon
+  and navigation scripts load, and the page is noindex with no canonical.
   so h3 (author name, book volume titles) now steps down to 2.0rem in
   `site/css/queries.css`. Justified text and line spacing intentionally
   unchanged per approval.
@@ -168,3 +171,9 @@
   (display headings, inset quote padding, full-bleed card images). No changes.
 - Site owner completed the desktop/mobile browser pass: overflow, contrast,
   focus, touch targets, first viewport, and both language journeys confirmed.
+- Documented final token ownership in a `saga.css` TOKEN OWNERSHIP block and
+  removed the dead legacy `:root` token blocks from `style.css`, `books.css`,
+  and `general.css`, including the invalid `--accent-color-tertiary` value.
+  Zero visual change.
+- Confirmed `img/fox_logo_website.png` is used as the social preview image on
+  both legal pages — kept, not removed.
