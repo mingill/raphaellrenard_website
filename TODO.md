@@ -61,9 +61,10 @@ issues below are the actionable ones.
       existing cover assets and routes. Covers are centered, rounded, and
       softly lit like the main carousel; visible title spans and divider lines
       were removed while accessible image names remain. (2026-09-21)
-- [ ] Add a title-led closing action after impressions or the map so the page
-      ends with a clear next step instead of ending on atmosphere and footer
-      utility links.
+- [x] Establish a title-led book choice on the homepage. The `Wähle ein Buch`
+      / `Choose a book` heading and direct links to the curated books provide
+      the clear next step; the compact image index reinforces the same routes.
+      (2026-09-21)
 
 ### P0 — Accessibility and interaction clarity
 

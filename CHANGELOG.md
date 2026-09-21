@@ -17,6 +17,9 @@
 - Matched the index covers to the carousel treatment with centered alignment,
   rounded corners, and a restrained glow; removed visible title spans and
   divider lines while preserving accessible image names.
+- Confirmed the homepage's title-led book choice as complete: the
+  `Wähle ein Buch` / `Choose a book` heading and direct book links provide the
+  closing decision without requiring a separate CTA section.
 
 ### Accessibility
 
