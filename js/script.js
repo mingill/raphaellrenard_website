@@ -9,7 +9,7 @@ const firstCardWidth = carousel.querySelector(".book-item").offsetWidth; // widt
 const carouselChildren = [...carousel.children]; // all carousel children (all cards) as an array
 
 // MAP INFO BOX //
-const markers = document.querySelectorAll(".marker-inside"); // get all markers
+const markers = document.querySelectorAll(".marker"); // get all markers
 const infoBoxes = document.querySelectorAll(".info"); // get all info boxes
 
 // DEFINING EMPTY VARIABLES
@@ -24,19 +24,55 @@ let isDragging = false,
 // ************************************* //
 // ************************************* //
 
-function showInfoText(markerID) {
-  const infoBoxID = `info-${markerID}`;
-  const infoBox = document.getElementById(infoBoxID);
+function getMarkerForInfo(infoBox) {
+  return document.querySelector(`[aria-controls="${infoBox.id}"]`);
+}
 
-  if (infoBox) {
-    infoBox.classList.toggle("hidden");
+function setInfoBox(infoBox, isOpen, returnFocus = false) {
+  const marker = getMarkerForInfo(infoBox);
+  if (!marker) return;
+
+  if (isOpen) {
+    infoBoxes.forEach((otherInfoBox) => {
+      if (otherInfoBox !== infoBox) {
+        otherInfoBox.classList.add("hidden");
+        otherInfoBox.setAttribute("aria-hidden", "true");
+
+        const otherMarker = getMarkerForInfo(otherInfoBox);
+        if (otherMarker) otherMarker.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  infoBox.classList.toggle("hidden", !isOpen);
+  infoBox.setAttribute("aria-hidden", String(!isOpen));
+  marker.setAttribute("aria-expanded", String(isOpen));
+
+  if (isOpen) {
+    const closeButton = infoBox.querySelector(".info-close");
+    if (closeButton) closeButton.focus();
+  } else if (returnFocus) {
+    marker.focus();
   }
 }
 
-markers.forEach((element) => {
-  element.addEventListener("click", (event) => {
-    showInfoText(event.target.id);
+markers.forEach((marker) => {
+  const infoBox = document.getElementById(marker.getAttribute("aria-controls"));
+  if (!infoBox) return;
+
+  marker.addEventListener("click", () => {
+    const isOpen = marker.getAttribute("aria-expanded") === "true";
+    setInfoBox(infoBox, !isOpen);
   });
+});
+
+infoBoxes.forEach((infoBox) => {
+  const closeButton = infoBox.querySelector(".info-close");
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      setInfoBox(infoBox, false, true);
+    });
+  }
 });
 
 /* CLOSE INFO BOX WHEN CLICK EVENT OUTSIDE THE INFO BOX */
@@ -49,10 +85,20 @@ document.addEventListener("click", function (event) {
     !Array.from(infoBoxes).some((infoBox) => infoBox.contains(target)) &&
     !Array.from(markers).some((marker) => marker.contains(target))
   ) {
-    // Click is outside, so add the 'hidden' class to all InfoBoxes
-    infoBoxes.forEach((infoBox) => {
-      infoBox.classList.add("hidden");
-    });
+    infoBoxes.forEach((infoBox) => setInfoBox(infoBox, false));
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  const openInfoBox = Array.from(infoBoxes).find(
+    (infoBox) => !infoBox.classList.contains("hidden")
+  );
+
+  if (openInfoBox) {
+    event.preventDefault();
+    setInfoBox(openInfoBox, false, true);
   }
 });
 

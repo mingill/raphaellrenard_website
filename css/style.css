@@ -222,7 +222,7 @@
 }
 
 .feature-icon {
-  color: var(--main-color);
+  color: var(--saga-ember-hot, var(--main-color));
   height: 3.2rem;
   width: 3.2rem;
   background-color: var(--background-color);
@@ -473,13 +473,17 @@
 
 .marker {
   background-color: var(--background-color);
-  height: 4rem;
-  width: 4rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  border: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  font: inherit;
   position: absolute;
+  touch-action: manipulation;
   /* margin: 0 auto; */
   z-index: 9;
 }
@@ -547,6 +551,25 @@
   width: 30rem;
 
   z-index: 10;
+}
+
+.info-close {
+  align-self: flex-end;
+  min-width: 4.4rem;
+  min-height: 4.4rem;
+  margin: -0.8rem -0.8rem 0.4rem auto;
+  padding: 0.4rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--saga-ember-hot, var(--main-color));
+  font: inherit;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.info-close:hover {
+  color: var(--saga-ink, var(--text-color-dark));
 }
 
 .info-arabia {
