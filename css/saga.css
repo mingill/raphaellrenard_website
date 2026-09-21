@@ -191,6 +191,16 @@ body::after {
   color: var(--saga-ember-hot);
 }
 
+.nav-books-group,
+.nav-mobile-group {
+  color: var(--saga-faint);
+}
+
+.nav-books-group:not(:first-child),
+.nav-mobile-group:not(:first-child) {
+  border-top-color: var(--saga-line);
+}
+
 .nav-mobile {
   background-color: rgba(13, 11, 9, 0.97);
 }

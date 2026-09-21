@@ -109,10 +109,11 @@ motion and reduced-motion review.
       atmosphere, author premise, selected excerpts, optional map capstone, and
       a final return to book links. Both language homepages now follow this
       backbone without replacing the existing SAGA & SMOKE assets.
-- [ ] Reduce competing discovery mechanisms. Hero links, book carousel,
-      flyout, flipcards, and map all expose different paths; preserve the
-      adventure atmosphere but make map and flipcards optional enrichment rather
-      than required ways to understand the catalogue.
+- [x] Keep the contextual discovery paths. Hero links, book carousel, flyout,
+      flipcards, map, and closing index may lead to the same book pages because
+      each offers a different narrative context. The opening book choice remains
+      the primary path; the other links are secondary enrichment rather than
+      competing calls to action. (2026-09-21)
 - [x] Make the English homepage a deliberate journey rather than a reduced
       German page. The German-only teaser was removed and the world map was
       added; `Places` now appears in desktop and mobile navigation. (2026-09-21)
@@ -125,10 +126,11 @@ motion and reduced-motion review.
 **Fitting skills:** Impeccable `clarify` and `harden`; `design-taste-frontend`
 for preserving routes, labels, and the existing visual system.
 
-- [ ] Make book grouping understandable. `Romane` / `Novels` currently contains
-      fiction, `101 German Proverbs`, and the nonfiction `Of the world` series;
-      preserve the public label until approved, but decide whether the flyout
-      needs visible grouping or explanatory structure.
+- [x] Make book grouping understandable. German pages now group the flyout
+      and mobile navigation as `Romane` and `Weitere Bücher`; English pages use
+      `Novels`, `German novels`, and `Other books`. Public labels, routes,
+      titles, and book facts were preserved, and the mobile language switch is
+      separated with its own divider. (2026-09-21)
 - [x] Resolve the English homepage teaser mismatch by removing the obsolete
       German-only teaser while preserving the existing public book routes.
       (2026-09-21)

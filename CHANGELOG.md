@@ -61,3 +61,10 @@
   use aligned rows without clipping the links inside the card.
 - Aligned map info headings and close buttons in a two-column header row on both
   homepages, with the existing focus and close behavior preserved.
+- Grouped the shared book navigation across all 12 pages: German pages use
+  `Romane` and `Weitere Bücher`; English pages use `Novels`, `German novels`,
+  and `Other books` in both desktop and mobile navigation.
+- Preserved all public navigation labels, routes, titles, and book links while
+  keeping group headings non-interactive and readable by assistive technology.
+- Separated the mobile language switch with its own divider using the existing
+  divider color.
