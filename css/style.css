@@ -103,15 +103,22 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--saga-ember-hot, var(--main-color)) transparent;
 }
 
 .books-container::-webkit-scrollbar {
-  display: none;
+  display: block;
+  height: 0.8rem;
 }
 
-.books-container.no-transition {
-  scroll-behavior: auto;
+.books-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.books-container::-webkit-scrollbar-thumb {
+  background: var(--saga-ember-hot, var(--main-color));
+  border-radius: 0;
 }
 
 .books-container.dragging {

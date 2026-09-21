@@ -1,22 +1,127 @@
 "use strict";
 
-// DEFINING CONST from document
-// BOOKS CAROUSEL //
-const wrapper = document.querySelector(".wrapper"); // wrapper around carousel
-const carousel = document.querySelector(".books-container"); // carousel containing the cards
-const arrowBtns = document.querySelectorAll(".wrapper button"); // left and right buttons
-const firstCardWidth = carousel.querySelector(".book-item").offsetWidth; // width of first card
-const carouselChildren = [...carousel.children]; // all carousel children (all cards) as an array
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const carouselTracks = document.querySelectorAll(".books-container");
+const isEnglishHomepage = document.documentElement.lang === "en";
+
+function getCarouselStep(track) {
+  const firstCard = track.querySelector(".book-item");
+  if (!firstCard) return track.clientWidth;
+
+  const styles = window.getComputedStyle(track);
+  const gap = parseFloat(styles.columnGap) || parseFloat(styles.gap) || 0;
+  return firstCard.getBoundingClientRect().width + gap;
+}
+
+function getCarouselMaxScroll(track) {
+  return Math.max(0, track.scrollWidth - track.clientWidth);
+}
+
+function updateCarouselButtons(track) {
+  const wrapper = track.closest(".wrapper");
+  if (!wrapper) return;
+
+  const maxScroll = getCarouselMaxScroll(track);
+  const atStart = track.scrollLeft <= 1;
+  const atEnd = track.scrollLeft >= maxScroll - 1;
+  const leftButton = wrapper.querySelector(".btn--left");
+  const rightButton = wrapper.querySelector(".btn--right");
+
+  if (leftButton) {
+    leftButton.disabled = atStart;
+    leftButton.setAttribute("aria-disabled", String(atStart));
+    leftButton.setAttribute(
+      "aria-label",
+      isEnglishHomepage ? "Previous books" : "Vorherige Bücher"
+    );
+  }
+  if (rightButton) {
+    rightButton.disabled = atEnd;
+    rightButton.setAttribute("aria-disabled", String(atEnd));
+    rightButton.setAttribute(
+      "aria-label",
+      isEnglishHomepage ? "Next books" : "Nächste Bücher"
+    );
+  }
+}
+
+function scrollCarousel(track, direction) {
+  const maxScroll = getCarouselMaxScroll(track);
+  const target = Math.min(
+    maxScroll,
+    Math.max(0, track.scrollLeft + direction * getCarouselStep(track))
+  );
+
+  if (typeof track.scrollTo === "function") {
+    track.scrollTo({
+      left: target,
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
+  } else {
+    track.scrollLeft = target;
+  }
+}
+
+carouselTracks.forEach((track, index) => {
+  if (!track.id) track.id = `books-carousel-${index + 1}`;
+  track.setAttribute("tabindex", "0");
+  track.setAttribute("role", "region");
+  track.setAttribute(
+    "aria-label",
+    isEnglishHomepage
+      ? index === 0
+        ? "English book collection carousel"
+        : "German-language book collection carousel"
+      : "Book collection carousel"
+  );
+
+  const wrapper = track.closest(".wrapper");
+  const buttons = wrapper
+    ? wrapper.querySelectorAll(".btn--left, .btn--right")
+    : [];
+
+  buttons.forEach((button) => {
+    button.type = "button";
+    button.setAttribute("aria-controls", track.id);
+    button.addEventListener("click", () => {
+      scrollCarousel(track, button.classList.contains("btn--left") ? -1 : 1);
+    });
+  });
+
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
+  track.addEventListener("mousedown", (event) => {
+    isDragging = true;
+    track.classList.add("dragging");
+    startX = event.pageX;
+    startScrollLeft = track.scrollLeft;
+  });
+
+  track.addEventListener("mousemove", (event) => {
+    if (!isDragging) return;
+    track.scrollLeft = startScrollLeft - (event.pageX - startX);
+  });
+
+  const stopDragging = () => {
+    isDragging = false;
+    track.classList.remove("dragging");
+  };
+
+  track.addEventListener("mouseleave", stopDragging);
+  track.addEventListener("scroll", () => updateCarouselButtons(track));
+  document.addEventListener("mouseup", stopDragging);
+  updateCarouselButtons(track);
+});
+
+window.addEventListener("resize", () => {
+  carouselTracks.forEach((track) => updateCarouselButtons(track));
+});
 
 // MAP INFO BOX //
 const markers = document.querySelectorAll(".marker"); // get all markers
 const infoBoxes = document.querySelectorAll(".info"); // get all info boxes
-
-// DEFINING EMPTY VARIABLES
-let isDragging = false,
-  startX,
-  startScrollLeft,
-  timeoutId;
 
 // ************************************* //
 // ************************************* //
@@ -113,107 +218,10 @@ document.addEventListener("keydown", (event) => {
 // ************************************* //
 
 // Add event listener for the arrow buttons to scroll the carousel left and right
-arrowBtns.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    carousel.scrollLeft +=
-      btn.id === "btn--left" ? -firstCardWidth : firstCardWidth; // if clicked button is left, then substract first card width from carousel scrollLeft, else add to it
-  });
-});
 
 // ************************************* //
 // 2.) DRAGGING
 // ************************************* //
-
-// mousedown starts dragging, sets it to true and adds the dragging class to the carousel
-// sets startX to the position of the cursor on the page and startScrollLeft to left x of clicked card (400,800, etc.)
-const dragStart = function (e) {
-  isDragging = true;
-  carousel.classList.add("dragging"); // sets cursor to grab, prevents selection and sets scroll behavior to auto
-  // Records the initial cursor and scroll position of the carousel
-  startX = e.pageX;
-  startScrollLeft = carousel.scrollLeft;
-};
-
-// mouseover triggers dragging function,  defines scrollLeft: starting x of clicked card - (current cursor position - starting cursor position)
-const dragging = function (e) {
-  if (!isDragging) return; // if isDragging is false return from here
-  // Updates the scroll position of the carousel based on the cursor movement
-  console.log(startScrollLeft, e.pageX, startX);
-  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-};
-
-// mouseup triggers dragStop, sets isDragging to false ans removes dragging class from carousel
-const dragStop = function () {
-  isDragging = false;
-  carousel.classList.remove("dragging");
-};
-
-// ************************************* //
-// 3.) AUTOPLAY
-// ************************************* //
-
-// set timeoutId to scroll by 1 card width every 2.5 seconds
-const autoPlay = function () {
-  if (window.innerWidth < 800) return; // return for small devices
-  // Autoplay the carousel after every 2500 ms
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
-};
-
-// initiate autoplay
-// autoPlay();
-
-// ************************************* //
-// 4.) INFINITE SCROLLING
-// ************************************* //
-
-// Get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth); // carousel width devided by single card width (equals 3)
-
-// Insert copies of the last few cards to beginning of the carousel for infinite scrolling
-carouselChildren
-  .slice(-cardPerView)
-  .reverse()
-  .forEach(function (card) {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
-
-// Insert copies of the first few cards to end of the carousel for infinite scrolling
-carouselChildren.slice(0, cardPerView).forEach(function (card) {
-  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-
-// define infinite Scroll
-const infiniteScroll = function () {
-  // If the carousel is at the beginning, scroll to the end
-  if (carousel.scrollLeft === 0) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth; // scrollWidth = full width of hidden carousel; offsetWidth = wudth in viewport
-    carousel.classList.remove("no-transition");
-  }
-  // If the carousel is at the end, scroll to the beginning (if scrollLeft is full length - seen length)
-  else if (
-    Math.ceil(carousel.scrollLeft) ===
-    carousel.scrollWidth - carousel.offsetWidth
-  ) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.offsetWidth; // set scrollLeft to length of viewport
-    carousel.classList.remove("no-transition");
-  }
-
-  // Clear existing timeout & start autoplay if the mouse is not hovering over carousel
-  //clearTimeout(timeoutId);
-  //if (!wrapper.matches(":hover")) autoPlay();
-};
-
-// ADD EVENT LISTENERS
-
-carousel.addEventListener("mousedown", dragStart); // trigger dragging to start
-carousel.addEventListener("mousemove", dragging); // dragging
-document.addEventListener("mouseup", dragStop); // trigger dragging to end
-carousel.addEventListener("scroll", infiniteScroll); // define infinite scrolling
-
-// wrapper.addEventListener("mouseenter", clearTimeout(timeoutId)); // only autoplay when hover is false
-// wrapper.addEventListener("mouseleave", autoPlay); // reset to autoPlay after leaving with the mouse
 
 // ************************************* //
 // ************************************* //

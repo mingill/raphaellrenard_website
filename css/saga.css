@@ -401,6 +401,11 @@ body::after {
   outline-offset: 8px;
 }
 
+.btn--carousel:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
 /************************/
  /* features / author / quotes / flipcards
 /************************/

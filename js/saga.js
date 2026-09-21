@@ -163,15 +163,39 @@
   document.querySelectorAll(".books-container").forEach(function (track) {
     track.setAttribute("tabindex", "0");
     track.setAttribute("role", "region");
-    track.setAttribute("aria-label", "Book carousel, use arrow keys to browse");
+    if (!track.hasAttribute("aria-label")) {
+      track.setAttribute("aria-label", "Book carousel, use arrow keys to browse");
+    }
     track.addEventListener("keydown", function (ev) {
-      var step = 380;
+      if (ev.target !== track) return;
+
+      var card = track.querySelector(".book-item");
+      var styles = window.getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap) || parseFloat(styles.gap) || 0;
+      var step = card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+      var maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+
       if (ev.key === "ArrowRight") {
         ev.preventDefault();
-        track.scrollBy({ left: step, behavior: reduceMotion ? "auto" : "smooth" });
+        track.scrollTo({
+          left: Math.min(maxScroll, track.scrollLeft + step),
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
       } else if (ev.key === "ArrowLeft") {
         ev.preventDefault();
-        track.scrollBy({ left: -step, behavior: reduceMotion ? "auto" : "smooth" });
+        track.scrollTo({
+          left: Math.max(0, track.scrollLeft - step),
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
+      } else if (ev.key === "Home") {
+        ev.preventDefault();
+        track.scrollTo({ left: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      } else if (ev.key === "End") {
+        ev.preventDefault();
+        track.scrollTo({
+          left: maxScroll,
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
       }
     });
   });
