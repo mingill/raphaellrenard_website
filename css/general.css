@@ -242,7 +242,6 @@ body {
   text-transform: uppercase;
 }
 
-.nav-books-group:not(:first-child),
 .nav-mobile-group:not(:first-child) {
   margin-top: 0.6rem;
   border-top: 1px solid var(--secondary-color);

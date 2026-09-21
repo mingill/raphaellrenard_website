@@ -227,7 +227,6 @@ body::after {
   color: var(--saga-faint);
 }
 
-.nav-books-group:not(:first-child),
 .nav-mobile-group:not(:first-child) {
   border-top-color: var(--saga-line);
 }

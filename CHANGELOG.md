@@ -232,3 +232,9 @@
   wrapping flex; single column below 26em unchanged).
 - Reordered the English closing index so the two German-only covers sit in
   the second row; English-available books lead. German page order unchanged.
+- Tightened the atmosphere heading-to-mosaic gap from 6.4rem to 0.8rem in
+  three passes (heading margin plus mosaic top margin); bottom air and mobile
+  rules untouched.
+- Reordered the English flyout (Novels, Other books, German novels) and
+  removed the divider lines above the flyout groups, keeping spacing only;
+  mobile nav dividers intentionally unchanged.
