@@ -224,8 +224,11 @@ for preserving routes, labels, and the existing visual system.
       tags (up to 4000w) were removed from all book pages with zero visual
       change, and `loading="lazy"` was added to both homepage mosaics and map
       images. Logos, shelf covers, and first book-page covers stay eager.
-- [ ] Decide whether the Ionicons CDN is justified. The current dependency adds
-      an external request despite the site's system-font/privacy-clean direction.
+- [x] Replace the Ionicons CDN with local inline SVG rendering. Done
+      (2026-09-21): all 12 pages use `js/icons.js`; the homepage feature,
+      menu, close, Amazon, and Instagram icons use local Ionicons SVG source.
+      Exact feature SVGs are constrained to the original circle dimensions in
+      `saga.css`; no external icon request remains.
 
 ### P2 — Detector and polish follow-up
 

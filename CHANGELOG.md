@@ -117,3 +117,8 @@
   so h3 (author name, book volume titles) now steps down to 2.0rem in
   `site/css/queries.css`. Justified text and line spacing intentionally
   unchanged per approval.
+- Replaced the Ionicons CDN dependency across all 12 pages with the local
+  `site/js/icons.js` inline SVG renderer. Added exact local Ionicons assets for
+  the homepage feature icons, menu, close, Amazon, and Instagram marks.
+- Restored the feature icon geometry and alignment by constraining native SVGs
+  to the original 3.2rem glyph box, 1.6rem padding, and circular background.
