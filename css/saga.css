@@ -487,7 +487,8 @@ body::after {
 .flipcard-container {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.65);
   border: 1px solid var(--saga-line);
-  cursor: default;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .flipcard-item {
@@ -503,12 +504,31 @@ body::after {
 }
 
 .flipcard-text {
+  display: flex;
+  width: 100%;
+  height: 16rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   color: var(--saga-ink);
+}
+
+.flipcard-quote {
+  display: grid;
+  grid-template-rows: 16rem auto auto;
+  row-gap: 0.8rem;
+  align-content: center;
+  justify-items: center;
+}
+
+.flipcard-book,
+.flipcard-link {
+  margin-top: 0;
 }
 
 .flipcard-link {
   display: inline-block;
-  margin-top: 1.2rem;
+  margin-top: 0;
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.25rem;
@@ -522,25 +542,6 @@ body::after {
 .flipcard-link:hover {
   color: var(--saga-ink);
   border-bottom-color: var(--saga-ember-hot);
-}
-
-.flipcard-toggle {
-  align-self: center;
-  margin-top: 1.2rem;
-  padding: 0.8rem 1.2rem;
-  border: 1px solid var(--saga-line);
-  background: transparent;
-  color: var(--saga-ember-hot);
-  font: inherit;
-  font-size: 1.2rem;
-  letter-spacing: 0.16rem;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.flipcard-toggle:hover {
-  border-color: var(--saga-ember-hot);
-  color: var(--saga-ink);
 }
 
 .flipcard-front[aria-hidden="true"],

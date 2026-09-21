@@ -21,3 +21,11 @@
 - Added keyboard and outside-click closing, Escape handling, close controls, and
   focus return for the map information panels.
 - Preserved all existing map positions, content, cover links, and destinations.
+- Replaced homepage carousel cloning and infinite scroll resets with finite shelves.
+- Added labelled carousel regions, bounded arrow buttons, and keyboard
+  Arrow/Home/End navigation for the homepage book collections.
+- Preserved native touch scrolling and mouse dragging while measuring each
+  movement from the current card width plus gap.
+- Restored visible, SAGA-themed horizontal scrollbars and removed duplicate
+  cloned focus targets. Book-page carousels and touch-flip behavior were not
+  changed.

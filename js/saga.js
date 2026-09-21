@@ -74,90 +74,48 @@
     var visibleFace = on ? back : front;
     inner.classList.toggle("flipcard-rotate", on);
     card.classList.toggle("flipped", on);
+    card.setAttribute("aria-expanded", on ? "true" : "false");
     setFaceAccessibility(front, !on);
     setFaceAccessibility(back, on);
-    card.querySelectorAll(".flipcard-toggle").forEach(function (button) {
-      button.setAttribute("aria-expanded", on ? "true" : "false");
-    });
+
+    var book = card.querySelector(".flipcard-book");
+    var bookName = book ? book.textContent.trim() : "quote card";
+    var isEnglish = document.documentElement.lang === "en";
+    card.setAttribute(
+      "aria-label",
+      isEnglish
+        ? on
+          ? "Show the front of " + bookName
+          : "Flip the quote from " + bookName
+        : on
+        ? "Vorderseite von " + bookName + " anzeigen"
+        : "Zitatkarte von " + bookName + " wenden"
+    );
 
     var activeElement = document.activeElement;
     var focusHiddenControl =
       moveFocus || (activeElement && hiddenFace && hiddenFace.contains(activeElement));
     if (focusHiddenControl && visibleFace) {
-      var visibleToggle = visibleFace.querySelector(".flipcard-toggle");
-      if (visibleToggle) visibleToggle.focus();
+      card.focus();
     }
   }
   flipCards.forEach(function (card) {
     var inner = card.querySelector(".flipcard-item");
     if (!inner) return;
-    card.querySelectorAll(".flipcard-toggle").forEach(function (button) {
-      button.addEventListener("click", function () {
-        setFlip(card, !card.classList.contains("flipped"), true);
-        disturbFlip();
-        scheduleFlipRearm();
-      });
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "group");
+    card.addEventListener("click", function (event) {
+      if (event.target.closest && event.target.closest("a")) return;
+      setFlip(card, !card.classList.contains("flipped"), true);
+    });
+    card.addEventListener("keydown", function (event) {
+      if (event.target !== card) return;
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      setFlip(card, !card.classList.contains("flipped"), true);
     });
     setFlip(card, false, false);
   });
-
-  var touchFlip = window.matchMedia("(hover: none)").matches;
-  var flipWatched = null;
-  var flipQuiet = true;
-  var flipT = 0;
-  var flipRearmT = 0;
-  function disturbFlip() {
-    flipQuiet = false;
-    clearTimeout(flipT);
-    clearTimeout(flipRearmT);
-  }
-  function scheduleFlipRearm() {
-    clearTimeout(flipRearmT);
-    flipRearmT = setTimeout(function () {
-      flipQuiet = true;
-      scheduleFlipTick();
-    }, 1500);
-  }
-  function scheduleFlipTick() {
-    clearTimeout(flipT);
-    if (!flipWatched) return;
-    flipT = setTimeout(function () {
-      if (flipWatched && flipQuiet) {
-        setFlip(flipWatched, !flipWatched.classList.contains("flipped"));
-      }
-      scheduleFlipTick(); // steady 5s rhythm while in view
-    }, 5000);
-  }
-  if (touchFlip && !reduceMotion && flipCards.length && "IntersectionObserver" in window) {
-    var flipWatcher = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.intersectionRatio >= 0.99) {
-            flipWatched = entry.target;
-            if (flipQuiet) scheduleFlipTick();
-          } else if (flipWatched === entry.target) {
-            flipWatched = null;
-            clearTimeout(flipT);
-            setFlip(entry.target, false);
-          }
-        });
-      },
-      { threshold: [0, 0.99, 1] }
-    );
-    flipCards.forEach(function (card) {
-      flipWatcher.observe(card);
-    });
-    window.addEventListener(
-      "scroll",
-      function () {
-        disturbFlip();
-        scheduleFlipRearm();
-      },
-      { passive: true }
-    );
-    window.addEventListener("touchstart", disturbFlip, { passive: true });
-    window.addEventListener("touchend", scheduleFlipRearm, { passive: true });
-  }
 
   /* ---------- carousel: arrow-key scrolling ---------- */
   document.querySelectorAll(".books-container").forEach(function (track) {

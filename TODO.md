@@ -81,9 +81,11 @@ motion and reduced-motion review.
       a container exposed as `role="button"`. Provide a separate manual flip
       control, update its accessible state, and prevent hidden-side links from
       receiving focus.
-- [ ] Replace infinite carousel cloning with finite, labelled regions. Hidden
-      scrollbars make the shelves difficult to discover, and duplicated cards
-      create duplicate focus targets for screen-reader and keyboard users.
+- [x] Replace infinite carousel cloning with finite, labelled regions. Hidden
+      scrollbars were replaced with visible themed scrollbars; duplicated cards
+      and their duplicate focus targets are gone. Homepage shelves now expose
+      bounded arrow navigation, keyboard Home/End/Arrow support, and dynamic
+      card-plus-gap measurements. (2026-09-21)
 - [ ] Remove automatic five-second touch flip behavior. It interrupts reading,
       takes control away from the visitor, and adds motion without helping book
       discovery.
@@ -173,9 +175,9 @@ for preserving routes, labels, and the existing visual system.
 - [ ] Remove or subordinate modules that do not help the first book decision.
       The homepage currently combines six hero links, a long infinite carousel,
       four feature claims, three flipcards, and seven map interactions.
-- [ ] Improve carousel resize/orientation behavior. Current card dimensions and
-      scroll steps are calculated once, so later viewport changes can leave stale
-      movement distances.
+- [ ] Verify carousel behavior after browser testing. Homepage scroll steps now
+      measure the current card-plus-gap distance per action and boundary state
+      updates on resize; book-page carousel behavior remains separate.
 - [ ] Lazy-load below-fold book covers and the German map where appropriate,
       reserve image space, and avoid loading background assets that are later
       hidden by `saga.css`.
