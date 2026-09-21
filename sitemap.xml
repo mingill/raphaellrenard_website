@@ -50,6 +50,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/oftheworld.html" />
   </url>
   <url>
+    <loc>https://raphaellrenard.com/htstw.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/htstw.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/htstw.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/htstw.html" />
+  </url>
+  <url>
+    <loc>https://raphaellrenard.com/en/htstw.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://raphaellrenard.com/htstw.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raphaellrenard.com/en/htstw.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raphaellrenard.com/htstw.html" />
+  </url>
+  <url>
     <loc>https://raphaellrenard.com/abenteurer.html</loc>
   </url>
   <url>

@@ -111,7 +111,10 @@ issues below are the actionable ones.
       at tablet widths the five covers now form a centered 3+2 layout (wrapping
       flex in `queries.css`) instead of an uneven 2-column grid, and on the
       English page the two German-only covers were moved to the second row.
-      (2026-09-21)
+      (2026-09-21) Update: the index now shows all six covers in one row on
+      desktop (6-column grid) and two centered rows of three below ~860px,
+      with a wider 2.4rem row gap; htstw was moved before proverbs on both
+      homepages. (2026-09-21)
 - [x] Establish a title-led book choice on the homepage. The `Wähle ein Buch`
       / `Choose a book` heading and direct links to the curated books provide
       the clear next step; the compact image index reinforces the same routes.
@@ -149,6 +152,10 @@ motion and reduced-motion review.
 - [x] Remove automatic five-second touch flip behavior. Cards now flip only
       when the visitor clicks or activates them with Enter/Space.
       (2026-09-21)
+- [x] Harden flipcard toggling to strict click-only A/B with a mid-flight
+      transition lock (ignores input during the 0.7s rotation). Cards removed
+      from scroll-reveal so they rest on side A; the background touch-only
+      wake loop and its listeners were deleted from `saga.js`. (2026-09-21)
 - [x] Restore robust focus treatment. Removed the global focus reset from
       `general.css` and the book-page carousel suppression from `books.css`;
       the Saga `:focus-visible` treatment now remains visible. (2026-09-21)
@@ -364,6 +371,10 @@ for approved long-form copy review, never for unapproved rewriting.
 - [x] Replace or correct the remaining `href="#"` placeholders. Never invent a
       destination for an unreleased book; use a non-link state or an explicit
       unavailable treatment instead.
+- [x] Link “Die Festung – Hoffnung” (available since December 2024, ASIN
+      B0DRMJ7YNG) on its book page: both clickables point to the verified
+      Amazon URL, date set to Dezember 2024, button changed from
+      Bald-erhältlich to Jetzt kaufen!. (2026-09-21)
 - [x] Decide whether English visitors should receive regional Amazon links or
       whether the existing Amazon.de links are intentional. Decided (2026-09-21):
       the 20 product links for English-language books and the 4 author-store

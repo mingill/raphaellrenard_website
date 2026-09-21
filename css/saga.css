@@ -944,6 +944,19 @@ body.accent-stone {
   --saga-stage-mid: #14110d;
 }
 
+body.accent-frost {
+  /* htstw.html — Svalbard, freezing ice blue (values derived from --el-frost) */
+  --saga-ember: #7fb6d9;
+  --saga-ember-hot: #c2e4f6;
+  --saga-gold: #8fc3e3;
+  --saga-accent-rgb: 127, 182, 217;
+  --saga-accent-hot-rgb: 194, 228, 246;
+  --saga-accent-gold-rgb: 143, 195, 227;
+  --saga-line: rgba(143, 195, 227, 0.28);
+  --saga-glow: 0 0 4rem rgba(127, 182, 217, 0.25);
+  --saga-stage-mid: #0b1620;
+}
+
 /************************/
  /* mobile hero — 3+3 mosaic, no stretch
 /************************/

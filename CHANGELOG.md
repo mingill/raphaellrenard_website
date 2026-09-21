@@ -241,3 +241,12 @@
 - Hid the homepage shelf scrollbar on both engines (arrows already carry
   navigation with disabled end states); drag, touch, and keyboard scrolling
   are unaffected.
+- Hardened flipcards to strict click-only A/B toggling with a mid-flight
+  transition lock; cards no longer reveal-animate and the background
+  touch-only wake loop was removed.
+- Linked “Die Festung – Hoffnung” on its book page (Amazon URL verified),
+  set Dezember 2024, and swapped the Bald-erhältlich button to
+  Jetzt kaufen!.
+- Widened the closing book index to six covers in one desktop row with two
+  centered rows of three below ~860px (2.4rem row gap); moved htstw before
+  proverbs on both homepages.
