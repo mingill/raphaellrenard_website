@@ -238,3 +238,6 @@
 - Reordered the English flyout (Novels, Other books, German novels) and
   removed the divider lines above the flyout groups, keeping spacing only;
   mobile nav dividers intentionally unchanged.
+- Hid the homepage shelf scrollbar on both engines (arrows already carry
+  navigation with disabled end states); drag, touch, and keyboard scrolling
+  are unaffected.

@@ -145,13 +145,15 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  /* Arrows are the visible navigation; the track stays scrollable,
+     draggable, and keyboard-operable without showing a scrollbar. */
+  scrollbar-width: none;
   scrollbar-color: var(--saga-ember-hot, var(--main-color)) transparent;
 }
 
 .books-container::-webkit-scrollbar {
-  display: block;
-  height: 0.8rem;
+  display: none;
+  height: 0;
 }
 
 .books-container::-webkit-scrollbar-track {
