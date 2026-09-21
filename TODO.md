@@ -45,18 +45,22 @@ issues below are the actionable ones.
 **Fitting skills:** Impeccable `clarify`, `layout`, and `distill`;
 `design-taste-frontend` as the visual-direction guardrail.
 
-- [ ] Decide the homepage's first visitor decision: choose a story/world,
-      choose a book, or buy from the general author store. The current hero
-      headline is atmospheric but generic, while `Jetzt kaufen!` / `Buy Now!`
-      sends visitors to a general Amazon store before they know which book fits.
-- [ ] Establish one visibly featured book or series using existing facts and
-      imagery. The current six-image hero strip has no visible title or series
-      labels, and the book shelf presents covers and tags without readable book
-      names, making discovery dependent on image recognition.
-- [ ] Clarify the primary and secondary CTA hierarchy without changing the
-      existing Amazon URL until approved. A catalogue/exploration action should
-      explain the first step; the general store link can remain the purchase
-      path if that is the intended conversion.
+- [x] Decide the homepage's first visitor decision: the first step is now
+      choosing a book. Both homepages lead with a curated three-book catalogue
+      before the atmospheric imagery or general author-store utility link.
+      (2026-09-21)
+- [x] Establish a curated three-book gateway using existing facts and imagery.
+      Both language versions now show readable book titles and direct links
+      before the atmospheric image section; the six-image strip remains an
+      atmosphere layer rather than a single featured-book claim. (2026-09-21)
+- [x] Clarify the primary and secondary CTA hierarchy without changing the
+      existing Amazon URL. The catalogue and direct book links are the primary
+      exploration action; the general author-store link remains secondary
+      utility. (2026-09-21)
+- [x] Add a compact image-led closing book index to both homepages using the
+      existing cover assets and routes. Covers are centered, rounded, and
+      softly lit like the main carousel; visible title spans and divider lines
+      were removed while accessible image names remain. (2026-09-21)
 - [ ] Add a title-led closing action after impressions or the map so the page
       ends with a clear next step instead of ending on atmosphere and footer
       utility links.
@@ -85,7 +89,9 @@ motion and reduced-motion review.
       scrollbars were replaced with visible themed scrollbars; duplicated cards
       and their duplicate focus targets are gone. Homepage shelves now expose
       bounded arrow navigation, keyboard Home/End/Arrow support, and dynamic
-      card-plus-gap measurements. (2026-09-21)
+      card-plus-gap measurements. The primary German and English shelves now
+      start on the second book when one fits, start on the left two when two
+      fit, and hide both arrows when all three fit. (2026-09-21)
 - [x] Remove automatic five-second touch flip behavior. Cards now flip only
       when the visitor clicks or activates them with Enter/Space.
       (2026-09-21)
@@ -173,11 +179,13 @@ for preserving routes, labels, and the existing visual system.
 **Fitting skills:** Impeccable `distill`, `optimize`, and `audit`.
 
 - [ ] Remove or subordinate modules that do not help the first book decision.
-      The homepage currently combines six hero links, a long infinite carousel,
-      four feature claims, three flipcards, and seven map interactions.
-- [ ] Verify carousel behavior after browser testing. Homepage scroll steps now
-      measure the current card-plus-gap distance per action and boundary state
-      updates on resize; book-page carousel behavior remains separate.
+      The homepage currently combines six hero links, a long carousel, four
+      feature claims, three flipcards, and seven map interactions.
+- [x] Verify the primary homepage carousel behavior after user browser testing.
+      Homepage scroll steps measure the current card-plus-gap distance per
+      action; responsive alignment, arrow visibility, and boundary state now
+      update correctly. Book-page carousel behavior remains separate.
+      (2026-09-21)
 - [ ] Lazy-load below-fold book covers and the German map where appropriate,
       reserve image space, and avoid loading background assets that are later
       hidden by `saga.css`.

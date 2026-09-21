@@ -2,6 +2,22 @@
 
 ## 2026-09-21
 
+### Homepage
+
+- Confirmed and recorded the homepage's first visitor decision as choosing a
+  book, with the curated three-book catalogue leading both language versions.
+- Recorded the curated three-book gateway and clarified its CTA hierarchy:
+  direct book links are primary, while the existing general author-store link
+  remains secondary utility.
+- Aligned the primary German and English shelves across responsive widths:
+  one visible book starts on the second, two visible books start on the left
+  two, and both arrows are hidden when all three books fit.
+- Added a compact image-led all-books index to both homepages using existing
+  covers and routes.
+- Matched the index covers to the carousel treatment with centered alignment,
+  rounded corners, and a restrained glow; removed visible title spans and
+  divider lines while preserving accessible image names.
+
 ### Accessibility
 
 - Restored reliable keyboard focus indicators across the shared site styles.
