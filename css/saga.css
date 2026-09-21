@@ -385,6 +385,22 @@ body::after {
   box-shadow: 0 0 5rem rgba(var(--saga-accent-hot-rgb), 0.45);
 }
 
+/* Coming-soon pill (unreleased book): same resting look as a buy button,
+   but non-interactive — default cursor, no hover glow, no press dip. */
+.btn--full-bookpage[aria-disabled="true"] {
+  color: #1a1206;
+  background-color: var(--saga-ember);
+  border-color: var(--saga-ember);
+  cursor: default;
+}
+.btn--full-bookpage[aria-disabled="true"]:hover,
+.btn--full-bookpage[aria-disabled="true"]:active {
+  background-color: var(--saga-ember);
+  color: #1a1206;
+  box-shadow: none;
+  transform: none;
+}
+
 .btn--carousel {
   border-color: var(--saga-ember);
   background-color: rgba(13, 11, 9, 0.8);
