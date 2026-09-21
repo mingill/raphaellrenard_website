@@ -2,6 +2,17 @@
  /* SAGA & SMOKE — pilot theme (index + apt)
  /* Layered LAST: overrides style.css / books.css / general.css tokens.
  /* System font stacks only — zero external requests.
+ /*
+ /* TOKEN OWNERSHIP (final, 2026-09-21):
+ /* - This :root block owns every live token: the --saga-* house system,
+ /*   the --el-* elemental accents, and the legacy light-theme names
+ /*   (--main-color etc.), which are remapped onto saga values below for
+ /*   non-pilot legacy rules. See COLORS.md for the palette table.
+ /* - The :root blocks in style.css, books.css and general.css were removed
+ /*   as provably dead: saga.css loads last on every page, so its remaps
+ /*   always won; the removed tokens had zero HTML/JS consumers.
+ /* - Accent overrides live in the body.accent-* blocks further below
+ /*   (one accent per page); --saga-blood stays global, never accented.
  /************************/
 
 :root {

@@ -7,16 +7,7 @@
 /* 6.) MAP */
 /************************/
 
-:root {
-  --main-color: #114b5f;
-  --main-color-light: #70939f;
-  --main-color-dark: #092630;
-  --secondary-color: #040404;
-  --tertiary-color: yellow;
-  --background-color: #e7edef;
-  --text-color-light: #e7edef;
-  --text-color-dark: #040404;
-}
+/* NOTE: legacy :root tokens removed 2026-09-21 — saga.css remaps own them. */
 
 .section {
   padding: 9.6rem 0;

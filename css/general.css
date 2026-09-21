@@ -98,20 +98,9 @@ Default: 20px, 10px, 5px
 -- sticky header: 999999
 */
 
-:root {
-  --main-color: #ff7400;
-  --main-color-light: #ff9e4d;
-  --main-color-dark: #803a00;
-  --secondary-color: #331700;
-  --tertiary-color: yellow;
-  --background-color: #fff1e6;
-  --background-color2: #ffe3cc;
-  --text-color-light: #fff1e6;
-  --text-color-dark: #190c00;
-  --accent-color-primary: #5f2511;
-  --accent-color-secondary: #5f114b;
-  --accent-color-tertiary: ##4b5f11;
-}
+/* NOTE: legacy :root tokens removed 2026-09-21 — saga.css remaps own them.
+   Also removed: unused --accent-color-secondary and the invalid
+   --accent-color-tertiary (double-## value, zero consumers). */
 
 /************************/
 /** 2.) GLOBAL RESET ****/
