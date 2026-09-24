@@ -662,6 +662,7 @@ svg.feature-icon {
 
 /* desktop affordance: hovering tips the card a little so it reads as flippable */
 .flipcard-container {
+  -webkit-perspective: 120rem;
   perspective: 120rem;
 }
 
