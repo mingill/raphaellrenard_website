@@ -37,6 +37,7 @@
 
     <script defer src="js/script.js"></script>
     <script defer src="js/overall.js"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="13c92d4d-46a4-432e-a2a6-ca5367a5d3d7" data-domains="raphaellrenard.com"></script>
     <script defer src="js/saga.js"></script>
     <title>Raphael L. Renard &mdash; Starte ins Abenteuer!</title>
     <script type="application/ld+json">
@@ -82,7 +83,7 @@
           <li class="lang-switch">
             <span class="lang-active">DE</span>
             <span class="lang-sep">|</span>
-            <a class="lang-link" data-lang="en" href="en/index.html">EN</a>
+            <a data-umami-event="lang-to-en" class="lang-link" data-lang="en" href="en/index.html">EN</a>
           </li>
         </ul>
         <div class="nav-books hidden" id="nav-books">
@@ -155,7 +156,7 @@
             >
           </li>
           <li class="nav-mobile-item nav-mobile-language">
-            <a class="nav-mobile-link" href="en/index.html">English</a>
+            <a data-umami-event="lang-to-en" class="nav-mobile-link" href="en/index.html">English</a>
           </li>
         </ul>
       </div>
@@ -171,7 +172,7 @@
         <div class="wrapper">
           <div class="books-container">
             <div class="book-item">
-              <a href="festung.html">
+              <a href="festung.html" data-umami-event="shelf-festung">
                 <img
                   srcset="
                     img/cover/cover_festung1_320.avif 320w,
@@ -194,7 +195,7 @@
               </div>
             </div>
             <div class="book-item">
-              <a href="abenteurer.html">
+              <a href="abenteurer.html" data-umami-event="shelf-abenteurer">
                 <img
                   srcset="
                     img/cover/cover_abenteurer1_320.avif 320w,
@@ -216,7 +217,7 @@
               </div>
             </div>
             <div class="book-item">
-              <a href="apt.html">
+              <a href="apt.html" data-umami-event="shelf-apt">
                 <img
                   srcset="
                     img/cover/cover_apt_320.avif 320w,
@@ -239,7 +240,7 @@
             </div>
             <!-- FILL-IN: shelf card for the unreleased book; tags are provisional -->
             <div class="book-item unfinished">
-              <a href="htstw.html">
+              <a href="htstw.html" data-umami-event="shelf-htstw">
                 <img
                   srcset="
                     img/cover/cover_htstw_320.avif 320w,
@@ -652,7 +653,7 @@
             />
             <!-- Arabia - Der Abenteurer -->
             <button
-              class="marker marker-arabia"
+              class="marker marker-arabia" data-umami-event="map-arabia"
               type="button"
               aria-label="Arabien öffnen"
               aria-controls="info-arabia"
@@ -713,7 +714,7 @@
             </div>
             <!-- Persia - Der Abenteurer -->
             <button
-              class="marker marker-persia"
+              class="marker marker-persia" data-umami-event="map-persia"
               type="button"
               aria-label="Persien öffnen"
               aria-controls="info-persia"
@@ -767,7 +768,7 @@
             </div>
             <!-- Caribbean - A Pirate's Tale -->
             <button
-              class="marker marker-caribbean"
+              class="marker marker-caribbean" data-umami-event="map-caribbean"
               type="button"
               aria-label="Die Karibik öffnen"
               aria-controls="info-caribbean"
@@ -804,7 +805,7 @@
             </div>
             <!-- Sahara - Die Festung -->
             <button
-              class="marker marker-sahara"
+              class="marker marker-sahara" data-umami-event="map-sahara"
               type="button"
               aria-label="Die Sahara öffnen"
               aria-controls="info-sahara"
@@ -865,7 +866,7 @@
             </div>
             <!-- Colorado - Der Abenteurer / Katherine -->
             <button
-              class="marker marker-colorado"
+              class="marker marker-colorado" data-umami-event="map-colorado"
               type="button"
               aria-label="Colorado öffnen"
               aria-controls="info-colorado"
@@ -910,7 +911,7 @@
             </div>
             <!-- Svalbard - How they saved the world -->
             <button
-              class="marker marker-svalbard"
+              class="marker marker-svalbard" data-umami-event="map-svalbard"
               type="button"
               aria-label="Svalbard öffnen"
               aria-controls="info-svalbard"
@@ -947,7 +948,7 @@
             </div>
             <!-- Germany - Der Abenteurer / 101 German Proverbs -->
             <button
-              class="marker marker-germany"
+              class="marker marker-germany" data-umami-event="map-germany"
               type="button"
               aria-label="Deutschland öffnen"
               aria-controls="info-germany"
@@ -1099,7 +1100,7 @@
         <div class="footer-sociallinks">
           <ul class="social-link">
             <li>
-              <a
+              <a data-umami-event="outbound-instagram"
                 class="footer-link"
                 href="https://www.instagram.com/raphaellrenard/?hl=en"
                 target="_blank" rel="noopener noreferrer"
@@ -1111,7 +1112,7 @@
               ></a>
             </li>
             <li>
-              <a
+              <a data-umami-event="outbound-author-store"
                 class="footer-link"
                 href="https://www.amazon.de/stores/Raphael-L.-Renard/author/B076V2Z5L5?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true"
                 target="_blank" rel="noopener noreferrer"
